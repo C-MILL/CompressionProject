@@ -15,7 +15,7 @@ package util;
 
 	    public void start(Stage primaryStage) {
 	        Label label = new Label("Drag your Files here.");
-	        Label dropped = new Label("This has changed");
+	        Label dropped = new Label("This has changed again");
 	        VBox dragTarget = new VBox();
 	        dragTarget.getChildren().addAll(label,dropped);
 	        dragTarget.setOnDragOver(new EventHandler<DragEvent>() {
