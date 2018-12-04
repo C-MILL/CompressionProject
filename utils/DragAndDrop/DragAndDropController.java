@@ -1,5 +1,7 @@
 package DragAndDrop;
- import Main.Main;
+ import java.util.ArrayList;
+
+import Main.Main;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -16,32 +18,28 @@ import Main.Main;
 	@FXML private Rectangle DragAndDropArea;
 	@FXML private Label labelNumberToCompress;
 	@FXML private Button DragAndDropButtonCancel;
-	private String[] links = new String[0];
+	ArrayList<String> links = new ArrayList<String>();
  	public Main main;
+ 	
  	public void setMain(Main main) {
 		this.main=main;
  	}
- 	@FXML
+ 	@FXML				
 	private void handleDragDropped(DragEvent event) {
  		Dragboard DragboardLinks = event.getDragboard();	//Save all links in DragBoard
-		String somelinks = DragboardLinks.getFiles().toString();		//convert dragboard to string
+		String somelinks = DragboardLinks.getFiles().toString();
+		//System.out.println(somelinks);							//convert dragboard to string
 		somelinks= somelinks.substring(1, (somelinks.length()-1));		//substract beginning and end (rechteckige klammern)
-		String[] somelinksarray = somelinks.split(", ");		//split the links 
-		String[] sublinks=links;								//saves links before overwriting the array
-		links = new String[links.length+somelinksarray.length]; //set the final array
-		labelNumberToCompress.setText(Integer.toString(links.length));	//set label
-		for(int i=0; i<sublinks.length; i++) {
-			links[i]=sublinks[i];
-		}	//write old links into the new array
+		//System.out.println(somelinks);
+		String[] linkarray=somelinks.split(", ")	;	//split the links 
 		
-		for(int i=links.length-1; i<(links.length+somelinksarray.length-1); i++) {
-			for(int j=0; j<somelinksarray.length; j++) {
-				links[i]=somelinksarray[j];
-			} //write new links into the array
-			for(int j=0; j<links.length; j++) {
-				System.out.println(links[j]);
-			}
+		for(int i =0; i<linkarray.length;i++) {
+		links.add(linkarray[i]);
 		}
+		for(int i =0; i<links.size();i++) {
+			System.out.println(links.get(i));
+			}
+		labelNumberToCompress.setText(Integer.toString(links.size()));	//set label
 	
 		
 	}
