@@ -17,7 +17,7 @@ public class compress {
 		try {
 			
 			//RANDOM TEXT
-			
+			randomly
 			
 			//Load Image
 		Image image = new ImageIcon(ImageIO.read(new File(linkOfFile))).getImage();
