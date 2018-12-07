@@ -1,11 +1,10 @@
 package Main;
  import java.io.IOException;
  import DragAndDrop.DragAndDropController;
-import Main.MainWindowController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.stage.Stage;
-import javafx.scene.Parent;
+import views.MainWindowController;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
  public class Main extends Application {
@@ -13,21 +12,20 @@ import javafx.scene.layout.AnchorPane;
  	@Override
 	public void start(Stage primaryStage) {
 		this.primaryStage = new Stage();
-		DragAndDropPopUpWindow();
-		//mainWindow();
+		mainWindow();
+		//DragAndDropPopUpWindow(); 
 	}
  
 	
 	public void DragAndDropPopUpWindow() {
 		try {
-			FXMLLoader loader= new FXMLLoader(getClass().getClassLoader().getResource("\\DragAndDrop\\DragAndDropView.fxml"));
-			/*FXMLLoader loader = new FXMLLoader(Main.class.getResource("\\DragAndDrop\\DragAndDropView.fxml"));*/
-			AnchorPane pane = loader.load();
+			FXMLLoader DragAndDropLoader= new FXMLLoader(getClass().getClassLoader().getResource("\\DragAndDrop\\DragAndDropView.fxml"));
+			AnchorPane DragAndDropPane = DragAndDropLoader.load();
 			primaryStage.setMinHeight(400.00);
 			primaryStage.setMinWidth(500.00);
-			DragAndDropController DragAndDropController = loader.getController();
-			DragAndDropController.setMain(this);
-			Scene scene=new Scene(pane);
+			//DragAndDropController DragAndDropController = DragAndDropLoader.getController();
+			//DragAndDropController.setMain(this);
+			Scene scene=new Scene(DragAndDropPane);
 			primaryStage.setScene(scene);
 			primaryStage.show();
  		} catch (IOException e) {
@@ -36,6 +34,27 @@ import javafx.scene.layout.AnchorPane;
 		}
 		
  	}
+	
+	
+	public void mainWindow() {
+		try {
+			FXMLLoader MainWindowLoader= new FXMLLoader(getClass().getClassLoader().getResource("\\views\\MainWindowView.fxml"));
+			AnchorPane MainWindowPane = MainWindowLoader.load();
+			primaryStage.setMinHeight(400.00);
+			primaryStage.setMinWidth(500.00);
+			MainWindowController mainWindowController = MainWindowLoader.getController();
+			mainWindowController.setMain(this);
+			Scene scene=new Scene(MainWindowPane);
+			primaryStage.setScene(scene);
+			primaryStage.show();
+			
+
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
  	public static void main(String[] args) {
 		launch(args);
 	}

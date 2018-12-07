@@ -40,7 +40,6 @@ import Main.Main;
 			System.out.println(links.get(i));
 			}
 		labelNumberToCompress.setText(Integer.toString(links.size()));	//set label
-	
 		
 	}
  	@FXML
