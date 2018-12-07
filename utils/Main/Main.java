@@ -16,18 +16,15 @@ import javafx.scene.layout.AnchorPane;
 		//DragAndDropPopUpWindow(); 
 	}
  
-	
-	public void DragAndDropPopUpWindow() {
+ 	public void DragAndDropPopUpWindow() {
 		try {
 			FXMLLoader DragAndDropLoader= new FXMLLoader(getClass().getClassLoader().getResource("\\DragAndDrop\\DragAndDropView.fxml"));
 			AnchorPane DragAndDropPane = DragAndDropLoader.load();
-			primaryStage.setMinHeight(400.00);
-			primaryStage.setMinWidth(500.00);
-			//DragAndDropController DragAndDropController = DragAndDropLoader.getController();
-			//DragAndDropController.setMain(this);
-			Scene scene=new Scene(DragAndDropPane);
-			primaryStage.setScene(scene);
-			primaryStage.show();
+			DragAndDropController DragAndDropController = DragAndDropLoader.getController();
+			DragAndDropController.setMain(this);
+			Scene DragAndDropScene=new Scene(DragAndDropPane);
+			primaryStage.setScene(DragAndDropScene);
+			//primaryStage.show();
  		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

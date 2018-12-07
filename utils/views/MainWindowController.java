@@ -8,7 +8,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
-public class MainWindowController extends Main{
+public class MainWindowController{
 
 	
 	//views
@@ -35,7 +35,7 @@ public class MainWindowController extends Main{
 	@FXML
 	public void handleEinfach() {
 		
-		DragAndDropPopUpWindow();
+		main.DragAndDropPopUpWindow();
 	
 	}
 
