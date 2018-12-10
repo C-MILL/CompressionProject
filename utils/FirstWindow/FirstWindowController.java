@@ -24,7 +24,7 @@ public class FirstWindowController {
 		
 
 		@FXML
-		public void handleMaximaleAuflösung() {
+		public void handleMaximaleAufloesung() {
 			
 			
 		}
