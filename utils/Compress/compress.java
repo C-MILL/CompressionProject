@@ -17,18 +17,11 @@ public class compress {
 		try {
 			
 			//RANDOM TEXT
-<<<<<<< HEAD
-			
-=======
->>>>>>> refs/heads/Compression_V0.1
 			//Load Image
 		Image image = new ImageIcon(ImageIO.read(new File(linkOfFile))).getImage();
 
 		// creates new Folder if not already existing
 		//new File("/linkOfFile/Compressed_Images").mkdir();
-		
-		// creates new Folder if not already existing
-		new File("/linkOfFile/Compressed_Images").mkdirs();
 		
 		//Get resolution of image and divide trough 2
 		int newheight=(image.getHeight(null))/2;
@@ -53,11 +46,7 @@ public class compress {
 		*	Hoping that "image" represents the current image name 
 		*	it should save it to the newly created folder inside the images folder.
 		 */
-<<<<<<< HEAD
-		ImageIO.write(outImg, "jpeg", new File("/linkOfFile/Compressed_Images)"+image+".jpg"));
-=======
 		ImageIO.write(outImg, "jpeg", new File("C:/Users/chrig/Desktop/Beispiel_small.jpg"));
->>>>>>> refs/heads/Compression_V0.1
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
