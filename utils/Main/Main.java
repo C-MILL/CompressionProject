@@ -1,6 +1,8 @@
 package Main;
  import java.io.IOException;
- import DragAndDrop.DragAndDropController;
+
+import Compress.compress;
+import DragAndDrop.DragAndDropController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.stage.Stage;
@@ -54,5 +56,7 @@ import javafx.scene.layout.AnchorPane;
 	}
  	public static void main(String[] args) {
 		launch(args);
+		compress com = new compress("C:/Users/chrig/Desktop/1.jpg");
+		
 	}
 }
