@@ -13,7 +13,7 @@ public class compress {
 
 	
 	//Constructor 1
-	public compress(String linkOfFile) {
+	public compress(String linkOfFile, String linkOfNewFolder) {
 		try {
 			
 			//RANDOM TEXT
