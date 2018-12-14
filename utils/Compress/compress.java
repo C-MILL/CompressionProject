@@ -13,7 +13,7 @@ public class compress {
 
 	
 	//Constructor 1
-	public compress(String linkOfFile, String linkOfFolder) {
+	public compress(String linkOfFile, String linkOfNewFolder) {
 		try {
 			
 			//RANDOM TEXT
@@ -22,7 +22,7 @@ public class compress {
 
 		// creates new Folder if not already existing
 		//new File("/linkOfFile/Compressed_Images").mkdir();
-
+		
 		//Get resolution of image and divide trough 2
 		int newheight=(image.getHeight(null))/2;
 		int wewWidth = (image.getWidth(null))/2;
@@ -46,8 +46,7 @@ public class compress {
 		*	Hoping that "image" represents the current image name 
 		*	it should save it to the newly created folder inside the images folder.
 		 */
-		
-		ImageIO.write(outImg, "jpeg", new File(linkOfFolder+"/example.jpg"));
+		ImageIO.write(outImg, "jpeg", new File("C:/Users/chrig/Desktop/Beispiel_small.jpg"));
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
