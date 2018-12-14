@@ -26,7 +26,6 @@ import javafx.scene.layout.AnchorPane;
 			DragAndDropController.setMain(this);
 			Scene DragAndDropScene=new Scene(DragAndDropPane);
 			primaryStage.setScene(DragAndDropScene);
-			//primaryStage.show();
  		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -56,7 +55,7 @@ import javafx.scene.layout.AnchorPane;
 	}
  	public static void main(String[] args) {
 		launch(args);
-		compress com = new compress("C:/Users/chrig/Desktop/1.jpg");
+		compress com = new compress("C:/Users/chrig/Desktop/1.jpg","C:/Users/chrig/Desktop/");
 		
 	}
 }
