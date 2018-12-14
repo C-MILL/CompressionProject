@@ -12,6 +12,7 @@ import javax.swing.ImageIcon;
 
 public class compress {
 
+	
 	// Constructor 1
 	public compress(String linkOfFile, String linkOfFolder) {
 		try {
