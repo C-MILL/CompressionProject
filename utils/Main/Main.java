@@ -14,15 +14,12 @@ import javafx.scene.layout.AnchorPane;
  public class Main extends Application {
  	private Stage primaryStage;
  	ArrayList<String> links = new ArrayList<String>();
- 
-
 	@Override
 	public void start(Stage primaryStage) {
 		this.primaryStage = new Stage();
 		mainWindow();
-		//DragAndDropPopUpWindow(); 
 	}
- 
+
  	public void DragAndDropPopUpWindow() {
 		try {
 			FXMLLoader DragAndDropLoader= new FXMLLoader(getClass().getClassLoader().getResource("\\DragAndDrop\\DragAndDropView.fxml"));
@@ -59,7 +56,9 @@ import javafx.scene.layout.AnchorPane;
 
 	}
  	public void main(String[] args) {
-		launch(args);
+ 		System.out.println("test");
+ 		launch(args);
+		System.out.println("test");
 		ArrayList<String> links=getLinks();
 		createNewFolder createNewFolder= new createNewFolder();
 		String linkOfNewFolder=createNewFolder.createFolder();
@@ -71,10 +70,6 @@ import javafx.scene.layout.AnchorPane;
 		
 		
 	}
-
-
-
-
 	private static void compress(String Link, String linkOfNewFolder) {
 		compress com = new compress(Link,linkOfNewFolder);
 		
