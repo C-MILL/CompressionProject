@@ -10,7 +10,7 @@ import javafx.scene.control.TextField;
 
 public class FirstWindowController {
 	//views
-		@FXML private Button komplizierButton,einfachButton, Deutsch, Englisch;
+		@FXML private Button maximaleAufloesung,maximaleGroesse, deutsch, englisch;
 		@FXML private TextField einfachTextfeld, kommpliziertTextfeld, Sprachwahl;
 		
 		public Main Main;
@@ -24,11 +24,23 @@ public class FirstWindowController {
 		
 
 		@FXML
+		public void handleMaximaleAuflösung() {
+			
+			
+		}
+		@FXML
+		public void handleMaximaleGroesse() {
+			
+			
+		}
+		
+		@FXML
 		public void handleEinfacherButton() {
 			
 			
 		}
 
+		
 
 
 				
