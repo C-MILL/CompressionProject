@@ -39,7 +39,7 @@ import javafx.scene.layout.AnchorPane;
 	
 	public void mainWindow() {
 		try {
-			FXMLLoader MainWindowLoader= new FXMLLoader(getClass().getClassLoader().getResource("\\FirstWindow\\MainWindowView.fxml"));
+			FXMLLoader MainWindowLoader= new FXMLLoader(getClass().getClassLoader().getResource("/FirstWindow/MainWindowView.fxml"));
 			AnchorPane MainWindowPane = MainWindowLoader.load();
 			primaryStage.setMinHeight(400.00);
 			primaryStage.setMinWidth(500.00);
