@@ -1,17 +1,22 @@
 package Main;
  import java.io.IOException;
+import java.util.ArrayList;
 
 import Compress.compress;
 import DragAndDrop.DragAndDropController;
+import FirstWindow.MainWindowController;
+import directory.createNewFolder;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.stage.Stage;
-import views.MainWindowController;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
  public class Main extends Application {
  	private Stage primaryStage;
- 	@Override
+ 	ArrayList<String> links = new ArrayList<String>();
+ 
+
+	@Override
 	public void start(Stage primaryStage) {
 		this.primaryStage = new Stage();
 		mainWindow();
@@ -36,7 +41,7 @@ import javafx.scene.layout.AnchorPane;
 	
 	public void mainWindow() {
 		try {
-			FXMLLoader MainWindowLoader= new FXMLLoader(getClass().getClassLoader().getResource("\\views\\MainWindowView.fxml"));
+			FXMLLoader MainWindowLoader= new FXMLLoader(getClass().getClassLoader().getResource("\\FirstWindow\\MainWindowView.fxml"));
 			AnchorPane MainWindowPane = MainWindowLoader.load();
 			primaryStage.setMinHeight(400.00);
 			primaryStage.setMinWidth(500.00);
@@ -53,9 +58,36 @@ import javafx.scene.layout.AnchorPane;
 		}
 
 	}
- 	public static void main(String[] args) {
+ 	public void main(String[] args) {
 		launch(args);
-		compress com = new compress("C:/Users/chrig/Desktop/1.jpg","C:/Users/chrig/Desktop/");
+		ArrayList<String> links=getLinks();
+		createNewFolder createNewFolder= new createNewFolder();
+		String linkOfNewFolder=createNewFolder.createFolder();
+		
+		for(int i =0; i<links.size();i++) {
+			compress(links.get(i),linkOfNewFolder);
+			}
+		
+		
 		
 	}
+
+
+
+
+	private static void compress(String Link, String linkOfNewFolder) {
+		compress com = new compress(Link,linkOfNewFolder);
+		
+	}
+	
+	public ArrayList<String> getLinks() {
+		return links;
+	}
+	
+	public void setLinkOfFiles(ArrayList<String> linkarray) {
+		this.links=linkarray;
+		
+	}
+
+	
 }

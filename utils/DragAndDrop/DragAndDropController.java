@@ -40,6 +40,7 @@ import Main.Main;
 			System.out.println(links.get(i));
 			}
 		labelNumberToCompress.setText(Integer.toString(links.size()));	//set label
+
 		
 	}
  	@FXML
@@ -55,5 +56,11 @@ import Main.Main;
  	@FXML
 	private void handleDragAndDropButtonCancel() {
 		Platform.exit();
+	}
+ 	
+ 	@FXML
+	private void handleDragAndDropButtonOk() {
+		main.setLinkOfFiles(links);
+ 		Platform.exit();
 	}
 }

@@ -1,4 +1,4 @@
-package views;
+package FirstWindow;
 
 import Main.Main;
 import javafx.event.ActionEvent;
