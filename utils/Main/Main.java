@@ -4,23 +4,26 @@ import java.util.ArrayList;
 
 import Compress.compress;
 import DragAndDrop.DragAndDropController;
-import FirstWindow.MainWindowController;
-import directory.createNewFolder;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.stage.Stage;
+import MainWindow.MainWindowController;
+import directory.createNewFolder;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
  public class Main extends Application {
  	private Stage primaryStage;
- 	ArrayList<String> links = new ArrayList<String>(null);
+	private ArrayList<String> links = new ArrayList<String>();
+
  	
-	@Override
+ 	
+ 	@Override
 	public void start(Stage primaryStage) {
 		this.primaryStage = new Stage();
 		mainWindow();
+		//DragAndDropPopUpWindow(); 
 	}
-
+ 
  	public void DragAndDropPopUpWindow() {
 		try {
 			FXMLLoader DragAndDropLoader= new FXMLLoader(getClass().getClassLoader().getResource("\\DragAndDrop\\DragAndDropView.fxml"));
@@ -39,7 +42,7 @@ import javafx.scene.layout.AnchorPane;
 	
 	public void mainWindow() {
 		try {
-			FXMLLoader MainWindowLoader= new FXMLLoader(getClass().getClassLoader().getResource("/FirstWindow/MainWindowView.fxml"));
+			FXMLLoader MainWindowLoader= new FXMLLoader(getClass().getClassLoader().getResource("\\MainWindow\\MainWindowView.fxml"));
 			AnchorPane MainWindowPane = MainWindowLoader.load();
 			primaryStage.setMinHeight(400.00);
 			primaryStage.setMinWidth(500.00);
@@ -56,33 +59,29 @@ import javafx.scene.layout.AnchorPane;
 		}
 
 	}
- 	public void main(String[] args) {
- 		System.out.println("test");
- 		launch(args);
-		System.out.println("test");
-		ArrayList<String> links=getLinks();
-		createNewFolder createNewFolder= new createNewFolder();
-		String linkOfNewFolder=createNewFolder.createFolder();
-		
-		for(int i =0; i<links.size();i++) {
-			compress(links.get(i),linkOfNewFolder);
-			}
-		
- 	}
-		
-	
-	private static void compress(String Link, String linkOfNewFolder) {
-		compress com = new compress(Link,linkOfNewFolder);
+ 	public static void main(String[] args) {
+		launch(args);
+		Main main=new Main();
+		main.compress();
 		
 	}
-	
+ 	
+	public void setLinkOfFiles(ArrayList<String> linkarray) {
+		this.links.equals(linkarray);		
+	}
+ 	
 	public ArrayList<String> getLinks() {
 		return links;
 	}
 	
-	public void setLinkOfFiles(ArrayList<String> linkarray) {
-		this.links.equals(linkarray);		
-	}
-
 	
+	private void compress() {
+		ArrayList<String> links=getLinks();
+		createNewFolder createNewFolder= new createNewFolder();
+		String linkOfNewFolder=createNewFolder.createFolder();
+		for(int i =0; i<links.size();i++) {
+		new compress(links.get(i),linkOfNewFolder);
+		}
+		
+	}
 }
