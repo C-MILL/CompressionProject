@@ -13,7 +13,8 @@ import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
  public class Main extends Application {
  	private Stage primaryStage;
- 	ArrayList<String> links = new ArrayList<String>();
+ 	ArrayList<String> links = new ArrayList<String>(null);
+ 	
 	@Override
 	public void start(Stage primaryStage) {
 		this.primaryStage = new Stage();
@@ -67,9 +68,9 @@ import javafx.scene.layout.AnchorPane;
 			compress(links.get(i),linkOfNewFolder);
 			}
 		
+ 	}
 		
-		
-	}
+	
 	private static void compress(String Link, String linkOfNewFolder) {
 		compress com = new compress(Link,linkOfNewFolder);
 		
@@ -80,8 +81,7 @@ import javafx.scene.layout.AnchorPane;
 	}
 	
 	public void setLinkOfFiles(ArrayList<String> linkarray) {
-		this.links=linkarray;
-		
+		this.links.equals(linkarray);		
 	}
 
 	
