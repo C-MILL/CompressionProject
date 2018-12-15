@@ -12,63 +12,67 @@ import javax.swing.ImageIcon;
 import Main.Main;
 
 public class compress {
-Main main = new Main();
-	//Constructor 1 -> Default program functionality
-	public compress(String linkOfFile, String linkOfNewFolder) {
 
-		// *** for testing purposes: String linkOfFile = "C:/Users/kruesin/Downloads/1.jpg";
+	Main main = new Main();
+			//Constructor 1 -> Default program functionality
+			public compress(String linkOfFile, String linkOfNewFolder) {
 
-		// initialize Image
-		Image image;
-		try {
-			// reads image from path input
-			image = new ImageIcon(ImageIO.read(new File(linkOfFile))).getImage();
-			// gets file path and saves it to f (important for further file processing)
-			File f = new File(linkOfFile);
-			// Extracts file name from file path
-			String originalImageName = f.getName();
+				// *** for testing purposes: String linkOfFile = "C:/Users/kruesin/Downloads/1.jpg";
 
-			// Removes file extension (.jpg / .jpeg / etc) -> important so that the newly created images all have the same file extension.
-			int pos = originalImageName.lastIndexOf(".");
-			String onlyImageName = originalImageName.substring(0, pos);
+				// initialize Image
+				Image image;
+				try {
+					// reads image from path input
+					image = new ImageIcon(ImageIO.read(new File(linkOfFile))).getImage();
+					// gets file path and saves it to f (important for further file processing)
+					File f = new File(linkOfFile);
+					// Extracts file name from file path
+					String originalImageName = f.getName();
 
-			// Creates the image name for the exported, compressed image
-			String newImageName = onlyImageName + "_compr";
+					// Removes file extension (.jpg / .jpeg / etc) -> important so that the newly created images all have the same file extension.
+					int pos = originalImageName.lastIndexOf(".");
+					String onlyImageName = originalImageName.substring(0, pos);
 
-			// *** for testing purposes: System.out.println(newImageName);
+					// Creates the image name for the exported, compressed image
+					String newImageName = onlyImageName + "_compr";
 
-			// creates new Folder if not already existing
-			//new File("/linkOfFile/Compressed_Images").mkdir();
+					// *** for testing purposes: System.out.println(newImageName);
 
-			//Get resolution of image and divide trough 2
-			int newheight=(image.getHeight(null))/2;
-			int wewWidth = (image.getWidth(null))/2;
+					// creates new Folder if not already existing
+					//new File("/linkOfFile/Compressed_Images").mkdir();
 
-			//Compress
-			Image scaledImage = image.getScaledInstance(wewWidth, newheight,Image.SCALE_SMOOTH);
-			BufferedImage outImg = new BufferedImage(wewWidth, newheight,BufferedImage.TYPE_INT_RGB);
+					//Get resolution of image and divide trough 2
+					int newheight=(image.getHeight(null));
+					int newWidth = (image.getWidth(null));
+					if(image.getHeight(null)>2*1080) {
+						newheight=(image.getHeight(null))/2;
+						newWidth = (image.getWidth(null))/2;
+					}
+					//Compress
+					Image scaledImage = image.getScaledInstance(newWidth, newheight,Image.SCALE_SMOOTH);
+					BufferedImage outImg = new BufferedImage(newWidth, newheight,BufferedImage.TYPE_INT_RGB);
 
-			//Does some stuff 
-			Graphics g = outImg.getGraphics();
-			g.drawImage(scaledImage, 0, 0, null);
-			g.dispose();
+					//Does some stuff 
+					Graphics g = outImg.getGraphics();
+					g.drawImage(scaledImage, 0, 0, null);
+					g.dispose();
 
-			// *** for testing purposes: ImageIO.write(outImg, "jpeg", new File("C:/Users/kruesin/Downloads/" + newImageName + ".jpeg"));
-System.out.println(linkOfNewFolder + newImageName + ".jpeg");
-			ImageIO.write(outImg, "jpeg", new File(linkOfNewFolder + "/"+newImageName + ".jpeg"));
-		
-		} catch (IOException e) {
-			e.printStackTrace();
-		}}
+					// *** for testing purposes: ImageIO.write(outImg, "jpeg", new File("C:/Users/kruesin/Downloads/" + newImageName + ".jpeg"));
+					System.out.println(linkOfNewFolder + newImageName + ".jpeg");
+					ImageIO.write(outImg, "jpeg", new File(linkOfNewFolder + "/"+newImageName + ".jpeg"));
 
-	//Constructor 2 for extended functionality
-	public compress(String linkOfFile, String linkOfNewFolder, int width, int height) {
+				} catch (IOException e) {
+					e.printStackTrace();
+				}}
 
-	}
+			//Constructor 2 for extended functionality
+			public compress(String linkOfFile, String linkOfNewFolder, int width, int height) {
 
-	//Constructor 3 for extended functionality
-	public compress(String linkOfFile, String linkOfNewFolder, int maxSizeOfFile) {
+			}
 
-	}
+			//Constructor 3 for extended functionality
+			public compress(String linkOfFile, String linkOfNewFolder, int maxSizeOfFile) {
+
+			}
 
 }

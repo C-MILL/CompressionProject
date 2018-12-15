@@ -40,7 +40,7 @@ public class progressController extends Thread{
 
 	@FXML
 	public void handleFinishButton() {
-		progressBar.setProgress(1/10);
+		Platform.exit();
 	}
 
 
@@ -60,7 +60,7 @@ public class progressController extends Thread{
 
 
 	public void closePlatform() {
-		Platform.exit();
+	
 
 	}
 
