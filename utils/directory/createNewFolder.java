@@ -36,7 +36,7 @@ public class createNewFolder {
 			File customDir = new File(path);
 			customDir.mkdirs();
 			linkOfNewFolder = path.replace("\\","/");
-			
+			System.out.println(linkOfNewFolder);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

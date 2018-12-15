@@ -54,8 +54,8 @@ Main main = new Main();
 			g.dispose();
 
 			// *** for testing purposes: ImageIO.write(outImg, "jpeg", new File("C:/Users/kruesin/Downloads/" + newImageName + ".jpeg"));
-
-			ImageIO.write(outImg, "jpeg", new File(linkOfNewFolder + newImageName + ".jpeg"));
+System.out.println(linkOfNewFolder + newImageName + ".jpeg");
+			ImageIO.write(outImg, "jpeg", new File(linkOfNewFolder + "/"+newImageName + ".jpeg"));
 		
 		} catch (IOException e) {
 			e.printStackTrace();

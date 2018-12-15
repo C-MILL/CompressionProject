@@ -18,8 +18,7 @@
             <HBox alignment="CENTER" />
             <HBox alignment="CENTER" prefHeight="69.0" prefWidth="200.0" spacing="20.0">
                <children>
-                  <Button fx:id="einfach" mnemonicParsing="false" onAction="#handleEinfach" text="Einfach" />
-                  <Button fx:id="Kompliziert" mnemonicParsing="false" onAction="#handleKompliziert" text="Kompliziert" />
+                  <Button fx:id="einfach" mnemonicParsing="false" onAction="#handleEinfach" text="Loslegen" />
                </children>
             </HBox>
          </children>

@@ -6,6 +6,8 @@ import Compress.compress;
 import DragAndDrop.DragAndDropController;
 import javafx.animation.AnimationTimer;
 import javafx.application.Application;
+import javafx.application.Platform;
+import javafx.beans.value.ChangeListener;
 import javafx.fxml.FXMLLoader;
 import javafx.stage.Stage;
 import MainWindow.MainWindowController;
@@ -18,11 +20,12 @@ public class Main extends Application {
 	private ArrayList<String> links = new ArrayList<String>();
 	private int doneNumber;
 	private int toDoNumber;
+	progressController progressController = new progressController();
 
-	
-	
+
+
 	public static void main(String[] args) {
-		
+
 		launch(args);
 	}
 
@@ -32,10 +35,10 @@ public class Main extends Application {
 		mainWindow();
 	}
 
-	
-	
+
+
 	//Windows
-	
+
 	public void mainWindow() {
 		try {
 			FXMLLoader MainWindowLoader= new FXMLLoader(getClass().getClassLoader().getResource("\\MainWindow\\MainWindowView.fxml"));
@@ -48,7 +51,7 @@ public class Main extends Application {
 			primaryStage.setScene(scene);
 			primaryStage.show();
 
-			
+
 
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
@@ -56,8 +59,7 @@ public class Main extends Application {
 		}
 
 	}
-	
-	
+
 	public void DragAndDropPopUpWindow() {
 		try {
 			FXMLLoader DragAndDropLoader= new FXMLLoader(getClass().getClassLoader().getResource("\\DragAndDrop\\DragAndDropView.fxml"));
@@ -72,52 +74,40 @@ public class Main extends Application {
 		}
 
 	}
-	
-	
+
 	public void progress() {
 		try {
 			FXMLLoader progressLoader= new FXMLLoader(getClass().getClassLoader().getResource("\\Progress\\progressView.fxml"));
 			AnchorPane progressPane = progressLoader.load();
-			progressController progressController = progressLoader.getController();
+			progressController= progressLoader.getController();
 			progressController.setMain(this);
-			
+			progressController.setAll(getDoneNumber(), getNumberToDo());
 			Scene progressScene=new Scene(progressPane);
 			primaryStage.setScene(progressScene);
+			
+
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
 
-	
 	//Methods
-public void compress() {
-		
+	public void compress() {
+
 		createNewFolder createNewFolder= new createNewFolder();
 		String linkOfNewFolder=createNewFolder.createFolder();
-		setNumberToDo(getLinks().size());
 		
-		new AnimationTimer() {
-	        @Override public void handle(long currentNanoTime) {
-	            for (int i = 0; i < getLinks().size(); i++) {
-	            	setDoneNumber(i);
-	            	progress();
-	            }
-
-	            try {
-	                Thread.sleep(100);
-	            } catch (InterruptedException e) {
-	                // Do nothing
-	            }
-	        }
-	    }.start();
+		setNumberToDo(getLinks().size());
+		progress();
+		for (int i = 0; i < getLinks().size(); i++) {
+			setDoneNumber(i);
+			progressController.setAll(getDoneNumber(), getNumberToDo());
+			new compress(links.get(i), linkOfNewFolder);
+		}
 	}
-	
-	
-	
+
 	//Setter and Getter
-
-
 
 	public void setLinks(ArrayList<String> linkarray) {
 		links.addAll(linkarray);
@@ -132,10 +122,10 @@ public void compress() {
 	}
 
 
-	
-	
-    
-	
+
+
+
+
 
 	public int getDoneNumber() {
 		return doneNumber;
@@ -145,12 +135,14 @@ public void compress() {
 	}
 	private void setDoneNumber(int i) {
 		doneNumber=i;
-		
+
 	}
 
 	public void setNumberToDo(int size) {
-	 toDoNumber=size;
-		
+		toDoNumber=size;
+
 	}
+
+
 }
 

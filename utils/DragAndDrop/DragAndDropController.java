@@ -37,9 +37,8 @@ import Main.Main;
 		links.add(linkarray[i]);
 		}
 		labelNumberToCompress.setText(Integer.toString(links.size()));	//set label
-
-		
 	}
+ 	
  	@FXML
 	private void setLabelNumberToCompress(String number) {
 		System.out.println(number);
