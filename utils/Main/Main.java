@@ -23,7 +23,6 @@ public class Main extends Application {
 	progressController progressController = new progressController();
 
 
-
 	public static void main(String[] args) {
 
 		launch(args);
