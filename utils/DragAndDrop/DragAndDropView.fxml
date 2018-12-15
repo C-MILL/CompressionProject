@@ -56,7 +56,7 @@
                         <Label fx:id="labelNumberToCompress" text="0" GridPane.columnIndex="1" />
                      </children>
                   </GridPane>
-                  <Button fx:id="DragAndDropButtonOk" mnemonicParsing="false" prefWidth="100.0" text="OK" />
+                  <Button fx:id="DragAndDropButtonOk" mnemonicParsing="false" onAction="#handleDragAndDropButtonOk" prefWidth="100.0" text="OK" />
                   <Button fx:id="DragAndDropButtonCancel" mnemonicParsing="false" onAction="#handleDragAndDropButtonCancel" prefWidth="100.0" text="Cancel" />
                </children>
             </HBox>

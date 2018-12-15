@@ -36,9 +36,6 @@ import Main.Main;
 		for(int i =0; i<linkarray.length;i++) {
 		links.add(linkarray[i]);
 		}
-		for(int i =0; i<links.size();i++) {
-			System.out.println(links.get(i));
-			}
 		labelNumberToCompress.setText(Integer.toString(links.size()));	//set label
 
 		
@@ -60,7 +57,9 @@ import Main.Main;
  	
  	@FXML
 	private void handleDragAndDropButtonOk() {
-		main.setLinkOfFiles(links);
- 		Platform.exit();
+		main.setLinks(links);
+		main.compress();
+
+ 		
 	}
 }
