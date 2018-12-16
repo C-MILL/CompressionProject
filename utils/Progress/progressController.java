@@ -1,19 +1,9 @@
 package Progress;
 
-import java.net.URL;
-import java.util.ResourceBundle;
-import java.util.concurrent.TimeUnit;
-
-import com.sun.xml.internal.ws.policy.privateutil.PolicyUtils.Text;
 
 import Main.Main;
 import javafx.application.Platform;
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
-import javafx.concurrent.Task;
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ProgressBar;

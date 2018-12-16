@@ -6,13 +6,10 @@ import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
 import javafx.scene.input.DragEvent;
 import javafx.scene.input.Dragboard;
 import javafx.scene.input.TransferMode;
 import javafx.scene.shape.Rectangle;
-import javafx.stage.Stage;
-import Main.Main;
  public class DragAndDropController {
 	//views
 	@FXML private Rectangle DragAndDropArea;

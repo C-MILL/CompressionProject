@@ -4,10 +4,7 @@ import java.util.ArrayList;
 
 import Compress.compress;
 import DragAndDrop.DragAndDropController;
-import javafx.animation.AnimationTimer;
 import javafx.application.Application;
-import javafx.application.Platform;
-import javafx.beans.value.ChangeListener;
 import javafx.fxml.FXMLLoader;
 import javafx.stage.Stage;
 import MainWindow.MainWindowController;
