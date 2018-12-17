@@ -41,9 +41,10 @@ public class progressController extends Thread{
 
 	public void setAll(int doneNumber, int numberToDo) {
 		
-		progressBar.setProgress(doneNumber+1.0/10.0);
+		progressBar.setProgress((doneNumber+1.0)/numberToDo);
 		toDoLabel.setText(Integer.valueOf(numberToDo).toString());
 		doneLabel.setText(Integer.valueOf(doneNumber+1).toString());
+		//binding probieren
 		System.out.println(doneLabel.getText());
 	}
 
