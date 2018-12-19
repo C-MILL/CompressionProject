@@ -104,7 +104,7 @@ public class Main extends Application {
 			setDoneNumber(i);
 			progressController.setAll(getDoneNumber(), getNumberToDo());
 			new compress(links.get(i), linkOfNewFolder);
-			new compress(links.get(i), linkOfNewFolder);
+			
 		}
 	}
 
