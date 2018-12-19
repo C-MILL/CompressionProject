@@ -1,4 +1,6 @@
 package Compress;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 import java.awt.Graphics;
 import java.awt.Image;
 import java.awt.image.BufferedImage;
@@ -13,6 +15,9 @@ import Main.Main;
 public class compress {
 
 	Main main = new Main();
+	public compress() {
+		
+	}
 			//Constructor 1 -> Default program functionality
 			public compress(String linkOfFile, String linkOfNewFolder) {
 
@@ -47,6 +52,7 @@ public class compress {
 						newheight=(image.getHeight(null))/2;
 						newWidth = (image.getWidth(null))/2;
 					}
+				
 					//Compress
 					Image scaledImage = image.getScaledInstance(newWidth, newheight,Image.SCALE_SMOOTH);
 					BufferedImage outImg = new BufferedImage(newWidth, newheight,BufferedImage.TYPE_INT_RGB);
