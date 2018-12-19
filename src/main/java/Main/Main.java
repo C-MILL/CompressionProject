@@ -4,10 +4,7 @@ import java.util.ArrayList;
 
 import Compress.compress;
 import DragAndDrop.DragAndDropController;
-import javafx.animation.AnimationTimer;
 import javafx.application.Application;
-import javafx.application.Platform;
-import javafx.beans.value.ChangeListener;
 import javafx.fxml.FXMLLoader;
 import javafx.stage.Stage;
 import MainWindow.MainWindowController;
@@ -21,6 +18,7 @@ public class Main extends Application {
 	private int doneNumber;
 	private int toDoNumber;
 	progressController progressController = new progressController();
+
 
 
 	public static void main(String[] args) {
@@ -40,7 +38,8 @@ public class Main extends Application {
 
 	public void mainWindow() {
 		try {
-			FXMLLoader MainWindowLoader= new FXMLLoader(getClass().getClassLoader().getResource("\\MainWindow\\MainWindowView.fxml"));
+			FXMLLoader MainWindowLoader= new FXMLLoader(MainWindowController.class.getResource("MainWindowView.fxml"));
+		//	FXMLLoader MainWindowLoader= new FXMLLoader(getClass().getClassLoader().getResource("\\MainWindow\\MainWindowView.fxml"));
 			AnchorPane MainWindowPane = MainWindowLoader.load();
 			primaryStage.setMinHeight(400.00);
 			primaryStage.setMinWidth(500.00);
@@ -61,7 +60,8 @@ public class Main extends Application {
 
 	public void DragAndDropPopUpWindow() {
 		try {
-			FXMLLoader DragAndDropLoader= new FXMLLoader(getClass().getClassLoader().getResource("\\DragAndDrop\\DragAndDropView.fxml"));
+			FXMLLoader DragAndDropLoader= new FXMLLoader(DragAndDropController.class.getResource("DragAndDropView.fxml"));
+			//FXMLLoader DragAndDropLoader= new FXMLLoader(getClass().getClassLoader().getResource("\\DragAndDrop\\DragAndDropView.fxml"));
 			AnchorPane DragAndDropPane = DragAndDropLoader.load();
 			DragAndDropController DragAndDropController = DragAndDropLoader.getController();
 			DragAndDropController.setMain(this);
@@ -76,7 +76,8 @@ public class Main extends Application {
 
 	public void progress() {
 		try {
-			FXMLLoader progressLoader= new FXMLLoader(getClass().getClassLoader().getResource("\\Progress\\progressView.fxml"));
+			FXMLLoader progressLoader= new FXMLLoader(progressController.class.getResource("progressView.fxml"));
+			//FXMLLoader progressLoader= new FXMLLoader(getClass().getClassLoader().getResource("\\Progress\\progressView.fxml"));
 			AnchorPane progressPane = progressLoader.load();
 			progressController= progressLoader.getController();
 			progressController.setMain(this);
