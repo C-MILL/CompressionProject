@@ -3,12 +3,14 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 import Compress.compress;
+import Compress.compressThreads;
 import DragAndDrop.DragAndDropController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.stage.Stage;
 import MainWindow.MainWindowController;
 import Progress.progressController;
+import Progress.progressThreads;
 import directory.createNewFolder;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
@@ -18,7 +20,7 @@ public class Main extends Application {
 	private int doneNumber;
 	private int toDoNumber;
 	progressController progressController = new progressController();
-
+	
 
 
 	public static void main(String[] args) {
@@ -76,12 +78,12 @@ public class Main extends Application {
 
 	public void progress() {
 		try {
+			
 			FXMLLoader progressLoader= new FXMLLoader(progressController.class.getResource("progressView.fxml"));
 			//FXMLLoader progressLoader= new FXMLLoader(getClass().getClassLoader().getResource("\\Progress\\progressView.fxml"));
 			AnchorPane progressPane = progressLoader.load();
 			progressController= progressLoader.getController();
 			progressController.setMain(this);
-			progressController.setAll(getDoneNumber(), getNumberToDo());
 			Scene progressScene=new Scene(progressPane);
 			primaryStage.setScene(progressScene);
 			
@@ -94,16 +96,19 @@ public class Main extends Application {
 
 	//Methods
 	public void compress() {
-
+		progress();
+		progressThreads[] progressThreads = new progressThreads[getLinks().size()];
+		compressThreads[] compressThreads= new compressThreads[getLinks().size()]; 
 		createNewFolder createNewFolder= new createNewFolder();
 		String linkOfNewFolder=createNewFolder.createFolder();
-		
 		setNumberToDo(getLinks().size());
-		progress();
-		for (int i = 0; i < getLinks().size(); i++) {
+		for (int i = 0; i < getLinks().size(); i++) {	
 			setDoneNumber(i);
-			progressController.setAll(getDoneNumber(), getNumberToDo());
-			new compress(links.get(i), linkOfNewFolder);
+			progressThreads[i]=new progressThreads(getDoneNumber(), getNumberToDo());
+			compressThreads[i] = new compressThreads(links.get(i), linkOfNewFolder);
+			progressThreads[i].start();
+			compressThreads[i].start();
+			
 		}
 	}
 
@@ -143,6 +148,8 @@ public class Main extends Application {
 
 	}
 
+	
+	
 
 }
 
