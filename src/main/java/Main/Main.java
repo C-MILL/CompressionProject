@@ -2,23 +2,19 @@ package Main;
 import java.io.IOException;
 import java.util.ArrayList;
 
-import Compress.compress;
-import Compress.compressThreads;
 import DragAndDrop.DragAndDropController;
+import Compress.compress;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.stage.Stage;
 import MainWindow.MainWindowController;
 import Progress.progressController;
-import Progress.progressThreads;
 import directory.createNewFolder;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 public class Main extends Application {
 	private Stage primaryStage;
 	private ArrayList<String> links = new ArrayList<String>();
-	private int doneNumber;
-	private int toDoNumber;
 	progressController progressController = new progressController();
 	
 
@@ -54,7 +50,7 @@ public class Main extends Application {
 
 
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
+
 			e.printStackTrace();
 		}
 
@@ -70,7 +66,7 @@ public class Main extends Application {
 			Scene DragAndDropScene=new Scene(DragAndDropPane);
 			primaryStage.setScene(DragAndDropScene);
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
+
 			e.printStackTrace();
 		}
 
@@ -84,12 +80,14 @@ public class Main extends Application {
 			AnchorPane progressPane = progressLoader.load();
 			progressController= progressLoader.getController();
 			progressController.setMain(this);
+			progressController.setLabelToDo(getLinks().size());
+			progressController.setDoneLabel("");
 			Scene progressScene=new Scene(progressPane);
 			primaryStage.setScene(progressScene);
 			
 
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
+			
 			e.printStackTrace();
 		}
 	}
@@ -97,19 +95,13 @@ public class Main extends Application {
 	//Methods
 	public void compress() {
 		progress();
-		progressThreads[] progressThreads = new progressThreads[getLinks().size()];
-		compressThreads[] compressThreads= new compressThreads[getLinks().size()]; 
 		createNewFolder createNewFolder= new createNewFolder();
 		String linkOfNewFolder=createNewFolder.createFolder();
-		setNumberToDo(getLinks().size());
 		for (int i = 0; i < getLinks().size(); i++) {	
-			setDoneNumber(i);
-			progressThreads[i]=new progressThreads(getDoneNumber(), getNumberToDo());
-			compressThreads[i] = new compressThreads(links.get(i), linkOfNewFolder);
-			progressThreads[i].start();
-			compressThreads[i].start();
-			
-		}
+			new compress(getLinks().get(i), linkOfNewFolder);
+			}
+		progressController.setLabelToDo(" ");
+		progressController.setDoneLabel("Alle Fotos wurden konvertiert und abgespeichert.");
 	}
 
 	//Setter and Getter
@@ -132,21 +124,7 @@ public class Main extends Application {
 
 
 
-	public int getDoneNumber() {
-		return doneNumber;
-	}
-	public int getNumberToDo(){
-		return toDoNumber;
-	}
-	private void setDoneNumber(int i) {
-		doneNumber=i;
 
-	}
-
-	public void setNumberToDo(int size) {
-		toDoNumber=size;
-
-	}
 
 	
 	

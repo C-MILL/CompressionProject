@@ -88,6 +88,8 @@ class ProgressView {
 		return root;
 	}
 
+	
+	
 	public void bind(ReadOnlyDoubleProperty progressProperty) {
 		progressBar.progressProperty().bind(progressProperty);
 		progressIndicator.progressProperty().bind(progressProperty);

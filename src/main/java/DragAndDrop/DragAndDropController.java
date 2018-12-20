@@ -1,21 +1,32 @@
 package DragAndDrop;
- import java.util.ArrayList;
+ import java.awt.Image;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.ArrayList;
+
+import javax.imageio.ImageIO;
+import javax.swing.ImageIcon;
 
 import Main.Main;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.DragEvent;
 import javafx.scene.input.Dragboard;
 import javafx.scene.input.TransferMode;
+import javafx.scene.layout.GridPane;
 import javafx.scene.shape.Rectangle;
  public class DragAndDropController {
 	//views
 	@FXML private Rectangle DragAndDropArea;
 	@FXML private Label labelNumberToCompress;
 	@FXML private Button DragAndDropButtonCancel;
+	@FXML private GridPane gridPane;
 	ArrayList<String> links = new ArrayList<String>();
+	ArrayList<ImageView> image = new ArrayList<ImageView>();
  	public Main main;
  	
  	public void setMain(Main main) {
@@ -31,9 +42,27 @@ import javafx.scene.shape.Rectangle;
 		String[] linkarray=somelinks.split(", ")	;	//split the links 
 		
 		for(int i =0; i<linkarray.length;i++) {
+		
+			
+			
+			
 		links.add(linkarray[i]);
+		
+		try {
+			Image singleImage = new new ImageIcon(ImageIO.read(new File(linkarray[i]))).getImage()
+			image.add();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+	        
+	        
+		gridPane.add(image.get(i), 0, 0);
 		}
 		labelNumberToCompress.setText(Integer.toString(links.size()));	//set label
+		
 	}
  	
  	@FXML
