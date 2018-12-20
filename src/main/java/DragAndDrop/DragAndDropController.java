@@ -47,7 +47,7 @@ import javafx.scene.shape.Rectangle;
 			
 			
 		links.add(linkarray[i]);
-		
+		/*
 		try {
 			Image singleImage = new new ImageIcon(ImageIO.read(new File(linkarray[i]))).getImage()
 			image.add();
@@ -60,6 +60,7 @@ import javafx.scene.shape.Rectangle;
 	        
 	        
 		gridPane.add(image.get(i), 0, 0);
+		*/
 		}
 		labelNumberToCompress.setText(Integer.toString(links.size()));	//set label
 		
