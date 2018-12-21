@@ -2,11 +2,9 @@ package ErrorMessagePopUp;
 
 import DragAndDrop.DragAndDropController;
 import Main.Main;
-import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.stage.Stage;
 
 public class ErrorMessageController {
 	public Main main;

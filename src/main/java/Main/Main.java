@@ -164,11 +164,6 @@ public class Main extends Application {
 	public int getNumberToDo(){
 		return toDoNumber;
 	}
-	private void setDoneNumber(int i) {
-		doneNumber=i;
-
-	}
-
 	public void setNumberToDo(int size) {
 		toDoNumber=size;
 

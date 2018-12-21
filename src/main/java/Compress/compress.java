@@ -1,6 +1,4 @@
 package Compress;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
 import java.awt.Graphics;
 import java.awt.Image;
 import java.awt.image.BufferedImage;
