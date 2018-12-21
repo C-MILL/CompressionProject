@@ -3,7 +3,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 import DragAndDrop.DragAndDropController;
-import Compress.compress;
+import ErrorMessagePopUp.ErrorMessageController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.stage.Stage;
@@ -14,9 +14,12 @@ import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 public class Main extends Application {
 	private Stage primaryStage;
+	public Stage ErrorStage;
 	private ArrayList<String> links = new ArrayList<String>();
+	private int doneNumber;
+	private int toDoNumber;
 	progressController progressController = new progressController();
-	
+	DragAndDropController DragAndDropController = new DragAndDropController();
 
 
 	public static void main(String[] args) {
@@ -27,7 +30,9 @@ public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 		this.primaryStage = new Stage();
+		this.ErrorStage = new Stage();
 		mainWindow();
+
 	}
 
 
@@ -50,7 +55,7 @@ public class Main extends Application {
 
 
 		} catch (IOException e) {
-
+			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 
@@ -61,12 +66,12 @@ public class Main extends Application {
 			FXMLLoader DragAndDropLoader= new FXMLLoader(DragAndDropController.class.getResource("DragAndDropView.fxml"));
 			//FXMLLoader DragAndDropLoader= new FXMLLoader(getClass().getClassLoader().getResource("\\DragAndDrop\\DragAndDropView.fxml"));
 			AnchorPane DragAndDropPane = DragAndDropLoader.load();
-			DragAndDropController DragAndDropController = DragAndDropLoader.getController();
+			DragAndDropController = DragAndDropLoader.getController();
 			DragAndDropController.setMain(this);
 			Scene DragAndDropScene=new Scene(DragAndDropPane);
 			primaryStage.setScene(DragAndDropScene);
 		} catch (IOException e) {
-
+			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 
@@ -74,34 +79,63 @@ public class Main extends Application {
 
 	public void progress() {
 		try {
-			
 			FXMLLoader progressLoader= new FXMLLoader(progressController.class.getResource("progressView.fxml"));
 			//FXMLLoader progressLoader= new FXMLLoader(getClass().getClassLoader().getResource("\\Progress\\progressView.fxml"));
 			AnchorPane progressPane = progressLoader.load();
 			progressController= progressLoader.getController();
 			progressController.setMain(this);
-			progressController.setLabelToDo(getLinks().size());
-			progressController.setDoneLabel("");
+			progressController.setNumberToDo(getNumberToDo());
+			progressController.finishButtonDisabled(true);
 			Scene progressScene=new Scene(progressPane);
 			primaryStage.setScene(progressScene);
 			
 
 		} catch (IOException e) {
-			
+			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
+	
+	
+	
+	public void error(String Message, String Message2) {
+		try {
+			FXMLLoader ErrorMessageLoader= new FXMLLoader(ErrorMessageController.class.getResource("ErrorMessageView.fxml"));
+		//	FXMLLoader MainWindowLoader= new FXMLLoader(getClass().getClassLoader().getResource("\\MainWindow\\MainWindowView.fxml"));
+			AnchorPane ErrorMessagePane = ErrorMessageLoader.load();
+			ErrorStage.setMinHeight(200.00);
+			ErrorStage.setMinWidth(700.00);
+			ErrorMessageController  ErrorMessageController = ErrorMessageLoader.getController();
+			ErrorMessageController.setMain(this,DragAndDropController);
+			ErrorMessageController.setMessage(Message,Message2);
+			Scene scene=new Scene(ErrorMessagePane);
+			ErrorStage.setScene(scene);
+			ErrorStage.showAndWait();
+
+
+
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		
+	}
+	
+	
+	
+	
 
 	//Methods
 	public void compress() {
-		progress();
+
 		createNewFolder createNewFolder= new createNewFolder();
 		String linkOfNewFolder=createNewFolder.createFolder();
-		for (int i = 0; i < getLinks().size(); i++) {	
-			new compress(getLinks().get(i), linkOfNewFolder);
-			}
-		progressController.setLabelToDo(" ");
-		progressController.setDoneLabel("Alle Fotos wurden konvertiert und abgespeichert.");
+		setNumberToDo(getLinks().size());
+		progress();
+		progressController.setProgressBar(getLinks(), linkOfNewFolder);
+		
+		
 	}
 
 	//Setter and Getter
@@ -124,10 +158,25 @@ public class Main extends Application {
 
 
 
+	public int getDoneNumber() {
+		return doneNumber;
+	}
+	public int getNumberToDo(){
+		return toDoNumber;
+	}
+	private void setDoneNumber(int i) {
+		doneNumber=i;
+
+	}
+
+	public void setNumberToDo(int size) {
+		toDoNumber=size;
+
+	}
 
 
-	
-	
+
+
 
 }
 

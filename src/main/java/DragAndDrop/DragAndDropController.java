@@ -1,91 +1,92 @@
 package DragAndDrop;
- import java.awt.Image;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
 import java.util.ArrayList;
-
-import javax.imageio.ImageIO;
-import javax.swing.ImageIcon;
 
 import Main.Main;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.image.ImageView;
 import javafx.scene.input.DragEvent;
 import javafx.scene.input.Dragboard;
 import javafx.scene.input.TransferMode;
-import javafx.scene.layout.GridPane;
 import javafx.scene.shape.Rectangle;
- public class DragAndDropController {
+public class DragAndDropController {
 	//views
 	@FXML private Rectangle DragAndDropArea;
 	@FXML private Label labelNumberToCompress;
+	@FXML private Label infoLabel;
 	@FXML private Button DragAndDropButtonCancel;
-	@FXML private GridPane gridPane;
+	@FXML private Button dragAndDropButtonOk;
+	boolean alreadyCatched=false;
+
 	ArrayList<String> links = new ArrayList<String>();
-	ArrayList<ImageView> image = new ArrayList<ImageView>();
- 	public Main main;
- 	
- 	public void setMain(Main main) {
+	public Main main;
+
+	public void setMain(Main main) {
 		this.main=main;
- 	}
- 	@FXML
+	}
+	@FXML
 	private void handleDragDropped(DragEvent event) {
- 		Dragboard DragboardLinks = event.getDragboard();	//Save all links in DragBoard
+		Dragboard DragboardLinks = event.getDragboard();	//Save all links in DragBoard
 		String somelinks = DragboardLinks.getFiles().toString();
 		//System.out.println(somelinks);							//convert dragboard to string
 		somelinks= somelinks.substring(1, (somelinks.length()-1));		//substract beginning and end (rechteckige klammern)
 		//System.out.println(somelinks);
 		String[] linkarray=somelinks.split(", ")	;	//split the links 
-		
+
 		for(int i =0; i<linkarray.length;i++) {
-		
+			for(int j=0; j<links.size(); j++) {
+				if(linkarray[i].equals(links.get(j))){
+					alreadyCatched=true;
+					}
+				}
 			
+			if(alreadyCatched!=false) {
+				setDragAndDropButtonOk(true);
+				main.error("Dieses Foto wird bereits konvertiert, willst du es nochmals hinzufügen?",linkarray[i] );	
+				
+			}
+			if(alreadyCatched==false) {
+				links.add(linkarray[i]);
+			}
+			alreadyCatched=false;
+			setDragAndDropButtonOk(false);
 			
-			
-		links.add(linkarray[i]);
-		/*
-		try {
-			Image singleImage = new new ImageIcon(ImageIO.read(new File(linkarray[i]))).getImage()
-			image.add();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
 		}
-		
-		
-	        
-	        
-		gridPane.add(image.get(i), 0, 0);
-		*/
-		}
-		labelNumberToCompress.setText(Integer.toString(links.size()));	//set label
-		
+		labelNumberToCompress.setText(links.size()+" Fotos wurden bereits hinzugefügt.");	//set label
+		infoLabel.setText("Sie können weiterhin beliebig viele Fotos hinzufügen.");	//set label
+
 	}
- 	
- 	@FXML
+
+
+	@FXML
 	private void setLabelNumberToCompress(String number) {
 		System.out.println(number);
- 	}
- 	@FXML
+	}
+	@FXML
 	private void handleOnDragOver(DragEvent event) {
 		if(event.getDragboard().hasFiles()) {
 			event.acceptTransferModes(TransferMode.ANY);
 		}
- 	}
- 	@FXML
+	}
+	@FXML
 	private void handleDragAndDropButtonCancel() {
 		Platform.exit();
 	}
- 	
- 	@FXML
+
+	@FXML
 	private void handleDragAndDropButtonOk() {
 		main.setLinks(links);
 		main.compress();
 
- 		
+
+	}
+	public void setAlreadyCatched(boolean b) {
+		alreadyCatched=b;
+		
+	}
+	
+	public void setDragAndDropButtonOk(boolean state) {
+		dragAndDropButtonOk.setDisable(state);
 	}
 }
