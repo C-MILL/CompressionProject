@@ -133,7 +133,9 @@ public class Main extends Application {
 		String linkOfNewFolder=createNewFolder.createFolder();
 		setNumberToDo(getLinks().size());
 		progress();
-
+		progressController.setProgressBar(getLinks(), linkOfNewFolder);
+		
+		
 	}
 
 	//Setter and Getter
