@@ -32,7 +32,6 @@ public class Main extends Application {
 		this.primaryStage = new Stage();
 		this.ErrorStage = new Stage();
 		mainWindow();
-
 	}
 
 
@@ -42,7 +41,7 @@ public class Main extends Application {
 	public void mainWindow() {
 		try {
 			FXMLLoader MainWindowLoader= new FXMLLoader(MainWindowController.class.getResource("MainWindowView.fxml"));
-		//	FXMLLoader MainWindowLoader= new FXMLLoader(getClass().getClassLoader().getResource("\\MainWindow\\MainWindowView.fxml"));
+			//	FXMLLoader MainWindowLoader= new FXMLLoader(getClass().getClassLoader().getResource("\\MainWindow\\MainWindowView.fxml"));
 			AnchorPane MainWindowPane = MainWindowLoader.load();
 			primaryStage.setMinHeight(400.00);
 			primaryStage.setMinWidth(500.00);
@@ -74,7 +73,6 @@ public class Main extends Application {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-
 	}
 
 	public void progress() {
@@ -88,20 +86,20 @@ public class Main extends Application {
 			progressController.finishButtonDisabled(true);
 			Scene progressScene=new Scene(progressPane);
 			primaryStage.setScene(progressScene);
-			
+
 
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
-	
-	
-	
+
+
+
 	public void error(String Message, String Message2) {
 		try {
 			FXMLLoader ErrorMessageLoader= new FXMLLoader(ErrorMessageController.class.getResource("ErrorMessageView.fxml"));
-		//	FXMLLoader MainWindowLoader= new FXMLLoader(getClass().getClassLoader().getResource("\\MainWindow\\MainWindowView.fxml"));
+			//	FXMLLoader MainWindowLoader= new FXMLLoader(getClass().getClassLoader().getResource("\\MainWindow\\MainWindowView.fxml"));
 			AnchorPane ErrorMessagePane = ErrorMessageLoader.load();
 			ErrorStage.setMinHeight(200.00);
 			ErrorStage.setMinWidth(700.00);
@@ -118,13 +116,11 @@ public class Main extends Application {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-
-		
 	}
-	
-	
-	
-	
+
+
+
+
 
 	//Methods
 	public void compress() {
@@ -134,22 +130,17 @@ public class Main extends Application {
 		setNumberToDo(getLinks().size());
 		progress();
 		progressController.setProgressBar(getLinks(), linkOfNewFolder);
-		
-		
 	}
 
 	//Setter and Getter
 
 	public void setLinks(ArrayList<String> linkarray) {
 		links.addAll(linkarray);
-
 	}
 
 
 	public ArrayList<String> getLinks() {
 		return links;
-
-
 	}
 
 
@@ -168,10 +159,5 @@ public class Main extends Application {
 		toDoNumber=size;
 
 	}
-
-
-
-
-
 }
 
