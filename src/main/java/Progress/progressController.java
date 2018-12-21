@@ -1,7 +1,13 @@
 package Progress;
 
+import java.util.ArrayList;
+
+import Compress.compress;
 import Main.Main;
 import javafx.application.Platform;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
+import javafx.concurrent.Task;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -9,7 +15,7 @@ import javafx.scene.control.ProgressBar;
 
 
 
-public class progressController extends Thread{
+public class progressController{
 
 
 	//views
@@ -18,8 +24,14 @@ public class progressController extends Thread{
 	@FXML private Label infoLabel;
 	@FXML private Button finishButton;
 	@FXML private ProgressBar progressBar;
-
+	private Task copyWorker;
+	private int doneNumber;
+	private int numberToDo;
+	private boolean threadfinished;
+	ArrayList<String> links;
+	String linkOfNewFolder;
 	public Main main;
+	int i;
 
 
 
@@ -37,26 +49,68 @@ public class progressController extends Thread{
 	
 
 
-
-
-	public void setAll(int doneNumber, int numberToDo) {
-		
-		progressBar.setProgress((doneNumber+1.0)/numberToDo);
-		toDoLabel.setText(Integer.valueOf(numberToDo).toString());
-		doneLabel.setText(Integer.valueOf(doneNumber+1).toString());
-		//binding probieren
-		System.out.println(doneLabel.getText());
-	}
-
-
-
 	public void closePlatform() {
 	
 
 	}
 
+	
+	
+	
+	public void setProgressBar(ArrayList<String> link, String linkOfNewFolder) {
+		this.links=link;
+		this.linkOfNewFolder=linkOfNewFolder;
+		progressBar.progressProperty().unbind();
+        progressBar.setProgress(0);
+        copyWorker = createWorker();
+        progressBar.progressProperty().bind(copyWorker.progressProperty());
+        copyWorker.messageProperty().addListener(new ChangeListener<String>() {
+            public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
+                System.out.println(newValue);
+            }
+        });
 
+        new Thread(copyWorker).start();
+        
+        
+	}
+	
+	
+	public Task createWorker() {
+        return new Task() {
+            @Override
+            protected Object call() throws Exception {
+                for (i = 0; i < numberToDo; i++) {
+                    Thread.sleep(5);
+                    updateMessage("5 milliseconds");
+                    updateProgress(i+1, numberToDo);
+                    new compress(links.get(i), linkOfNewFolder);
+                    
+                    Platform.runLater(new Runnable() {
+                        @Override public void run() {
+                        	doneLabel.setText(i+"");
+                        	if(i==numberToDo) {
+                        		infoLabel.setText("Komprimierung war erfolgreich.");
+                        	}
+                        }
+                  });
+                }
+                finishButtonDisabled(false);
+                
+                return true;
+            }
+        };
+    }
 
+	public void finishButtonDisabled(boolean state) {
+		finishButton.setDisable(state);
+	}
+
+	public void setNumberToDo(int numberToDo) {
+		this.numberToDo=numberToDo;
+		 toDoLabel.setText(""+numberToDo);
+		
+	}
 
 
 

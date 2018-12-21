@@ -8,21 +8,21 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Progress.progressController">
+<AnchorPane prefHeight="300.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Progress.progressController">
    <children>
       <VBox alignment="CENTER" layoutX="150.0" layoutY="-19.0" prefHeight="119.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="10.0">
          <children>
-            <ProgressBar fx:id="progressBar" prefWidth="150.0" progress="0.0">
+            <ProgressBar fx:id="progressBar" prefWidth="300.0" progress="0.0">
                <VBox.margin>
                   <Insets />
                </VBox.margin>
             </ProgressBar>
             <HBox alignment="CENTER" spacing="1.0">
                <children>
-                  <Label fx:id="doneLabel" text="0" />
-                  <Label fx:id="slashLabel" text="/" />
-                  <Label fx:id="toDoLabel" text="300" />
-                  <Label fx:id="infoLabel" text="Fotos Komprimiert" />
+                  <Label fx:id="doneLabel" layoutX="182.0" layoutY="10.0" text="0" />
+                  <Label fx:id="toDoLabel1" layoutX="35.0" layoutY="10.0" text="/" />
+                  <Label fx:id="toDoLabel" text="0" />
+                  <Label fx:id="infoLabel" text="Fotos wurden Komprimiert" />
                </children>
             </HBox>
             <HBox alignment="CENTER" spacing="10.0">
