@@ -12,7 +12,9 @@ import Progress.progressController;
 import directory.createNewFolder;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
+
 public class Main extends Application {
+
 	private Stage primaryStage;
 	public Stage ErrorStage;
 	private ArrayList<String> links = new ArrayList<String>();
@@ -23,7 +25,6 @@ public class Main extends Application {
 
 
 	public static void main(String[] args) {
-
 		launch(args);
 	}
 
@@ -34,10 +35,7 @@ public class Main extends Application {
 		mainWindow();
 	}
 
-
-
 	//Windows
-
 	public void mainWindow() {
 		try {
 			FXMLLoader MainWindowLoader= new FXMLLoader(MainWindowController.class.getResource("MainWindowView.fxml"));
@@ -51,13 +49,10 @@ public class Main extends Application {
 			primaryStage.setScene(scene);
 			primaryStage.show();
 
-
-
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-
 	}
 
 	public void DragAndDropPopUpWindow() {
@@ -69,6 +64,7 @@ public class Main extends Application {
 			DragAndDropController.setMain(this);
 			Scene DragAndDropScene=new Scene(DragAndDropPane);
 			primaryStage.setScene(DragAndDropScene);
+
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -94,8 +90,6 @@ public class Main extends Application {
 		}
 	}
 
-
-
 	public void error(String Message, String Message2) {
 		try {
 			FXMLLoader ErrorMessageLoader= new FXMLLoader(ErrorMessageController.class.getResource("ErrorMessageView.fxml"));
@@ -110,17 +104,11 @@ public class Main extends Application {
 			ErrorStage.setScene(scene);
 			ErrorStage.showAndWait();
 
-
-
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
-
-
-
-
 
 	//Methods
 	public void compress() {
@@ -133,22 +121,12 @@ public class Main extends Application {
 	}
 
 	//Setter and Getter
-
 	public void setLinks(ArrayList<String> linkarray) {
 		links.addAll(linkarray);
 	}
-
-
 	public ArrayList<String> getLinks() {
 		return links;
 	}
-
-
-
-
-
-
-
 	public int getDoneNumber() {
 		return doneNumber;
 	}
@@ -157,7 +135,5 @@ public class Main extends Application {
 	}
 	public void setNumberToDo(int size) {
 		toDoNumber=size;
-
 	}
 }
-

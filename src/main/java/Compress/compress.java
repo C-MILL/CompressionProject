@@ -14,7 +14,6 @@ public class compress {
 
 	Main main = new Main();
 	public compress() {
-
 	}
 	//Constructor 1 -> Default program functionality
 	public compress(String linkOfFile, String linkOfNewFolder) {
@@ -53,7 +52,7 @@ public class compress {
 			g.drawImage(scaledImage, 0, 0, null);
 			g.dispose();
 
-			System.out.println(linkOfNewFolder + newImageName + ".jpeg");
+			// Writes compressed image to the newly generated folder with the newly generated filename.
 			ImageIO.write(outImg, "jpeg", new File(linkOfNewFolder + "/"+newImageName + ".jpeg"));
 
 		} catch (IOException e) {
