@@ -12,7 +12,7 @@
 7. [Sprint 1](sprint-1)
     + [Taskliste](#taskliste)
     + [Anreicherung der User Stories](#anreicherung-der-user-stories)
-    + [Klassen- und Sequenzdiagramm](#klassen-und-sequenzdiagramm)
+    + [Klassen- und Sequenzdiagramm](#klassen--und-sequenzdiagramm)
     + [Dokumentation wichtiger Code Snipplets](#dokumentation-wichtiger-code-snipplets)
     + [Testfelle](testfelle)
 8. [Bedienungsanleitung](bedienungsanleitung)
