@@ -20,9 +20,9 @@ Das Programm soll in Java innerhalb der Eclipse Programmierumgebung geschrieben 
 
 ## Build-Anleitung
 
-1. Laden Sie die Datei .jar auf ihren Computer runter.
+1. Laden Sie die .jar Datei auf ihren Computer runter.
 2. Vergewissern Sie sich, dass Sie eine Java Runtime Environment auf Ihrem Computer installiert haben.
-3. Klicken Sie (Doppelklick) auf ebenjene, um die Datei auszuführen.
+3. Klicken Sie (Doppelklick) auf die .jar Datei, um das Programm zu starten.
 
 
 ## User Stories
