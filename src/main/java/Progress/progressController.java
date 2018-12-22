@@ -87,7 +87,7 @@ public class progressController{
                     new compress(links.get(i), linkOfNewFolder);
                     
                     Platform.runLater(new Runnable() {
-                        @Override public void run() {
+                        public void run() {
                         	doneLabel.setText(i+"");
                         	if(i==numberToDo) {
                         		infoLabel.setText("Komprimierung war erfolgreich.");

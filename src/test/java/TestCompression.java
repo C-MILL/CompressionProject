@@ -5,7 +5,11 @@ import java.awt.Image;
 import java.io.File;
 import java.io.IOException;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
+
+import junit.runner.Version;
+
+
 
 import Compress.compress;
 
@@ -27,7 +31,8 @@ class TestCompression {
 	
 	@Test
 	public void testTheFileSizeAfterCompression() throws IOException { 
-		
+
+System.out.println("JUnit version is: " + Version.id());
 			new compress(linkOfBigFile, "./src/test/resources/testCompressed");
 			File bigImage = new File(linkOfBigFile);
 			File bigCompressedImage = new File(linkOfBigCompressedFile);
