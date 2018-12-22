@@ -43,5 +43,15 @@ public class ErrorMessageController {
 		messageLabel2.setText(message2);
 		
 	}
+	
+	public void setNoButtonText(String text, boolean disabled){
+		noButton.setText(text);
+		noButton.setDisable(disabled);
+	}
+
+	public void setYesButtonText(String text, boolean disabled) {
+		yesButton.setText(text);
+		yesButton.setDisable(disabled);
+	}
 
 }

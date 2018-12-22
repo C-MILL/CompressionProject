@@ -1,4 +1,6 @@
 package DragAndDrop;
+import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 
 import Main.Main;
@@ -26,13 +28,11 @@ public class DragAndDropController {
 		this.main=main;
 	}
 	@FXML
-	private void handleDragDropped(DragEvent event) {
-		Dragboard DragboardLinks = event.getDragboard();	//Save all links in DragBoard
+	private void handleDragDropped(DragEvent event) throws IOException {
+		Dragboard DragboardLinks = event.getDragboard();
 		String somelinks = DragboardLinks.getFiles().toString();
-		//System.out.println(somelinks);							//convert dragboard to string
-		somelinks= somelinks.substring(1, (somelinks.length()-1));		//substract beginning and end (rechteckige klammern)
-		//System.out.println(somelinks);
-		String[] linkarray=somelinks.split(", ")	;	//split the links 
+		somelinks= somelinks.substring(1, (somelinks.length()-1));		
+		String[] linkarray=somelinks.split(", ");	
 
 		for(int i =0; i<linkarray.length;i++) {
 			for(int j=0; j<links.size(); j++) {
@@ -40,18 +40,39 @@ public class DragAndDropController {
 					alreadyCatched=true;
 					}
 				}
-			
-			if(alreadyCatched!=false) {
+			if(alreadyCatched==true) {
 				setDragAndDropButtonOk(true);
-				main.error("Dieses Foto wird bereits konvertiert, willst du es nochmals hinzufügen?",linkarray[i] );	
+				File f = new File(linkarray[i]);
+				String originalImageName = f.getName();
+				main.error("Dieses Foto wird bereits konvertiert, willst du es nochmals hinzufügen?",originalImageName);
 				
 			}
 			if(alreadyCatched==false) {
-				links.add(linkarray[i]);
+				if(
+						linkarray[i].endsWith(".jpg")||
+						linkarray[i].endsWith(".Jpg")||
+						linkarray[i].endsWith(".Jpeg")||
+						linkarray[i].endsWith(".jpeg")||
+						linkarray[i].endsWith(".gif")||
+						linkarray[i].endsWith(".GIF")||
+						linkarray[i].endsWith(".PNG")||
+						linkarray[i].endsWith(".png")||
+						linkarray[i].endsWith(".XBM")||
+						linkarray[i].endsWith(".xbm")||
+						linkarray[i].endsWith(".tiff")||
+						linkarray[i].endsWith(".TIFF")){
+							links.add(linkarray[i]);
+				}else {
+					File f = new File(linkarray[i]);
+					String originalImageName = f.getName();
+					main.error(("Wollen sie die Datei: "+originalImageName+" trotzdem hinzufügen?"),"Bitte wählen sie nur Fotos mit der Dateiendung jpg, jpeg, png oder gif.");
+				
+				}
+				
+				
 			}
 			alreadyCatched=false;
 			setDragAndDropButtonOk(false);
-			
 		}
 		labelNumberToCompress.setText(links.size()+" Fotos wurden bereits hinzugefügt.");	//set label
 		infoLabel.setText("Sie können weiterhin beliebig viele Fotos hinzufügen.");	//set label
@@ -75,7 +96,7 @@ public class DragAndDropController {
 	}
 
 	@FXML
-	private void handleDragAndDropButtonOk() {
+	private void handleDragAndDropButtonOk() throws IOException {
 		main.setLinks(links);
 		main.compress();
 

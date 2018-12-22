@@ -25,6 +25,7 @@ public class compress {
 			image = new ImageIcon(ImageIO.read(new File(linkOfFile))).getImage();
 			// gets file path and saves it to f (important for further file processing)
 			File f = new File(linkOfFile);
+
 			// Extracts file name from file path
 			String originalImageName = f.getName();
 

@@ -22,41 +22,34 @@ public class Main extends Application {
 	private int toDoNumber;
 	progressController progressController = new progressController();
 	DragAndDropController DragAndDropController = new DragAndDropController();
-
+	ErrorMessageController ErrorMessageController = new ErrorMessageController();
 
 	public static void main(String[] args) {
 		launch(args);
 	}
 
 	@Override
-	public void start(Stage primaryStage) {
+	public void start(Stage primaryStage) throws IOException {
 		this.primaryStage = new Stage();
 		this.ErrorStage = new Stage();
 		mainWindow();
 	}
 
 	//Windows
-	public void mainWindow() {
-		try {
-			FXMLLoader MainWindowLoader= new FXMLLoader(MainWindowController.class.getResource("MainWindowView.fxml"));
-			//	FXMLLoader MainWindowLoader= new FXMLLoader(getClass().getClassLoader().getResource("\\MainWindow\\MainWindowView.fxml"));
-			AnchorPane MainWindowPane = MainWindowLoader.load();
-			primaryStage.setMinHeight(400.00);
-			primaryStage.setMinWidth(500.00);
-			MainWindowController mainWindowController = MainWindowLoader.getController();
-			mainWindowController.setMain(this);
-			Scene scene=new Scene(MainWindowPane);
-			primaryStage.setScene(scene);
-			primaryStage.show();
-
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+	public void mainWindow() throws IOException {
+		FXMLLoader MainWindowLoader= new FXMLLoader(MainWindowController.class.getResource("MainWindowView.fxml"));
+		AnchorPane MainWindowPane = MainWindowLoader.load();
+		primaryStage.setMinHeight(400.00);
+		primaryStage.setMinWidth(500.00);
+		MainWindowController mainWindowController = MainWindowLoader.getController();
+		mainWindowController.setMain(this);
+		Scene scene=new Scene(MainWindowPane);
+		primaryStage.setScene(scene);
+		primaryStage.show();
 	}
 
-	public void DragAndDropPopUpWindow() {
-		try {
+
+	public void DragAndDropPopUpWindow() throws IOException {
 			FXMLLoader DragAndDropLoader= new FXMLLoader(DragAndDropController.class.getResource("DragAndDropView.fxml"));
 			//FXMLLoader DragAndDropLoader= new FXMLLoader(getClass().getClassLoader().getResource("\\DragAndDrop\\DragAndDropView.fxml"));
 			AnchorPane DragAndDropPane = DragAndDropLoader.load();
@@ -64,17 +57,10 @@ public class Main extends Application {
 			DragAndDropController.setMain(this);
 			Scene DragAndDropScene=new Scene(DragAndDropPane);
 			primaryStage.setScene(DragAndDropScene);
-
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
 	}
 
-	public void progress() {
-		try {
+	public void progress() throws IOException {
 			FXMLLoader progressLoader= new FXMLLoader(progressController.class.getResource("progressView.fxml"));
-			//FXMLLoader progressLoader= new FXMLLoader(getClass().getClassLoader().getResource("\\Progress\\progressView.fxml"));
 			AnchorPane progressPane = progressLoader.load();
 			progressController= progressLoader.getController();
 			progressController.setMain(this);
@@ -82,37 +68,23 @@ public class Main extends Application {
 			progressController.finishButtonDisabled(true);
 			Scene progressScene=new Scene(progressPane);
 			primaryStage.setScene(progressScene);
-
-
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
 	}
 
-	public void error(String Message, String Message2) {
-		try {
+	public void error(String Message, String Message2) throws IOException {
 			FXMLLoader ErrorMessageLoader= new FXMLLoader(ErrorMessageController.class.getResource("ErrorMessageView.fxml"));
-			//	FXMLLoader MainWindowLoader= new FXMLLoader(getClass().getClassLoader().getResource("\\MainWindow\\MainWindowView.fxml"));
 			AnchorPane ErrorMessagePane = ErrorMessageLoader.load();
 			ErrorStage.setMinHeight(200.00);
 			ErrorStage.setMinWidth(700.00);
-			ErrorMessageController  ErrorMessageController = ErrorMessageLoader.getController();
+			ErrorMessageController = ErrorMessageLoader.getController();
 			ErrorMessageController.setMain(this,DragAndDropController);
 			ErrorMessageController.setMessage(Message,Message2);
 			Scene scene=new Scene(ErrorMessagePane);
 			ErrorStage.setScene(scene);
 			ErrorStage.showAndWait();
-
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
 	}
 
 	//Methods
-	public void compress() {
-
+	public void compress() throws IOException {
 		createNewFolder createNewFolder= new createNewFolder();
 		String linkOfNewFolder=createNewFolder.createFolder();
 		setNumberToDo(getLinks().size());
@@ -136,4 +108,12 @@ public class Main extends Application {
 	public void setNumberToDo(int size) {
 		toDoNumber=size;
 	}
+	
+	public void setErrorMessageControllerNoButton(String text, boolean disabled) {
+		ErrorMessageController.setNoButtonText(text,disabled);
+	}
+	
+public void setErrorMessageControllerYesButton(String text, boolean disabled) {
+	ErrorMessageController.setYesButtonText(text,disabled);
+}
 }
