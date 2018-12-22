@@ -77,7 +77,7 @@ Der 3. Release kam nicht zu Stande, da wir für die beiden ersten Sprints mehr Z
 ## Sprint 1
 
 
-## Taskliste
+#### Taskliste
 
 Nr. | Task | User Story | Zeit Schätzung in h
 ----|------|------------|--------------------
@@ -90,31 +90,31 @@ Nr. | Task | User Story | Zeit Schätzung in h
 7 | Start-Button (1.Scene)  | 2 | 1
 
 
-## Anreicherung der User Stories
+#### Anreicherung der User Stories
 
-## Klassen- und Sequenzdiagramm
+#### Klassen- und Sequenzdiagramm
 
-#### Klassendiagramm
+###### Klassendiagramm
 
-#### Sequenzdiagramm
+###### Sequenzdiagramm
 
-## Dokumentation wichtiger Code Snipplets
+#### Dokumentation wichtiger Code Snipplets
 
-#### JUnit Test - Komprimierung
+###### JUnit Test - Komprimierung
 
 ![](https://github.com/atorha/CompressionProject/blob/master/Images/Code_Snipplet_JUnit.jpg)
 
 Das Code Snippet (oberhalb) zeigt einen Teil des Codes aus dem JUnit-Test, um zu testen, ob die Bilddateien komprimiert wurden. Der Test unterscheidet kleine (small) Bilder und grosse (big) Bilder, dabei ist die Pixelanzahl entscheidend, ob das Bild klein oder gross ist. Wenn das Bild weniger als 1080 Pixel (1080 Pixel = full HD Auflösung) hat, ist es klein und wird nicht komprimiert. Die Idee dahinter ist, dass die Bilder nicht zu stark komprimiert werden und dann irgendwann eine schlechte Qualität bekommen. Für den Test haben wir ein kleines und ein grosses Bild genommen und dieses mit unserem Programm komprimiert und dann über den Dateipfad in den Test eingelesen.  Beim ersten Test wird geprüft, ob das kleine Bild nicht komprimiert wird, weil es ja zu klein zum Komprimieren ist. Beim zweiten Test wird geprüft, ob das Bild komprimiert wird. Diese Tests werden mit Hilfe von «assertEquals» gemacht. Dabei wird geprüft, ob das erwartete Ergebnis mit dem Programmoutput übereinstimmt.
 
 
-#### Neuer Ordner für komprimierte Bilder
+###### Neuer Ordner für komprimierte Bilder
 
 ![](https://github.com/atorha/CompressionProject/blob/master/Images/Code_Snipplet_New_Folder.JPG)
 
 Die Klasse createFolder() erstellt einen neuen Ordner auf dem Desktop des Benutzers. Dazu wird das Home-Verzeichnis des Benutzers bestimmt und der Pfad für den Desktop mit der Funktion File.separator definiert. Danach wird diesem Pfad der Ordnername «Compressed Images Datum» hinzugefügt. Das aktuelle Datum wird am Anfang der Methode bestimmt. Als letztes wird eine Datei mit dem neuen Pfad erstellt und mit dem Befehl mkdirs() der Ordner im Ziel des Pfades hergestellt. Der Pfad des neuen Ordners wird von der Methode für weitere Zwecke übergeben. 
 
 
-#### Bild komprimieren und neuer Bildname
+###### Bild komprimieren und neuer Bildname
 
 ![](https://github.com/atorha/CompressionProject/blob/master/Images/Code_Snipplet_Compress_1.jpg)
 
@@ -124,7 +124,7 @@ Das obige Code-Snippet aus der Klasse «compress.java» zeigt, wie der Pfad des 
 
 Dieses Code-Snippet zeigt, wie das eingelesene Bild komprimiert und danach im neu generierten Ordner mit dem neu generierten Dateinamen abgespeichert wird. Es wird dabei zuerst die Höhe und Breite des Bildes ausgelesen. Falls die Höhe des Bildes unterhalb der doppelten Full-HD Auflösung liegt, wird das Bild nicht komprimiert, da die Bildqualität ansonsten nicht auf einem akzeptablen Niveau wäre. Wenn die Bildhöhe grösser als 2160 Pixel ist, wird das Bild im weiteren Verlauf komprimiert. Dabei wird die Bildhöhe halbiert und das Bild entsprechend skaliert. Das komprimierte Bild besitzt damit immer eine Auflösung, die mindestens der Full-HD Auflösung entspricht. Danach wird das komprimierte Bild generiert. Das neue Bild wird danach als «jpeg» Datei im neu generierten Ordner auf dem Desktop unter dem neuen Bildnamen abgelegt. Es existieren weitere Konstruktoren, die erweiterte Funktionalitäten beim nächsten Release bieten werden. So soll für professionellere Anwender die Möglichkeit geschaffen werden, das Bild nach einer genauen Eingabe der Pixel oder nach der maximal erwünschten Dateigrösse zu komprimieren. 
 
-## Testfälle
+#### Testfälle
 
 
 ## Bedienungsanleitung
