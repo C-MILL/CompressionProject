@@ -9,13 +9,13 @@
 4. [Build-Anleitung](#build-anleitung)
 5. [User Stories](#user-stories)
 6. [Releaseplan](#releaseplan)
-7. [Sprint 1](sprint-1)
+7. [Sprint 1](#sprint-1)
     + [Taskliste](#taskliste)
     + [Anreicherung der User Stories](#anreicherung-der-user-stories)
     + [Klassen- und Sequenzdiagramm](#klassen--und-sequenzdiagramm)
     + [Dokumentation wichtiger Code Snipplets](#dokumentation-wichtiger-code-snipplets)
-    + [Testfelle](testfelle)
-8. [Bedienungsanleitung](bedienungsanleitung)
+    + [Testfälle](#testfälle)
+8. [Bedienungsanleitung](#bedienungsanleitung)
 
 
 ## Einleitung
@@ -122,7 +122,7 @@ Das obige Code-Snippet aus der Klasse «compress.java» zeigt, wie der Pfad des 
 
 Dieses Code-Snippet zeigt, wie das eingelesene Bild komprimiert und danach im neu generierten Ordner mit dem neu generierten Dateinamen abgespeichert wird. Es wird dabei zuerst die Höhe und Breite des Bildes ausgelesen. Falls die Höhe des Bildes unterhalb der doppelten Full-HD Auflösung liegt, wird das Bild nicht komprimiert, da die Bildqualität ansonsten nicht auf einem akzeptablen Niveau wäre. Wenn die Bildhöhe grösser als 2160 Pixel ist, wird das Bild im weiteren Verlauf komprimiert. Dabei wird die Bildhöhe halbiert und das Bild entsprechend skaliert. Das komprimierte Bild besitzt damit immer eine Auflösung, die mindestens der Full-HD Auflösung entspricht. Danach wird das komprimierte Bild generiert. Das neue Bild wird danach als «jpeg» Datei im neu generierten Ordner auf dem Desktop unter dem neuen Bildnamen abgelegt. Es existieren weitere Konstruktoren, die erweiterte Funktionalitäten beim nächsten Release bieten werden. So soll für professionellere Anwender die Möglichkeit geschaffen werden, das Bild nach einer genauen Eingabe der Pixel oder nach der maximal erwünschten Dateigrösse zu komprimieren. 
 
-## Testfelle
+## Testfälle
 
 
 ## Bedienungsanleitung
