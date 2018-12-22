@@ -66,6 +66,8 @@ User Story | Release 1 | Release 2 | Release 3
 5 | | | X
 6 | | | X
 7 | | | X
+8 | | | X
+
 
 #### Kommentar zum Releaseplan
 
