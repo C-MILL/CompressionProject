@@ -20,9 +20,9 @@ Das Programm soll in Java innerhalb der Eclipse Programmierumgebung geschrieben 
 
 ## Build-Anleitung
 
-1. Laden Sie die .jar Datei auf ihren Computer runter.
+1. Laden Sie die Datei .jar auf ihren Computer runter.
 2. Vergewissern Sie sich, dass Sie eine Java Runtime Environment auf Ihrem Computer installiert haben.
-3. Klicken Sie (Doppelklick) auf die .jar Datei, um das Programm zu starten.
+3. Klicken Sie (Doppelklick) auf ebenjene, um die Datei auszuführen.
 
 
 ## User Stories
@@ -49,9 +49,8 @@ User Story | Release 1 | Release 2 | Release 3
 5 | | | X
 6 | | | X
 7 | | | X
-8 | | | X
 
-### Kommentar zum Releaseplan
+#### Kommentar zum Releaseplan
 
 Der 3. Release kam nicht zu Stande, da wir für die beiden ersten Sprints mehr Zeit als erwartet benötigten. Vor allem die Komprimierung selbst und die Progress Bar erwiesen sich als zeitintensiver als erwartet. So werden die geplanten Storys zu unseren Zielen, die wir in einem darauffolgenden Projekt weiter ausbauen wollen.
 
@@ -67,6 +66,33 @@ Nr. | Task | User Story | Zeit Schätzung in h
 5 | 2 Buttons und Label erstellen (2.Scene) | 2 | 0,5
 6 | Zählerfunktion erstellen (2.Scene) | 2 | 1
 7 | Start-Button (1.Scene)  | 2 | 1
+
+
+## Dokumentation wichtiger Code Snipplets
+
+#### JUnit Test - Komprimierung
+
+![](https://github.com/atorha/CompressionProject/blob/master/Images/Code_Snipplet_JUnit.jpg)
+
+Das Code Snippet (oberhalb) zeigt einen Teil des Codes aus dem JUnit-Test, um zu testen, ob die Bilddateien komprimiert wurden. Der Test unterscheidet kleine (small) Bilder und grosse (big) Bilder, dabei ist die Pixelanzahl entscheidend, ob das Bild klein oder gross ist. Wenn das Bild weniger als 1080 Pixel (1080 Pixel = full HD Auflösung) hat, ist es klein und wird nicht komprimiert. Die Idee dahinter ist, dass die Bilder nicht zu stark komprimiert werden und dann irgendwann eine schlechte Qualität bekommen. Für den Test haben wir ein kleines und ein grosses Bild genommen und dieses mit unserem Programm komprimiert und dann über den Dateipfad in den Test eingelesen.  Beim ersten Test wird geprüft, ob das kleine Bild nicht komprimiert wird, weil es ja zu klein zum Komprimieren ist. Beim zweiten Test wird geprüft, ob das Bild komprimiert wird. Diese Tests werden mit Hilfe von «assertEquals» gemacht. Dabei wird geprüft, ob das erwartete Ergebnis mit dem Programmoutput übereinstimmt.
+
+
+#### Neuer Ordner für komprimierte Bilder
+
+![](https://github.com/atorha/CompressionProject/blob/master/Images/Code_Snipplet_New_Folder.JPG)
+
+Die Klasse createFolder() erstellt einen neuen Ordner auf dem Desktop des Benutzers. Dazu wird das Home-Verzeichnis des Benutzers bestimmt und der Pfad für den Desktop mit der Funktion File.separator definiert. Danach wird diesem Pfad der Ordnername «Compressed Images Datum» hinzugefügt. Das aktuelle Datum wird am Anfang der Methode bestimmt. Als letztes wird eine Datei mit dem neuen Pfad erstellt und mit dem Befehl mkdirs() der Ordner im Ziel des Pfades hergestellt. Der Pfad des neuen Ordners wird von der Methode für weitere Zwecke übergeben. 
+
+
+#### Bild komprimieren und neuer Bildname
+
+![](https://github.com/atorha/CompressionProject/blob/master/Images/Code_Snipplet_Compress_1.jpg)
+
+Das obige Code-Snippet aus der Klasse «compress.java» zeigt, wie der Pfad des hinzugefügten Bildes, sowie der Ordner, der für die Komprimierung neu angelegt wird, der Methode «compress()» als Konstruktor hinzugefügt wird. Aus dem Pfad des hinzugefügten Bildes wird der Name des Bildes ausgelesen. Es wird daraufhin ein neuer Dateiname für das zu komprimierende Bild nach dem Format [«alter Dateiname» + «_compr»] generiert. 
+
+![](https://github.com/atorha/CompressionProject/blob/master/Images/Code_Snipplet_Compress_2.jpg)
+
+Dieses Code-Snippet zeigt, wie das eingelesene Bild komprimiert und danach im neu generierten Ordner mit dem neu generierten Dateinamen abgespeichert wird. Es wird dabei zuerst die Höhe und Breite des Bildes ausgelesen. Falls die Höhe des Bildes unterhalb der doppelten Full-HD Auflösung liegt, wird das Bild nicht komprimiert, da die Bildqualität ansonsten nicht auf einem akzeptablen Niveau wäre. Wenn die Bildhöhe grösser als 2160 Pixel ist, wird das Bild im weiteren Verlauf komprimiert. Dabei wird die Bildhöhe halbiert und das Bild entsprechend skaliert. Das komprimierte Bild besitzt damit immer eine Auflösung, die mindestens der Full-HD Auflösung entspricht. Danach wird das komprimierte Bild generiert. Das neue Bild wird danach als «jpeg» Datei im neu generierten Ordner auf dem Desktop unter dem neuen Bildnamen abgelegt. Es existieren weitere Konstruktoren, die erweiterte Funktionalitäten beim nächsten Release bieten werden. So soll für professionellere Anwender die Möglichkeit geschaffen werden, das Bild nach einer genauen Eingabe der Pixel oder nach der maximal erwünschten Dateigrösse zu komprimieren. 
 
 
 ## Bedienungsanleitung
