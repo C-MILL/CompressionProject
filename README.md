@@ -1,6 +1,21 @@
 # **Java Bildkompression**
 
 
+## Inhaltsverzeichniss
+
+1. [Einleitung](#einleitung)
+2. [Zielsetzung](#zielsetzung)
+3. [Randbedingung](#randbedingung)
+4. [Build-Anleitung](#build-anleitung)
+5. [User Stories](#user-stories)
+6. [Releaseplan](#releaseplan)
+7. [Sprint 1](sprint-1)
+    + [Taskliste](#taskliste)
+    + [Anreicherung der User Stories](#anreicherung-der-user-stories)
+    + [Klassen- und Sequenzdiagramm](#klassen-und-sequenzdiagramm)
+    + [Dokumentation wichtiger Code Snipplets](#dokumentation-wichtiger-code-snipplets)
+
+
 ## Einleitung
 
 Das vorliegende Programm dient der Komprimierung von Bildern. Wir haben dieses Programm geschrieben, weil wir den Komprimierungsprozess vereinfachen wollen. Vor allem ältere Personen, die sich nicht mit komplizierten Computerprogrammen auskennen, haben öfters Probleme mit dem Komprimieren von Bildern.
@@ -8,7 +23,7 @@ Um das Komprimieren von Bildern für diese Zielgruppe zu vereinfachen, haben wir
 Die Programmiersprache Java wurde ausgewählt, weil sie sowohl mit Windows, Mac als auch Linux kompatibel ist.
 
 
-## Zielsetzung / Vision
+## Zielsetzung
 
 Das Ziel unseres Projekts ist es, die Komprimierung von Bildern zu vereinfachen. Die Applikation soll speziell für Leute sein, die gerne Fotografieren, sich aber nicht mit der Bildkomprimierung auskennen und ihre Bilder trotzdem möglichst platzsparend ablegen möchten.
 
@@ -99,7 +114,7 @@ Dieses Code-Snippet zeigt, wie das eingelesene Bild komprimiert und danach im ne
 
 ![](https://github.com/atorha/CompressionProject/blob/master/Images/bedienungsanleitung_1.jpg)
 
-Das Programm ermöglicht das Komprimieren von Bildern. Beim Komprimieren wird die Pixelanzahl halbiert. Dies ist nützlich, wenn beispielsweise mehrere Bilder per Email versandt werden sollen.
+Das Programm ermöglicht das Komprimieren von Bildern. Beim Komprimieren wird die Bildgröße halbiert. Dies ist nützlich, wenn beispielsweise mehrere Bilder per Email versandt werden sollen.
 Um das Programm zu starten, drücken Sie auf den Button «Loslegen».
 
 ![](https://github.com/atorha/CompressionProject/blob/master/Images/bedienungsanleitung_2.jpg)
@@ -108,10 +123,10 @@ Durch das drücken des «Loslegen» Buttons öffnet sich ein neues Fenster. Zieh
 
 ![](https://github.com/atorha/CompressionProject/blob/master/Images/bedienungsanleitung_3.jpg)
 
-Nachdem die ersten Bilder in das Fenster gezogen worden sind, wird angezeigt, wie viele Bilder zum komprimieren vorliegen. Falls noch weitere Bilder komprimiert werden sollen, kann man diese weiterhin in das Fenster ziehen. Sobald Sie alle Ihre Bilder in das Fenster gezogen haben, können sie auf den «OK» Button drücken, um den Komprimierprozess zu starten. Durch den «Cancel» Button können Sie das Programm beenden, ohne dass die Bilder komprimiert werden.
+Nachdem die ersten Bilder in das Fenster gezogen worden sind, wird angezeigt wie viele Bilder zum komprimieren vorliegen. Falls noch weitere Bilder komprimiert werden sollen, kann man diese weiterhin in das Fenster ziehen. Sobald Sie alle Ihre Bilder in das Fenster gezogen haben, können sie auf den «OK» Button drücken, um den Komprimierprozess zu starten. Durch den «Cancel» Button können Sie das Programm beenden, ohne dass die Bilder komprimiert werden.
 ![](https://github.com/atorha/CompressionProject/blob/master/Images/bedienungsanleitung_4.jpg) ![](https://github.com/atorha/CompressionProject/blob/master/Images/bedienungsanleitung_5.jpg)
 
-Wenn Sie auf «OK» gedrückt haben, werden die Bilder komprimiert. Dabei wird Ihnen anhand eines Fortschrittbalkens angezeigt, wie weit das Programm mit dem Komprimieren ist.
+Wenn Sie auf «OK» gedrückt haben, werden die Bilder komprimiert. Dabei wird Ihnen anhand einer Prozess Bar angezeigt, wie weit das Programm mit dem komprimieren ist.
 Die komprimierten Bilder werden nach dem Komprimieren in einem neuen Ordner auf dem Desktop gespeichert. Der neue Ordner ist folgendermaßen benannt «Compressed Images YYYY.MM.DD». Die komprimierten Bilder haben den ursprünglichen Dateinamen übernommen, jedoch wird das Kürzel «_compr» angehängt, damit erkannt werden kann, dass es sich dabei um die komprimierten Bilder handelt.
 
 
