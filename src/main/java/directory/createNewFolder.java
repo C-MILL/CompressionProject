@@ -1,8 +1,7 @@
 package directory;
- import java.io.File;
+import java.io.File;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-
 
 public class createNewFolder {
 
@@ -15,7 +14,7 @@ public class createNewFolder {
 			DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy.MM.dd");
 			LocalDateTime today = LocalDateTime.now();
 
-			
+
 			// Gets users home directory and splits it at Desktop
 			// Creates new folder with e.g. following path: C:\Users\mkaun\Desktop\Compressed 2018.12.14
 			String path = System.getProperty("user.home") + File.separator + "Desktop";
@@ -29,5 +28,4 @@ public class createNewFolder {
 		}
 		return linkOfNewFolder;
 	}
-
 }
