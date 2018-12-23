@@ -172,76 +172,62 @@ Tasknummer| Taksbezeichnung | Zeitschätzung
 #### Sprint 1 Review
 Wir konnten im ersten Sprint tatsächlich alle Tasks erfüllen. Man muss aber  sagen dass die geschätzten Zeiten IMMER überschritten wurde und jedes Teammitglied überstunden machen musste. Somit ist die ToDo Liste des ersten Sprints nun eine Done Liste. 
 
-### Sprint 2
-#### Updated Backlog
-Story 2 | Schritte um das DragAndDrop Fenster zu realisieren  | Zeitschätzung
-----|------|--------------------
-2.3 | Mit SceneBuilder ein Fenster erstellen welches für die Fehlermeldungen individuell genutzt werden kann. und welches man über einfache handles ändern und anpassen kann. | 30min 
-2.4 | Eine Controller Klasse für die Fehlermeldungen schreiben. Darin soll man über eine Methode die Nachricht des fehlers ändern können. Die Klasse soll einen boolean zurückgeben.
-2.5 | Im DragAndDropController die Links auf nichtunterstützte Formate untersuchen und diese ausfiltern. Falls es nicht unterstützte Dateien gibt, soll der Nutzer informiert werden über das Fehlerfenster. | 60min
-2.6 | Im DragAndDropController die Links auf doppelgänger Untersuchen und diese aussortieren. Falls es Doppelgänger gibt soll der Nutzer über das Fehlerfenster darauf aufmerksam gemacht werden und entscheiden können ob er die Datei trotzdem hinzufügen will oder nicht.| 4 | 60min 
+#### Sprint 1 einige Code snippets
 
-Story 3 | Tasks um die Komprimierung realisieren | Zeitschätzung
-----|------|--------------------
-3.1 | Eine Klasse erstellen an die ein Link eines Fotos sowie der Link des Desktop-Ornders weitergegeben werden kann für die komprimierung. Darin soll eine Methode gerufen werden die über den Link das Foto ladet, die Auflösung anpasst und das Bild komprimiert sowie in den erstellten Ordner auf dem Desktop abspeichert. | 6-Stunden 
-3.2 | JUnit Klasse machen um zu testen ob das Bild tatsächlich kleiner geworden ist. | 2Stunden
-3.3 | JUnit Klasse machen um zu testen ob die Auflösung richtig angepasst wird. | 2Stunden 
 
-Story 4 | Tasks um die Abspeicherung auf dem Desktop zu realisieren | Zeitschätzung
-----|------|--------------------
-4.1 | Eine Weitere Klasse erstellen die auf dem Desktop einen Ordner erstellt in dem die komprimierten Dateien abgelegt werden können. Die Klasse soll eine Methode haben die den Ordner erstellt und den Link des Ordners zurückgibt. | 4-Stunden
 
-Story 5 | Tasks für die Fortschrittanzeige  | Zeitschätzung
-----|------|--------------------
-5.1 | Mit Scene Builder ein Fenster erstellen der den Fortschritt der Komprimierung anzeigt. Dafür soll es einen Ladebalken geben und ein schriftliche Information die anzeigt wie viele Fotos bereits komprimiert worden sind. | 30min
-5.2 | Controllerklasse für die Fortschrittseite erstellen. Sie soll sich automatisch aktualisieren sobald ein Bild komprimiert wurde. | 30min
 
-Story 6 | Taks für das Ende des Programmes | Zeitschätzung
-----|------|--------------------
-6.1 | Einen Button machen auf der Progressseite der "Fertig" heisst und den man erste Drücken kann wenn alle Fotos komprimiert wurden. | 30min
-
-Story 7 | Taks für das Ende des Programmes | Zeitschätzung
-----|------|--------------------
-7.1 | Einen Button machen auf der Progressseite der "Fertig" heisst und den man erste Drücken kann wenn alle Fotos komprimiert wurden. | 30min
-
-#### Sprint 2 Planning Meeting
-Da wir pro Sprint 20 Punkte verarbeiten können was vierundzwanzig Stunden entspricht haben wir uns 
-
-#### Sprint 2 Review
-
-###### JUnit Test - Komprimierung
+## DragAndDropController V0.1
+Dies ist der Teil des Codes der reagiert sobald eine Datei in das Fenster gezogen wird. Hier sind noch keine Kontrollmechanismen eingebaut die überprüfen ob diese Datei unterstützt wird von Java oder nicht.
 
 ```ruby
-	@Test
-	public void testCompressResolutionResizingToSmallResolution() throws IOException { 
-		try {
-			new compress(linkOfSmallFile, "./src/test/resources/testCompressed");
-			smallImage= new ImageIcon(ImageIO.read(new File(linkOfSmallFile))).getImage();
-			smallCompressedImage  = new ImageIcon(ImageIO.read(new File(linkOfSmallCompressedFile))).getImage();
-			assertEquals(smallImage.getHeight(null), smallCompressedImage.getHeight(null), "The small images got compressed, even though they should not get compressed.");
-		} catch (IOException e) {
-			e.printStackTrace();
+ 	@FXML
+	private void handleDragDropped(DragEvent event) {
+ 		Dragboard DragboardLinks = event.getDragboard();
+		String somelinks = DragboardLinks.getFiles().toString();					
+		somelinks= somelinks.substring(1, (somelinks.length()-1));
+		String[] linkarray=somelinks.split(", ")	;	
+		for(int i =0; i<linkarray.length;i++) {
+		links.add(linkarray[i]);
+		}
+		labelNumberToCompress.setText(Integer.toString(links.size()));	
+	}
+ ```
+ Zuerst wird alles in einem Dragboard gespeichert und dann in einen einzelnen String gespeichert. 
+ 
+ ```ruby
+ 		Dragboard DragboardLinks = event.getDragboard();
+		String somelinks = DragboardLinks.getFiles().toString();					
+	}
+ ```
+ 
+ Danach wird der Anfang und das ende abgeschnitten da dort jeweils noch ein Anführungszeichen steht.
+ ```ruby				
+		somelinks= somelinks.substring(1, (somelinks.length()-1));
+	}
+ ```
+ 
+ 
+ Dann wird der rest des Strings gesplitted in die einzelnen Links und in einem Array gespeichert. Das Array wird dann der ArrayList mit einer for schleife hinzugefügt.
+ ```ruby
+		String[] linkarray=somelinks.split(", ")	;	
+		for(int i =0; i<linkarray.length;i++) {
+		links.add(linkarray[i]);
 		}
 	}
-	
-	
-	@Test
-	public void testCompressResolutionResizingBigFile() throws IOException { 
-		try {
-			new compress(linkOfBigFile, "./src/test/resources/testCompressed");
-			bigImage= new ImageIcon(ImageIO.read(new File(linkOfBigFile))).getImage();
-			bigCompressedImage  = new ImageIcon(ImageIO.read(new File(linkOfBigCompressedFile))).getImage();
-			assertEquals(bigImage.getHeight(null)/2, bigCompressedImage.getHeight(null), "The small images got compressed, even though they should not get compressed.");
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+ ```
+ 
+ Zum schluss wird die Variabel die angibt wie viele Links schon der Liste hinzugefügt wurden gesetzt.
+ ```ruby
+		labelNumberToCompress.setText(Integer.toString(links.size()));	
 	}
-```
-
-Das Code Snippet (oberhalb) zeigt einen Teil des Codes aus dem JUnit-Test, um zu testen, ob die Bilddateien komprimiert wurden. Der Test unterscheidet kleine (small) Bilder und grosse (big) Bilder, dabei ist die Pixelanzahl entscheidend, ob das Bild klein oder gross ist. Wenn das Bild weniger als 1080 Pixel (1080 Pixel = full HD Auflösung) hat, ist es klein und wird nicht komprimiert. Die Idee dahinter ist, dass die Bilder nicht zu stark komprimiert werden und dann irgendwann eine schlechte Qualität bekommen. Für den Test haben wir ein kleines und ein grosses Bild genommen und dieses mit unserem Programm komprimiert und dann über den Dateipfad in den Test eingelesen.  Beim ersten Test wird geprüft, ob das kleine Bild nicht komprimiert wird, weil es ja zu klein zum Komprimieren ist. Beim zweiten Test wird geprüft, ob das Bild komprimiert wird. Diese Tests werden mit Hilfe von «assertEquals» gemacht. Dabei wird geprüft, ob das erwartete Ergebnis mit dem Programmoutput übereinstimmt.
-
-
-###### Neuer Ordner für komprimierte Bilder
+ ```
+ 
+ 
+ 
+ 
+ 
+#### Neuer Ordner für komprimierte Bilder
 
 ```ruby
 
@@ -346,6 +332,208 @@ Das obige Code-Snippet aus der Klasse «compress.java» zeigt, wie der Pfad des 
 ```
 
 Dieses Code-Snippet zeigt, wie das eingelesene Bild komprimiert und danach im neu generierten Ordner mit dem neu generierten Dateinamen abgespeichert wird. Es wird dabei zuerst die Höhe und Breite des Bildes ausgelesen. Falls die Höhe des Bildes unterhalb der doppelten Full-HD Auflösung liegt, wird das Bild nicht komprimiert, da die Bildqualität ansonsten nicht auf einem akzeptablen Niveau wäre. Wenn die Bildhöhe grösser als 2160 Pixel ist, wird das Bild im weiteren Verlauf komprimiert. Dabei wird die Bildhöhe halbiert und das Bild entsprechend skaliert. Das komprimierte Bild besitzt damit immer eine Auflösung, die mindestens der Full-HD Auflösung entspricht. Danach wird das komprimierte Bild generiert. Das neue Bild wird danach als «jpeg» Datei im neu generierten Ordner auf dem Desktop unter dem neuen Bildnamen abgelegt. Es existieren weitere Konstruktoren, die erweiterte Funktionalitäten beim nächsten Release bieten werden. So soll für professionellere Anwender die Möglichkeit geschaffen werden, das Bild nach einer genauen Eingabe der Pixel oder nach der maximal erwünschten Dateigrösse zu komprimieren. 
+
+
+### Sprint 2
+#### Updated Backlog
+Story 2 | Schritte um das DragAndDrop Fenster zu realisieren  | Zeitschätzung
+----|------|--------------------
+2.3 | Mit SceneBuilder ein Fenster erstellen welches für die Fehlermeldungen individuell genutzt werden kann. und welches man über einfache handles ändern und anpassen kann. | 30min 
+2.4 | Eine Controller Klasse für die Fehlermeldungen schreiben. Darin soll man über eine Methode die Nachricht des fehlers ändern können. Die Klasse soll einen boolean zurückgeben.
+2.5 | Im DragAndDropController die Links auf nichtunterstützte Formate untersuchen und diese ausfiltern. Falls es nicht unterstützte Dateien gibt, soll der Nutzer informiert werden über das Fehlerfenster. | 60min
+2.6 | Im DragAndDropController die Links auf doppelgänger Untersuchen und diese aussortieren. Falls es Doppelgänger gibt soll der Nutzer über das Fehlerfenster darauf aufmerksam gemacht werden und entscheiden können ob er die Datei trotzdem hinzufügen will oder nicht.| 4 | 60min 
+
+Story 3 | Tasks um die Komprimierung realisieren | Zeitschätzung
+----|------|--------------------
+3.1 | Eine Klasse erstellen an die ein Link eines Fotos sowie der Link des Desktop-Ornders weitergegeben werden kann für die komprimierung. Darin soll eine Methode gerufen werden die über den Link das Foto ladet, die Auflösung anpasst und das Bild komprimiert sowie in den erstellten Ordner auf dem Desktop abspeichert. | 6-Stunden 
+3.2 | JUnit Klasse machen um zu testen ob das Bild tatsächlich kleiner geworden ist. | 2Stunden
+3.3 | JUnit Klasse machen um zu testen ob die Auflösung richtig angepasst wird. | 2Stunden 
+
+Story 4 | Tasks um die Abspeicherung auf dem Desktop zu realisieren | Zeitschätzung
+----|------|--------------------
+4.1 | Eine Weitere Klasse erstellen die auf dem Desktop einen Ordner erstellt in dem die komprimierten Dateien abgelegt werden können. Die Klasse soll eine Methode haben die den Ordner erstellt und den Link des Ordners zurückgibt. | 4-Stunden
+
+Story 5 | Tasks für die Fortschrittanzeige  | Zeitschätzung
+----|------|--------------------
+5.1 | Mit Scene Builder ein Fenster erstellen der den Fortschritt der Komprimierung anzeigt. Dafür soll es einen Ladebalken geben und ein schriftliche Information die anzeigt wie viele Fotos bereits komprimiert worden sind. | 30min
+5.2 | Controllerklasse für die Fortschrittseite erstellen. Sie soll sich automatisch aktualisieren sobald ein Bild komprimiert wurde. | 30min
+
+Story 6 | Taks für das Ende des Programmes | Zeitschätzung
+----|------|--------------------
+6.1 | Einen Button machen auf der Progressseite der "Fertig" heisst und den man erste Drücken kann wenn alle Fotos komprimiert wurden. | 30min
+
+Story 7 | Taks für das Ende des Programmes | Zeitschätzung
+----|------|--------------------
+7.1 | Einen Button machen auf der Progressseite der "Fertig" heisst und den man erste Drücken kann wenn alle Fotos komprimiert wurden. | 30min
+
+#### Sprint 2 Planning Meeting
+Da wir pro Sprint 20 Punkte verarbeiten können was vierundzwanzig Stunden entspricht haben wir uns 
+
+#### Sprint 2 Review
+
+#### Sprint 2 Code-snippets
+
+#### DragAndDropController Finale Version
+Diese Methode die aufgerufen wird sobald etwas in die Drop-Area gezogen wird hat sich sehr verändert im zweiten Sprint. Auf denersten Teil will ich nicht mehr eingehen da ich es schon nach dem ersten Sprint erklärt habe.
+	
+	```ruby
+	@FXML
+	private void handleDragDropped(DragEvent event) throws IOException {
+		Dragboard DragboardLinks = event.getDragboard();
+		String somelinks = DragboardLinks.getFiles().toString();
+		somelinks= somelinks.substring(1, (somelinks.length()-1));		
+		String[] linkarray=somelinks.split(", ");	
+
+		for(int i =0; i<linkarray.length;i++) {
+			for(int j=0; j<links.size(); j++) {
+				if(linkarray[i].equals(links.get(j))){
+					alreadyCatched=true;
+					}
+				}
+			if(alreadyCatched==true) {
+				setDragAndDropButtonOk(true);
+				File f = new File(linkarray[i]);
+				String originalImageName = f.getName();
+				main.error("Dieses Foto wird bereits konvertiert, willst du es nochmals hinzufügen?",originalImageName);
+				
+			}
+			if(alreadyCatched==false) {
+				if(
+						linkarray[i].endsWith(".jpg")||
+						linkarray[i].endsWith(".Jpg")||
+						linkarray[i].endsWith(".Jpeg")||
+						linkarray[i].endsWith(".jpeg")||
+						linkarray[i].endsWith(".gif")||
+						linkarray[i].endsWith(".GIF")||
+						linkarray[i].endsWith(".PNG")||
+						linkarray[i].endsWith(".png")||
+						linkarray[i].endsWith(".XBM")||
+						linkarray[i].endsWith(".xbm")||
+						linkarray[i].endsWith(".tiff")||
+						linkarray[i].endsWith(".TIFF")){
+							links.add(linkarray[i]);
+				}else {
+					File f = new File(linkarray[i]);
+					String originalImageName = f.getName();
+					main.error(("Wollen sie die Datei: "+originalImageName+" trotzdem hinzufügen?"),"Bitte wählen sie nur Fotos mit der Dateiendung jpg, jpeg, png oder gif.");
+				
+				}
+				
+				
+			}
+			alreadyCatched=false;
+			setDragAndDropButtonOk(false);
+		}
+		labelNumberToCompress.setText(links.size()+" Fotos wurden bereits hinzugefügt.");	//set label
+		infoLabel.setText("Sie können weiterhin beliebig viele Fotos hinzufügen.");	//set label
+
+	}
+	```
+
+
+Hier ist eine verkettung von zwei For schleifen. Sie sollen die bereits gespeicherten Links mit den Links vergleichen die neu dazukommen. 
+
+```ruby
+
+		for(int i =0; i<linkarray.length;i++) {
+			for(int j=0; j<links.size(); j++) {
+```
+Wenn eine Datei den genau gleichen Link hat wie ein bereits gespeicherten Link dann wird die Variable alreadyCatched als wahr gesetzt.
+			
+```ruby
+				if(linkarray[i].equals(links.get(j))){
+					alreadyCatched=true;
+					}
+				}
+				
+```
+Ist die Datei schon vorhanden wird ein ERROR ausgeführt welcher das Error Fenster aufruft und den OK Button disabled damit der Benutzer nicht trotz des Fehlers weitergehen kann. Dies würde nämlich das Programm crashen.
+	
+```ruby
+			if(alreadyCatched==true) {
+				setDragAndDropButtonOk(true);
+				File f = new File(linkarray[i]);
+				String originalImageName = f.getName();
+				main.error("Dieses Foto wird bereits konvertiert, willst du es nochmals hinzufügen?",originalImageName);
+				
+			}
+```
+
+			
+Wenn der Benutzer im ERROR Fenster bestimmt hat wie er fortfahren möchte oder wenn gar kein alreadyCatched vorliegt, wird in diesem if überprüft ob die Datei ein Kompatibles foto ist. Wenn nicht kann es nämlich auch zu einem Crah führen. Hier wird auch wieder ein Error ausgeführt wo der Benutzer gefragt wird ob er die Datei trotzdem speichern möchte.
+
+
+```ruby
+			if(alreadyCatched==false) {
+				if(
+						linkarray[i].endsWith(".jpg")||
+						linkarray[i].endsWith(".Jpg")||
+						linkarray[i].endsWith(".Jpeg")||
+						linkarray[i].endsWith(".jpeg")||
+						linkarray[i].endsWith(".gif")||
+						linkarray[i].endsWith(".GIF")||
+						linkarray[i].endsWith(".PNG")||
+						linkarray[i].endsWith(".png")||
+						linkarray[i].endsWith(".XBM")||
+						linkarray[i].endsWith(".xbm")||
+						linkarray[i].endsWith(".tiff")||
+						linkarray[i].endsWith(".TIFF")){
+							links.add(linkarray[i]);
+				}else {
+					File f = new File(linkarray[i]);
+					String originalImageName = f.getName();
+					main.error(("Wollen sie die Datei: "+originalImageName+" trotzdem hinzufügen?"),"Bitte wählen sie nur Fotos mit der Dateiendung jpg, jpeg, png oder gif.");
+				
+				}
+				
+```
+				
+				
+Ganz am schluss wird noch der Text gesetzt der dann im Fenster angezeigt wird.
+
+```ruby
+			}
+			alreadyCatched=false;
+			setDragAndDropButtonOk(false);
+		}
+		labelNumberToCompress.setText(links.size()+" Fotos wurden bereits hinzugefügt.");	//set label
+		infoLabel.setText("Sie können weiterhin beliebig viele Fotos hinzufügen.");	//set label
+
+	}
+	
+```
+
+#### JUnit Test - Komprimierung
+
+```ruby
+	@Test
+	public void testCompressResolutionResizingToSmallResolution() throws IOException { 
+		try {
+			new compress(linkOfSmallFile, "./src/test/resources/testCompressed");
+			smallImage= new ImageIcon(ImageIO.read(new File(linkOfSmallFile))).getImage();
+			smallCompressedImage  = new ImageIcon(ImageIO.read(new File(linkOfSmallCompressedFile))).getImage();
+			assertEquals(smallImage.getHeight(null), smallCompressedImage.getHeight(null), "The small images got compressed, even though they should not get compressed.");
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	
+	@Test
+	public void testCompressResolutionResizingBigFile() throws IOException { 
+		try {
+			new compress(linkOfBigFile, "./src/test/resources/testCompressed");
+			bigImage= new ImageIcon(ImageIO.read(new File(linkOfBigFile))).getImage();
+			bigCompressedImage  = new ImageIcon(ImageIO.read(new File(linkOfBigCompressedFile))).getImage();
+			assertEquals(bigImage.getHeight(null)/2, bigCompressedImage.getHeight(null), "The small images got compressed, even though they should not get compressed.");
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+```
+
+Das Code Snippet (oberhalb) zeigt einen Teil des Codes aus dem JUnit-Test, um zu testen, ob die Bilddateien komprimiert wurden. Der Test unterscheidet kleine (small) Bilder und grosse (big) Bilder, dabei ist die Pixelanzahl entscheidend, ob das Bild klein oder gross ist. Wenn das Bild weniger als 1080 Pixel (1080 Pixel = full HD Auflösung) hat, ist es klein und wird nicht komprimiert. Die Idee dahinter ist, dass die Bilder nicht zu stark komprimiert werden und dann irgendwann eine schlechte Qualität bekommen. Für den Test haben wir ein kleines und ein grosses Bild genommen und dieses mit unserem Programm komprimiert und dann über den Dateipfad in den Test eingelesen.  Beim ersten Test wird geprüft, ob das kleine Bild nicht komprimiert wird, weil es ja zu klein zum Komprimieren ist. Beim zweiten Test wird geprüft, ob das Bild komprimiert wird. Diese Tests werden mit Hilfe von «assertEquals» gemacht. Dabei wird geprüft, ob das erwartete Ergebnis mit dem Programmoutput übereinstimmt.
+
 
 #### Testfälle
 
