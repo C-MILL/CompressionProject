@@ -17,7 +17,7 @@
     + [Sprint 1 Planning Meeting](#sprint-1-planning-meeting)
       - [In Progress:](#in-progress)
     + [Sprint 1 Review](#sprint-1-review)
-    + [Backlog 2](#backlog-2)
+    + [Backlog](#backlog-1)
     + [Sprint 1 Code-Snippets](#sprint-1-code-snippets)
       - [DragAndDropController V0.1](#draganddropcontroller-v01)
       - [Neuer Ordner für komprimierte Bilder](#neuer-ordner-für-komprimierte-bilder)
@@ -27,7 +27,7 @@
       - [In Progress:](#in-progress-1)
     + [Scrum Halftime Meeting](#scrum-halftime-meeting)
     + [Sprint 2 Review](#sprint-2-review)
-    + [Backlog 3](#backlog-3)
+    + [Backlog](#backlog-2)
     + [Sprint 2 Code-snippets](#sprint-2-code-snippets)
       - [ProgressController](#progresscontroller)
       - [DragAndDropController Finale Version](#draganddropcontroller-finale-version)
@@ -177,7 +177,7 @@ Tasknummer| Taskbezeichnung | Zeitschätzung
 #### Sprint 1 Review
 Wir konnten im ersten Sprint alle Tasks erfüllen. Es muss aber gesagt werden, dass die geschätzten Zeiten **immer** überschritten wurden und jedes Teammitglied Überstunden leisten musste. Somit ist die To Do Liste des ersten Sprints nun eine Done Liste. 
 
-#### Backlog 2
+#### Backlog
 
 Story 2 | Schritte, um das DragAndDrop Fenster zu realisieren  | Zeitschätzung
 ----|------|--------------------
@@ -400,7 +400,7 @@ In der Hälfte des Sprints haben wir festgestellt, dass die ProgressBar unserem 
 #### Sprint 2 Review
 Rückblickend hat uns dieser Sprint unerwartet viel Zeit gekostet und dementsprechend ist der Backlog weniger geschrumpft als bei unserem ersten Sprint. Insofern sind wir froh, dass wir zu Beginn der Sprints eine Priorisierung gemacht haben und in diesem Sinne auch wirklich das wichtigste am Anfang gemacht haben und nicht bspw. mit der Sprachauswahl begonnen haben.
 
-#### Backlog 3
+#### Backlog
 
 Story 7 | Task für frei wählbare Komprimierungsgrösse realisieren | Zeitschätzung
 ----|------|--------------------
