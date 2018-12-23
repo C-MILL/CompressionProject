@@ -74,10 +74,11 @@ User Story | Release 1 | Release 2 | Release 3
 Der 3. Release kam nicht zu Stande, da wir für die beiden ersten Sprints mehr Zeit als erwartet benötigten. Vor allem die Komprimierung selbst und die Progress Bar erwiesen sich als zeitintensiver als erwartet. So werden die geplanten Storys zu unseren Zielen, die wir in einem darauffolgenden Projekt weiter ausbauen wollen.
 
 
-## Sprint 1
-
-
-#### Taskliste
+## Sprints
+#### Sprint-Conditions
+Wir haben unsere Sprint's auf jeweils **sechs Stunden** festegelegg. Die Sprints werden von jedem Mitglied **individuell** durchgeführt. Das **Sprint Planning Meeting** wird somit anfangs woche, das **Daily Scrum Meeting** in der Wochenmitte und der **Sprint Review** am Freitag durchgeführt. Dies macht insofern Sinn da teilweise dependencies bestehen zwischen den verschiedenen Klasen und die Mitglieder auch nich alle zur selben Zeit frei haben für die Sprints. 
+#### Sprint 1
+###### Sprint Planning Meeting
 
 Nr. | Task | User Story | Zeit Schätzung in h
 ----|------|------------|--------------------
@@ -89,6 +90,8 @@ Nr. | Task | User Story | Zeit Schätzung in h
 6 | Zählerfunktion erstellen (2.Scene) | 2 | 1
 7 | Start-Button (1.Scene)  | 2 | 1
 
+#### Daily Scrum Meeting (Halftime-Meeting)
+In der hälfte der Zeit 
 
 #### Anreicherung der User Stories
 
