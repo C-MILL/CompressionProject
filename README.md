@@ -168,7 +168,7 @@ Tasknummer| Taskbezeichnung | Zeitschätzung
  |         | Total: 16h 40min
 
 ### Sprint 1 Review
-Wir konnten im ersten Sprint tatsächlich alle Tasks erfüllen. Man muss aber  sagen dass die geschätzten Zeiten IMMER überschritten wurde und jedes Teammitglied überstunden machen musste. Somit ist die ToDo Liste des ersten Sprints nun eine Done Liste. 
+Wir konnten im ersten Sprint alle Tasks erfüllen. Es muss aber gesagt werden, dass die geschätzten Zeiten **immer** überschritten wurden und jedes Teammitglied Überstunden leisten musste. Somit ist die To Do Liste des ersten Sprints nun eine Done Liste. 
 
 #### Backlog 2
 
