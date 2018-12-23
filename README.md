@@ -650,14 +650,16 @@ Um das Programm zu starten, drücken Sie auf den Button «Loslegen».
 ![](https://github.com/atorha/CompressionProject/blob/master/Images/bedienungsanleitung_2.jpg)
 ![](https://github.com/atorha/CompressionProject/blob/master/Images/bedienungsanleitung_6.JPG)
 
-Durch das drücken des «Loslegen» Buttons öffnet sich ein neues Fenster. Ziehen Sie mit Hilfe von Drag-and-Drop alle Bilder, die Sie komprimieren wollen, in das Feld in der Mitte des Fensters. (Drag-and-Drop: Bilder auswählen und mit der Maus ins Fenster ziehen) Falls Sie das gleiche Bild mehrmals in das Fenster ziehen, erscheint eine Fehlermeldung. In der Fehlermeldung werden Sie gefragt, ob Sie das Bild tatsächlich ein zweites Mal hinzufügen und komprimieren wollen.
+Durch das Drücken des «Loslegen» Buttons öffnet sich ein neues Fenster. Ziehen Sie mit Hilfe von Drag-and-Drop alle Bilder, die Sie komprimieren wollen, in das Feld in der Mitte des Fensters. (Drag-and-Drop: Bilder auswählen und mit der Maus ins Fenster ziehen) Falls Sie das gleiche Bild mehrmals in das Fenster ziehen, erscheint eine Fehlermeldung. In der Fehlermeldung werden Sie gefragt, ob Sie das Bild tatsächlich ein zweites Mal hinzufügen und komprimieren wollen.
 
 ![](https://github.com/atorha/CompressionProject/blob/master/Images/bedienungsanleitung_3.jpg)
 
 Nachdem die ersten Bilder in das Fenster gezogen worden sind, wird angezeigt wie viele Bilder zum komprimieren vorliegen. Falls noch weitere Bilder komprimiert werden sollen, kann man diese weiterhin in das Fenster ziehen. Sobald Sie alle Ihre Bilder in das Fenster gezogen haben, können sie auf den «OK» Button drücken, um den Komprimierprozess zu starten. Durch den «Cancel» Button können Sie das Programm beenden, ohne dass die Bilder komprimiert werden.
-![](https://github.com/atorha/CompressionProject/blob/master/Images/bedienungsanleitung_4.jpg) ![](https://github.com/atorha/CompressionProject/blob/master/Images/bedienungsanleitung_5.jpg)
 
-Wenn Sie auf «OK» gedrückt haben, werden die Bilder komprimiert. Dabei wird Ihnen anhand eines Ladebalkens angezeigt, wie weit das Programm mit dem komprimieren ist.
+![](https://github.com/atorha/CompressionProject/blob/master/Images/bedienungsanleitung_4.jpg) 
+![](https://github.com/atorha/CompressionProject/blob/master/Images/bedienungsanleitung_5.jpg)
+
+Wenn Sie auf «OK» gedrückt haben, werden die Bilder komprimiert. Dabei wird Ihnen anhand eines Ladebalkens angezeigt, wie weit das Programm mit dem Komprimieren ist.
 Die komprimierten Bilder werden nach dem Komprimieren in einem neuen Ordner auf dem Desktop gespeichert. Der neue Ordner ist folgendermaßen benannt «Compressed Images YYYY.MM.DD». Die komprimierten Bilder haben den ursprünglichen Dateinamen übernommen, jedoch wird das Kürzel «_compr» angehängt, damit erkannt werden kann, dass es sich dabei um die komprimierten Bilder handelt.
 
 
@@ -668,4 +670,8 @@ Im Rahmen dieser Arbeit konnten die Grundprinzipien der Entwicklungsprogramme Ec
 Wir möchten uns an dieser Stelle ganz herzlich bei unserem Betreuer, Matthias Bachmann, bedanken für die kontinuierliche Hilfeleistungen und im Besonderen für seine nützlichen Inputs zur Erstellung von Threads. 
 
 Mit unserer Arbeit sind wir zufrieden, da das Programm tatsächlich Gebrauch findet und einen erheblichen Mehrwert darstellt bei unserer Zielgruppe, die ansonsten nicht von einer einfachen Bildkomprimierung profitieren könnte. Durch das Arbeiten in einem Team konnten wir uns in die Sichtweise der Programmierer grosser Softwares versetzen und haben auch verstanden, inwiefern User Stories, Tasks und Sprints zu einem effizienteren Arbeiten gemäss Software Engineering beitragen können. 
+
+
+
+Christof Müller, Irene Näf, Mikaela Kaunisaho, Nicolas Krüsi
 
