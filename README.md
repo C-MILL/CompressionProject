@@ -10,12 +10,17 @@
 5. [User Stories](#user-stories)
 6. [Releaseplan](#releaseplan)
 7. [Sprint 1](#sprint-1)
-    + [Taskliste](#taskliste)
-    + [Anreicherung der User Stories](#anreicherung-der-user-stories)
-    + [Klassen- und Sequenzdiagramm](#klassen--und-sequenzdiagramm)
-    + [Dokumentation wichtiger Code Snipplets](#dokumentation-wichtiger-code-snipplets)
-    + [Testfälle](#testfälle)
-8. [Bedienungsanleitung](#bedienungsanleitung)
+    + 7.1. [Taskliste](#taskliste)
+    + 7.2. [Anreicherung der User Stories](#anreicherung-der-user-stories)
+    + 7.3. [Dokumentation wichtiger Code Snipplets](#dokumentation-wichtiger-code-snipplets)
+    + 7.4. [Testfälle](#testfälle)
+8. [Sprint 2](#sprint-1)
+    + 8.1. [Taskliste](#taskliste)
+    + 8.2. [Anreicherung der User Stories](#anreicherung-der-user-stories)
+    + 8.3. [Klassen- und Sequenzdiagramm](#klassen--und-sequenzdiagramm)
+    + 8.4. [Dokumentation wichtiger Code Snipplets](#dokumentation-wichtiger-code-snipplets)
+    + 8.5. [Testfälle](#testfälle)
+9. [Bedienungsanleitung](#bedienungsanleitung)
 
 
 ## Einleitung
@@ -118,18 +123,7 @@ Wir haben unsere Sprint's auf jeweils **sechs Stunden** festegelegg. Die Sprints
 #### Sprint Planning Meeting
 
 
-#### Sprint Review
-Wir mussten erkennen dass wir leider keine 20 Punkte schaffen pro Sprint. In diesem Sprint haben wir nur die hälfte der Stories abgeschlossen. Wir haben ein Startfenster gemacht und auch das Drag and Drop fenster gemacht.
-
 #### Anreicherung der User Stories
-
-#### Klassen- und Sequenzdiagramm
-
-###### Klassendiagramm
-
-![](https://github.com/atorha/CompressionProject/blob/master/Images/Class_Diagramm.JPG)
-
-###### Sequenzdiagramm
 
 #### Dokumentation wichtiger Code Snipplets
 
@@ -156,6 +150,27 @@ Das obige Code-Snippet aus der Klasse «compress.java» zeigt, wie der Pfad des 
 ![](https://github.com/atorha/CompressionProject/blob/master/Images/Code_Snipplet_Compress_2.jpg)
 
 Dieses Code-Snippet zeigt, wie das eingelesene Bild komprimiert und danach im neu generierten Ordner mit dem neu generierten Dateinamen abgespeichert wird. Es wird dabei zuerst die Höhe und Breite des Bildes ausgelesen. Falls die Höhe des Bildes unterhalb der doppelten Full-HD Auflösung liegt, wird das Bild nicht komprimiert, da die Bildqualität ansonsten nicht auf einem akzeptablen Niveau wäre. Wenn die Bildhöhe grösser als 2160 Pixel ist, wird das Bild im weiteren Verlauf komprimiert. Dabei wird die Bildhöhe halbiert und das Bild entsprechend skaliert. Das komprimierte Bild besitzt damit immer eine Auflösung, die mindestens der Full-HD Auflösung entspricht. Danach wird das komprimierte Bild generiert. Das neue Bild wird danach als «jpeg» Datei im neu generierten Ordner auf dem Desktop unter dem neuen Bildnamen abgelegt. Es existieren weitere Konstruktoren, die erweiterte Funktionalitäten beim nächsten Release bieten werden. So soll für professionellere Anwender die Möglichkeit geschaffen werden, das Bild nach einer genauen Eingabe der Pixel oder nach der maximal erwünschten Dateigrösse zu komprimieren. 
+
+#### Testfälle
+
+
+## Sprint 2
+
+#### Taskliste
+
+#### Anreicherung der User Stories
+
+#### Klassen- und Sequenzdiagramm
+
+###### Klassendiagramm
+
+![](https://github.com/atorha/CompressionProject/blob/master/Images/Class_Diagramm.JPG)
+
+###### Sequenzdiagramm
+
+![](https://github.com/atorha/CompressionProject/blob/master/Images/Sequence_diagram.jpg)
+
+#### Dokumentation wichtiger Code Snipplets
 
 #### Testfälle
 
