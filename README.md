@@ -15,19 +15,17 @@
   * [Sprint-Conditions](#sprint-conditions)
   * [Sprint 1](#sprint-1)
     + [Sprint 1 Planning Meeting](#sprint-1-planning-meeting)
-      - [In Progress:](#in-progress)
-    + [Sprint 1 Review](#sprint-1-review)
     + [Sprint Backlog 1](#sprint-backlog-1)
+    + [Sprint 1 Review](#sprint-1-review)
     + [Sprint 1 Code-Snippets](#sprint-1-code-snippets)
       - [DragAndDropController V0.1](#draganddropcontroller-v01)
       - [Neuer Ordner für komprimierte Bilder](#neuer-ordner-für-komprimierte-bilder)
       - [Bild komprimieren und neuer Bildname](#bild-komprimieren-und-neuer-bildname)
   * [Sprint 2](#sprint-2)
     + [Sprint 2 Planning Meeting](#sprint-2-planning-meeting)
-      - [In Progress:](#in-progress-1)
+    + [Sprint Backlog 2](#sprint-backlog-2)
     + [Scrum Halftime Meeting](#scrum-halftime-meeting)
     + [Sprint 2 Review](#sprint-2-review)
-    + [Sprint Backlog 2](#sprint-backlog-2)
     + [Sprint 2 Code-snippets](#sprint-2-code-snippets)
       - [ProgressController](#progresscontroller)
       - [DragAndDropController Finale Version](#draganddropcontroller-finale-version)
@@ -36,6 +34,7 @@
       - [Klassendiagramm](#klassendiagramm)
       - [Sequenzdiagramm](#sequenzdiagramm)
 - [Bedienungsanleitung](#bedienungsanleitung)
+- [Restlicher Product Backlog](#restlicher-product-backlog)
 - [Fazit](#fazit)
 
 
@@ -154,10 +153,11 @@ Der 3. Release kam nicht zu Stande, da für die ersten beiden Sprints mehr Zeit 
 Wir haben unsere Sprint's auf jeweils **fünf Stunden** festgelegt. Die Sprints werden von jedem Mitglied **individuell** durchgeführt. Das **Sprint Planning Meeting** wird somit anfangs der Woche, das **Daily Scrum Meeting** in der mitte der Woche und der **Sprint Review** am Freitag durchgeführt. Dies macht insofern Sinn, da teilweise Abhängigkeiten zwischen den verschiedenen Klassen bestehen und die Mitglieder auch nicht alle zur selben Zeit frei haben für die Sprints. Wir schätzen, dass unser Team jeweils 20 Story-Points behandeln kann pro Sprint. Dies ergibt 5 Storypoints pro Teammitglied. Da wir die Aufgaben gerne indiviudell bearbeiten, ist es unser Ziel, die Stories in möglichst kleine Pakete zu verpacken, damit der Aufwand möglichst klein und im Zeitraum eines Sprints zu erledigen bleibt. Dies setzt aber voraus, dass die Kommunikation sehr intensiv stattfindet, damit man die individuell erarbeiteten Teile dann auch zusammensetzen kann.
 
 ### Sprint 1
+
 #### Sprint 1 Planning Meeting
 Pro Sprint können wir 20 Story Punkte verarbeiten, was zwanzig Arbeitsstunden entspricht. Für den ersten Sprint haben wir uns aber etwas weniger eingeteilt, um zu sehen, ob wir mit unserer Zeiteinschätzung richtig liegen. Wir erwarten, dass die Zeiten zwar stimmen, aber nebst den realen Arbeitszeiten noch viele Stunden verloren gehen werden mit der Teamkommunikation sowie Merge Konflikten. Deshalb beeinhaltet der erste Sprint einen Workload von etwas weniger wie 17 Stunden.
 
-##### In Progress:
+#### Sprint Backlog 1
 Tasknummer| Taskbezeichnung | Zeitschätzung
 ----|------|--------------------
 1.1 | Ordnerstruktur erstellen mit Maven. | 20 min
@@ -177,37 +177,6 @@ Tasknummer| Taskbezeichnung | Zeitschätzung
 #### Sprint 1 Review
 Wir konnten im ersten Sprint alle Tasks erfüllen. Es muss aber gesagt werden, dass die geschätzten Zeiten **immer** überschritten wurden und jedes Teammitglied Überstunden leisten musste. Somit ist die To Do Liste des ersten Sprints nun eine Done Liste. 
 
-#### Sprint Backlog 1
-
-Story 2 | Schritte, um das DragAndDrop Fenster zu realisieren  | Zeitschätzung
-----|------|--------------------
-2.3 | Mit SceneBuilder ein Fenster erstellen, welches für die Fehlermeldungen individuell genutzt werden kann und welches über einfache Handles geändert und angepasst werden kann. | 40 min 
-2.4 | Eine Controller Klasse für die Fehlermeldungen schreiben. Darin soll über eine Methode die Nachricht des Fehlers geändert werden können. Die Klasse soll einen Boolean zurückgeben. | 80 min
-2.5 | Im DragAndDropController die Links auf nicht unterstützte Formate untersuchen und diese herausfiltern. Falls es nicht unterstützte Dateien gibt, soll der Nutzer informiert werden mittels eines Fehlerfensters. | 80 min
-2.6 | Im DragAndDropController die Links auf Doppelgänger untersuchen und diese aussortieren. Falls es Doppelgänger gibt, soll der Nutzer über das Fehlerfenster darauf aufmerksam gemacht werden und entscheiden können, ob er die Datei trotzdem hinzufügen will oder nicht.| 80 min 
-
-Story 3 | Tasks, um die Komprimierung realisieren | Zeitschätzung
-----|------|--------------------
-3.2 | JUnit Klasse machen um zu testen, ob das Bild tatsächlich kleiner wurde. | 2 Stunden
-3.3 | JUnit Klasse machen um zu testen, ob die Auflösung richtig angepasst wurde. | 2 Stunden 
-
-Story 5 | Tasks für die Fortschrittanzeige realisieren | Zeitschätzung
-----|------|--------------------
-5.1 | Mit Scene Builder ein Fenster erstellen, das den Fortschritt der Komprimierung anzeigt. Dafür soll es einen Ladebalken geben und eine schriftliche Information, die anzeigt, wie viele Fotos bereits komprimiert wurden. | 40 min
-5.2 | Controllerklasse für die Fortschrittseite erstellen. Sie soll sich automatisch aktualisieren, sobald ein Bild komprimiert wurde. | 40 min
-
-Story 7 | Tasks für frei wählbare Komprimeirungsgrösse realisieren | Zeitschätzung
-----|------|--------------------
-7.2 | Hinter dem "Einfach" Button soll das bisherige Programm laufen. | 2 Stunden
-7.2 | Hinter dem "Fortgeschritten" Button soll eine neue Scene starten, auf der man über zwei Labels die gewünschte Auflösung einstellen kann. Danach soll per "OK" Button das normale Programm fortgeführt werden können. | 2 Stunden
-7.3 | Einen Button mit SceneBuilder erstellen, damit das DragANdDrop Fenster aufgerufen werden kann, um dann die Bilder ins Fenster zu ziehen. | 40 min
-
-Story 8 | Tasks für die Sprachauswahl realisieren | Zeitschätzung
-----|------|--------------------
-8.1 | Ein Fenster mit SceneBuilder erstellen, wobei 2 Buttons mit der Beschriftung "Deutsch" und "Englisch" vorhanden sind. | 40 min
-8.2 | Controllerklasse für das Sprachwahlfenster erstellen. Dabei soll die Sprachauswahl aus dem Willkommensfenster aufgerufen werden können. | 40 min
-8.3 | Im Willkommensfenster einen Sprachauswahl Button erstellen. | 20 min
-8.4 | Eine englische Version der Buttons und Labels erstellen und ins Programm einbinden.| 4 Stunden
 
 #### Sprint 1 Code-Snippets
 
@@ -374,7 +343,7 @@ Dieses Code-snippet zeigt, wie das eingelesene Bild komprimiert und danach im ne
 #### Sprint 2 Planning Meeting
 In diesem Sprint haben wir einen Workload von 17 Stunden. Dies ist noch mehr als im letzten Sprint. Da wir nun aber eingespielter sind und uns mit SceneBuilder besser auskennen, hoffen wir, dass wir schneller Fortschritte machen.
 
-##### In Progress:
+#### Sprint Backlog 2
 Tasknummer| Taskbezeichnung | Zeitschätzung
 ----|------|--------------------
 2.3 | Mit SceneBuilder ein Fenster erstellen, welches für die Fehlermeldungen individuell genutzt werden kann und welches über einfache Handles geändert und angepasst werden kann. | 40 min 
@@ -399,21 +368,6 @@ In der Hälfte des Sprints haben wir festgestellt, dass die ProgressBar unserem 
 
 #### Sprint 2 Review
 Rückblickend hat uns dieser Sprint unerwartet viel Zeit gekostet und dementsprechend ist der Backlog weniger geschrumpft als bei unserem ersten Sprint. Insofern sind wir froh, dass wir zu Beginn der Sprints eine Priorisierung gemacht haben und in diesem Sinne auch wirklich das wichtigste am Anfang gemacht haben und nicht bspw. mit der Sprachauswahl begonnen haben.
-
-#### Sprint Backlog 2
-
-Story 7 | Task für frei wählbare Komprimierungsgrösse realisieren | Zeitschätzung
-----|------|--------------------
-7.2 | Hinter dem "Einfach" Button soll das bisherige Programm laufen. | 2 Stunden
-7.2 | Hinter dem "Fortgeschritten" Button soll eine neue Scene starten auf der über zwei Labels die gewünschte Auflösung eingestellt werden kann. Danach soll mittels "OK" Button das normale Programm fortgesetzt werden können. | 2 Stunden
-7.3 | Einen Button mit SceneBuilder erstellen, damit man zum DragAndDrop Fensert kommmt, um dann die Bilder in das Fenster ziehen zu können. | 40 min
-
-Story 8 | Task für die Sprachauswahl realisieren | Zeitschätzung
-----|------|--------------------
-8.1 | Ein Fenster mit SceneBuilder erstellen, wobei 2 Buttons mit der Beschriftung "Deutsch" und "Englisch" vorhanden sind. | 40 min
-8.2 | Controllerklasse für das Sprachwahlfenster erstellen. Die Sprachauswahl soll aus dem Willkommensfenster aufgerufen werden können. | 40 min
-8.3 | Im Willkommensfenster einen Sprachauswahl Button erstellen. | 20 min
-8.4 | Eine englische Version der Buttons und Labels erstellen und ins Programm einbinden.| 4 Stunden
 
 
 #### Sprint 2 Code-snippets
@@ -665,6 +619,22 @@ Nachdem die ersten Bilder in das Fenster gezogen worden sind, wird angezeigt wie
 
 Wenn Sie auf «OK» gedrückt haben, werden die Bilder komprimiert. Dabei wird Ihnen anhand eines Ladebalkens angezeigt, wie weit das Programm mit dem Komprimieren ist.
 Die komprimierten Bilder werden nach dem Komprimieren in einem neuen Ordner auf dem Desktop gespeichert. Der neue Ordner ist folgendermaßen benannt «Compressed Images YYYY.MM.DD». Die komprimierten Bilder haben den ursprünglichen Dateinamen übernommen, jedoch wird das Kürzel «_compr» angehängt, damit erkannt werden kann, dass es sich dabei um die komprimierten Bilder handelt.
+
+
+## Restlicher Product Backlog
+
+Story 7 | Task für frei wählbare Komprimierungsgrösse realisieren | Zeitschätzung
+----|------|--------------------
+7.2 | Hinter dem "Einfach" Button soll das bisherige Programm laufen. | 2 Stunden
+7.2 | Hinter dem "Fortgeschritten" Button soll eine neue Scene starten auf der über zwei Labels die gewünschte Auflösung eingestellt werden kann. Danach soll mittels "OK" Button das normale Programm fortgesetzt werden können. | 2 Stunden
+7.3 | Einen Button mit SceneBuilder erstellen, damit man zum DragAndDrop Fensert kommmt, um dann die Bilder in das Fenster ziehen zu können. | 40 min
+
+Story 8 | Task für die Sprachauswahl realisieren | Zeitschätzung
+----|------|--------------------
+8.1 | Ein Fenster mit SceneBuilder erstellen, wobei 2 Buttons mit der Beschriftung "Deutsch" und "Englisch" vorhanden sind. | 40 min
+8.2 | Controllerklasse für das Sprachwahlfenster erstellen. Die Sprachauswahl soll aus dem Willkommensfenster aufgerufen werden können. | 40 min
+8.3 | Im Willkommensfenster einen Sprachauswahl Button erstellen. | 20 min
+8.4 | Eine englische Version der Buttons und Labels erstellen und ins Programm einbinden.| 4 Stunden
 
 
 ## Fazit
