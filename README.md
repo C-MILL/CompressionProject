@@ -671,8 +671,7 @@ Wir möchten uns an dieser Stelle ganz herzlich bei unserem Betreuer, Matthias B
 
 Mit unserer Arbeit sind wir zufrieden, da das Programm tatsächlich Gebrauch findet und einen erheblichen Mehrwert darstellt bei unserer Zielgruppe, die ansonsten nicht von einer einfachen Bildkomprimierung profitieren könnte. Durch das Arbeiten in einem Team konnten wir uns in die Sichtweise der Programmierer grosser Softwares versetzen und haben auch verstanden, inwiefern User Stories, Tasks und Sprints zu einem effizienteren Arbeiten gemäss Software Engineering beitragen können. 
 
-\
 
 
-Christof Müller, Irene Näf, Mikaela Kaunisaho, Nicolas Krüsi
+<   Christof Müller, Irene Näf, Mikaela Kaunisaho, Nicolas Krüsi   >
 
