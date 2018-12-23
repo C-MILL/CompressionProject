@@ -51,7 +51,6 @@ public class Main extends Application {
 
 	public void DragAndDropPopUpWindow() throws IOException {
 			FXMLLoader DragAndDropLoader= new FXMLLoader(DragAndDropController.class.getResource("DragAndDropView.fxml"));
-			//FXMLLoader DragAndDropLoader= new FXMLLoader(getClass().getClassLoader().getResource("\\DragAndDrop\\DragAndDropView.fxml"));
 			AnchorPane DragAndDropPane = DragAndDropLoader.load();
 			DragAndDropController = DragAndDropLoader.getController();
 			DragAndDropController.setMain(this);
