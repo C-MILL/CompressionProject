@@ -150,4 +150,8 @@ Wenn Sie auf «OK» gedrückt haben, werden die Bilder komprimiert. Dabei wird I
 Die komprimierten Bilder werden nach dem Komprimieren in einem neuen Ordner auf dem Desktop gespeichert. Der neue Ordner ist folgendermaßen benannt «Compressed Images YYYY.MM.DD». Die komprimierten Bilder haben den ursprünglichen Dateinamen übernommen, jedoch wird das Kürzel «_compr» angehängt, damit erkannt werden kann, dass es sich dabei um die komprimierten Bilder handelt.
 
 
+ArrayList<String> links = new ArrayList<String>();
+	public Main main;
 
+	public void setMain(Main main) {
+		this.main=main;
