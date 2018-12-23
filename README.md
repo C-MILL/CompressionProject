@@ -98,13 +98,10 @@ Nr. | Task | User Story | Zeitschätzung
 2.8 | Im DragAndDropController den Button so einrichten dass er die Links in die Main-Klasse speichert und die nächste Scene startet. | 2 | 30min 
 3 | Komprimierung und Dateisammlung sowie abspeicherung der Fotos in einem Ornder auf dem Desktop. | | 
 3.1 | Eine Weitere Klasse erstellen die auf dem Desktop einen Ordner erstellt in dem die komprimierten Dateien abgelegt werden können. Die Klasse soll eine Methode haben die den Ordner erstellt und den Link des Ordners zurückgibt. | 8 | 4-Stunden
-3.3 | Eine Klasse erstellen an die ein Link eines Fotos so wie der Link des Desktop-Ornders weitergegeben werden kann für die komprimierung. Darin soll eine Methode gerufen werden die über den Link das Foto ladet, die Auflösung anpasst und das Bild komprimiert sowie in den erstellten Ordner auf dem Desktop abspeichert. | 10 | 6-Stunden
-2 | Alle Bilder zum Komprimieren in Arraylist auflisten | 2 | 1
-3 | Komprimierung der Bilddatei | 5 | 6
-4 | Drag and Drop Bereich erstellen (2.Scene) | 5 | 6
-5 | 2 Buttons und Label erstellen für (exit.Platform und callNextScene) (2.Scene) | 2 | 1
-6 | Zählerfunktion erstellen wo man sieht wie viel Fotos bereits zum Array hinzugefügt wurden. (2.Scene) | 3 | 2
-7 | Start-Button (1.Scene)  | 1 | 0.5
+3.3 | Eine Klasse erstellen an die ein Link eines Fotos sowie der Link des Desktop-Ornders weitergegeben werden kann für die komprimierung. Darin soll eine Methode gerufen werden die über den Link das Foto ladet, die Auflösung anpasst und das Bild komprimiert sowie in den erstellten Ordner auf dem Desktop abspeichert. | 10 | 6-Stunden
+4 | Eine neue Klasse erstellen der den Fortschritt der Komprimierung anzeigt. Dafür soll es einen Ladebalken geben und ein schriftliche Information die anzeigt wie viele Fotos bereits komprimiert worden sind. | 2 | 30min
+4.2 | Controllerklasse für die Fortschrittseite erstellen. Sie soll sich automatisch aktualisieren sobald ein Bild komprimiert wurde. | 2 | 30min
+5.1 | Einen Button machen auf der Progressseite der "Fertig" heisst und den man erste Drücken kann wenn alle Fotos komprimiert wurden.
 
 #### Sprint Review
 Wir mussten erkennen dass wir leider keine 20 Punkte schaffen pro Sprint. In diesem Sprint haben wir nur die hälfte der Stories abgeschlossen. Wir haben ein Startfenster gemacht und auch das Drag and Drop fenster gemacht.
