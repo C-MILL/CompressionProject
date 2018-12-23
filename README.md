@@ -26,7 +26,7 @@
     + [Sprint Backlog 2](#sprint-backlog-2)
     + [Scrum Halftime Meeting](#scrum-halftime-meeting)
     + [Sprint 2 Review](#sprint-2-review)
-    + [Sprint 2 Code-snippets](#sprint-2-code-snippets)
+    + [Sprint 2 Code-Snippets](#sprint-2-code-snippets)
       - [ProgressController](#progresscontroller)
       - [DragAndDropController Finale Version](#draganddropcontroller-finale-version)
       - [JUnit Test - Komprimierung](#junit-test---komprimierung)
@@ -365,7 +365,7 @@ In der Hälfte des Sprints haben wir festgestellt, dass die ProgressBar unserem 
 Rückblickend hat uns dieser Sprint unerwartet viel Zeit gekostet und dementsprechend ist der Backlog weniger geschrumpft als bei unserem ersten Sprint. Insofern sind wir froh, dass wir zu Beginn der Sprints eine Priorisierung gemacht haben und in diesem Sinne auch wirklich das wichtigste am Anfang gemacht haben und nicht bspw. mit der Sprachauswahl begonnen haben.
 
 
-#### Sprint 2 Code-snippets
+#### Sprint 2 Code-Snippets
 
 
 ##### ProgressController
