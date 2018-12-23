@@ -100,6 +100,8 @@ Nr. | Task | User Story | Zeit Schätzung in h
 
 ###### Sequenzdiagramm
 
+![](https://github.com/atorha/CompressionProject/blob/master/Images/Sequence_diagram.jpg)
+
 #### Dokumentation wichtiger Code Snipplets
 
 ###### JUnit Test - Komprimierung
