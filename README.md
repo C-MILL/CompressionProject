@@ -257,7 +257,35 @@ Die Klasse createFolder() erstellt einen neuen Ordner auf dem Desktop des Benutz
 
 ###### Bild komprimieren und neuer Bildname
 
-![](https://github.com/atorha/CompressionProject/blob/master/Images/Code_Snipplet_Compress_1.jpg)
+```ruby
+
+public class compress {
+
+	Main main = new Main();
+	public compress() {
+	}
+	//Constructor 1 -> Default program functionality
+	public compress(String linkOfFile, String linkOfNewFolder) {
+
+		// initialize Image
+		Image image;
+		try {
+			// reads image from path input
+			image = new ImageIcon(ImageIO.read(new File(linkOfFile))).getImage();
+			// gets file path and saves it to f (important for further file processing)
+			File f = new File(linkOfFile);
+
+			// Extracts file name from file path
+			String originalImageName = f.getName();
+
+			// Removes file extension (.jpg / .jpeg / etc) -> important so that the newly created images all have the same file extension.
+			int pos = originalImageName.lastIndexOf(".");
+			String onlyImageName = originalImageName.substring(0, pos);
+
+			// Creates the image name for the exported, compressed image
+			String newImageName = onlyImageName + "_compr";
+
+```
 
 Das obige Code-Snippet aus der Klasse «compress.java» zeigt, wie der Pfad des hinzugefügten Bildes, sowie der Ordner, der für die Komprimierung neu angelegt wird, der Methode «compress()» als Konstruktor hinzugefügt wird. Aus dem Pfad des hinzugefügten Bildes wird der Name des Bildes ausgelesen. Es wird daraufhin ein neuer Dateiname für das zu komprimierende Bild nach dem Format [«alter Dateiname» + «_compr»] generiert. 
 
