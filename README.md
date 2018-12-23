@@ -75,23 +75,35 @@ Der 3. Release kam nicht zu Stande, da wir für die beiden ersten Sprints mehr Z
 
 
 ## Sprints
-#### Sprint-Conditions
-Wir haben unsere Sprint's auf jeweils **sechs Stunden** festegelegg. Die Sprints werden von jedem Mitglied **individuell** durchgeführt. Das **Sprint Planning Meeting** wird somit anfangs woche, das **Daily Scrum Meeting** in der Wochenmitte und der **Sprint Review** am Freitag durchgeführt. Dies macht insofern Sinn da teilweise dependencies bestehen zwischen den verschiedenen Klasen und die Mitglieder auch nich alle zur selben Zeit frei haben für die Sprints. 
-#### Sprint 1
-###### Sprint Planning Meeting
+### Sprint-Conditions
+Wir haben unsere Sprint's auf jeweils **sechs Stunden** festegelegg. Die Sprints werden von jedem Mitglied **individuell** durchgeführt. Das **Sprint Planning Meeting** wird somit anfangs woche, das **Daily Scrum Meeting** in der Wochenmitte und der **Sprint Review** am Freitag durchgeführt. Dies macht insofern Sinn da teilweise dependencies bestehen zwischen den verschiedenen Klasen und die Mitglieder auch nich alle zur selben Zeit frei haben für die Sprints. Wir schätzen unser Team kann jeweils 20 Story-Points behandeln pro Sprint. Dies ergibt 5 Storypoints pro Teammitglied. Da wir die Aufgaben gerne indiviudell machen würden, ist es unser Ziel die Stories in möglichst kleine Packete zu verpacken damit der Aufwand möglichst klein und im Zeitraum eines Sprints zu erledigen ist. 
+### Sprint 1
+#### Sprint Planning Meeting
 
 Nr. | Task | User Story | Zeit Schätzung in h
 ----|------|------------|--------------------
-1 | Bilder einlesen | 1 | 2
-2 | Alle Bilder zum Komprimieren in Arraylist auflisten | 1 | 0,5
-3 | Komprimierung der Bilddatei | 1 | 6
-4 | Drag and Drop Bereich erstellen (2.Scene) | 2 | 1,5
-5 | 2 Buttons und Label erstellen (2.Scene) | 2 | 0,5
-6 | Zählerfunktion erstellen (2.Scene) | 2 | 1
-7 | Start-Button (1.Scene)  | 2 | 1
+1.1 | Ordnerstruktur erstellen mit Maven. | 2 | 1
+1.2 | Grundstruktur des Programmes schreiben, main-JavaFx klasse erstellen. | 2 | 1
+1.3 | Willkommen Fenster mit Scene Builder gestalten. | 2 | 1
+1.4 | Die Controller Klasse für das Willkommenfenster erstellen. | 2 | 1
+1.5 | Im Controller einen WeiterButton erstellen der die nächste Scene startet. | 2 | 1
+2.1 | Ein DragANdDrop Fenster gestalten mit SceneBuilder. | 3 | 4
+2.2 | Der DragAndDropController erstellen der alle Drops in ein Array schreibt. | 2 | 2
+2.3 | Im DragAndDropController die Links auf nichtunterstützte Formate untersuchen und diese ausfiltern. | 2 | 2
+2.4 | Im DragAndDropController die Links auf doppelgänger Untersuchen und diese aussortieren. | 2 | 2
+2.5 | Im DragAndDropController die verbleibenden Links in eine ArrayList stecken. | 2 | 2
+2.6 | Im DragAndDropController den Button so einrichten dass er die Links in die Main-Klasse speichert und die nächste Scene startet. | 2 | 2
+3.1 | Eine Klasse erstellen an die die Bilder weitergegeben werden können für die komprimierung. 
+3.2 | In der Main Klasse eine Methode schreiben die alle Links an die Komprimierung weitergibt.
+2 | Alle Bilder zum Komprimieren in Arraylist auflisten | 2 | 1
+3 | Komprimierung der Bilddatei | 5 | 6
+4 | Drag and Drop Bereich erstellen (2.Scene) | 5 | 6
+5 | 2 Buttons und Label erstellen für (exit.Platform und callNextScene) (2.Scene) | 2 | 1
+6 | Zählerfunktion erstellen wo man sieht wie viel Fotos bereits zum Array hinzugefügt wurden. (2.Scene) | 3 | 2
+7 | Start-Button (1.Scene)  | 1 | 0.5
 
-#### Daily Scrum Meeting (Halftime-Meeting)
-In der hälfte der Zeit 
+#### Sprint Review
+Wir mussten erkennen dass wir leider keine 20 Punkte schaffen pro Sprint. In diesem Sprint haben wir nur die hälfte der Stories abgeschlossen. Wir haben ein Startfenster gemacht und auch das Drag and Drop fenster gemacht.
 
 #### Anreicherung der User Stories
 
