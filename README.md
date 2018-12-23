@@ -140,7 +140,7 @@ User Story | Release 1 | Release 2 | Release 3
 
 #### Kommentar zum Releaseplan
 
-Der 3. Release kam nicht zu Stande, da wir für die beiden ersten Sprints mehr Zeit als erwartet benötigten. Vor allem die Komprimierung selbst und die Progress Bar erwiesen sich als zeitintensiver als erwartet. So werden die geplanten Storys zu unseren Zielen, die wir in einem darauffolgenden Projekt weiter ausbauen wollen.
+Der 3. Release kam nicht zu Stande, da für die ersten beiden Sprints mehr Zeit als erwartet benötigt wurde. Vor allem die Komprimierung selbst und die Progress Bar erwiesen sich als zeitintensiver als erwartet. So werden die geplanten Storys zu unseren Zielen, die wir in einem darauffolgenden Release weiter ausbauen wollen.
 
 
 ## Sprints
