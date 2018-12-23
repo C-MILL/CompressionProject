@@ -63,7 +63,7 @@ Das Programm soll in Java innerhalb der Eclipse Programmierumgebung geschrieben 
 Nr. | UserStory | Aufwand-schätzung (Story Points) | Priorität | Akzptanzkriterium
 ----|-----------|----------------------------------|-----------|------------------
 1 | Der Kunde soll die Applikation zur Komprimierung von Bildern intuitiv bedienen können, damit er Zeit spart beim Komprimieren von Dateien. | 5 | 1 | Es sollen nicht mehr als drei Buttons auf einer Seite verwendet werden. Die Buttons sollen beschriftet sein, um eine intuitive 
-2 | Der Kunde soll alle Fotos einfach in ein Fenster ziehen können und das Programm soll dabei automatisch erkennen welche Fotos behandet werden können und welche nicht. Der Nutzer soll dabei über fehler benachrichtigt werden. DAbei soll ihm angezeigt werden was nicht gut ist und mit welcher Datei etwas nicht stimmt. | 13 | 1 | Dateien Können üer Drag and Drop fenster ausgewählt werden und das Programm muss automatisch erkennen welche Dateien fehlerhaft sind.
+2 | Der Kunde soll alle Fotos einfach in ein Fenster ziehen können und das Programm soll dabei automatisch erkennen welche Fotos behandet werden können und welche nicht. Der Nutzer soll dabei über fehler benachrichtigt werden. Dabei soll ihm angezeigt werden was nicht gut ist und mit welcher Datei etwas nicht stimmt. | 13 | 1 | Dateien Können üer Drag and Drop fenster ausgewählt werden und das Programm muss automatisch erkennen welche Dateien fehlerhaft sind.
 3 | Der nutzer soll kleinere Dateien mit immer noch akzeptabler Qualität erhalten, ohne sich selber Gedanken zur Bildgrösse zu machen. | 8 | 1 | Die Komprimierten Dateien müssen kleiner sein als die Originale.
 4 | Die Bilddateien sollen direkt auf den Desktop gespeichert werden, damit der Benutzer keinen Dateipfad eingeben muss. | 8 | 1 | Der Speichervorgang wird vom Programm übernommen, ohne dass der Benutzer etwas eingeben muss.
 5 | Während der potentiellen Wartezeit des Komprimiervorgangs soll der Kunde über die Aktion (also, dass das Programm komprimiert) informiert werden, damit er weiss, was das Programm macht. | 8 | 2 | Sobald eine Wartezeit entsteht, weil das Programm Daten verarbeitet, wird das mit einer «Progress Bar» angezeigt.
@@ -94,23 +94,23 @@ Story 2 | Schritte um das DragAndDrop Fenster zu realisieren  | Zeitschätzung
 Story 3 | Tasks um die Komprimierung realisieren | Zeitschätzung
 ----|------|--------------------
 3.1 | Eine Klasse erstellen an die ein Link eines Fotos sowie der Link des Desktop-Ornders weitergegeben werden kann für die komprimierung. Darin soll eine Methode gerufen werden die über den Link das Foto ladet, die Auflösung anpasst und das Bild komprimiert sowie in den erstellten Ordner auf dem Desktop abspeichert. | 6-Stunden 
-3.2 | JUnit Klasse machen um zu testen ob das Bild tatsächlich kleiner geworden ist. | 2Stunden
-3.3 | JUnit Klasse machen um zu testen ob die Auflösung richtig angepasst wird. | 2Stunden 
+3.2 | JUnit Klasse machen um zu testen ob das Bild tatsächlich kleiner geworden ist. | 2-Stunden
+3.3 | JUnit Klasse machen um zu testen ob die Auflösung richtig angepasst wird. | 2-Stunden 
 
 Story 4 | Tasks um die Abspeicherung auf dem Desktop zu realisieren | Zeitschätzung
 ----|------|--------------------
 4.1 | Eine Weitere Klasse erstellen die auf dem Desktop einen Ordner erstellt in dem die komprimierten Dateien abgelegt werden können. Die Klasse soll eine Methode haben die den Ordner erstellt und den Link des Ordners zurückgibt. | 4-Stunden
 
-Story 5 | Tasks für die Fortschrittanzeige  | Zeitschätzung
+Story 5 | Tasks für die Fortschrittanzeige realisieren | Zeitschätzung
 ----|------|--------------------
 5.1 | Mit Scene Builder ein Fenster erstellen der den Fortschritt der Komprimierung anzeigt. Dafür soll es einen Ladebalken geben und ein schriftliche Information die anzeigt wie viele Fotos bereits komprimiert worden sind. | 30min
 5.2 | Controllerklasse für die Fortschrittseite erstellen. Sie soll sich automatisch aktualisieren sobald ein Bild komprimiert wurde. | 30min
 
-Story 6 | Taks für das Ende des Programmes | Zeitschätzung
+Story 6 | Taks für das Ende des Programmes realisieren | Zeitschätzung
 ----|------|--------------------
 6.1 | Einen Button machen auf der Progressseite der "Fertig" heisst und den man erst Drücken kann wenn alle Fotos komprimiert wurden. | 30min
 
-Story 7 | Taks für frei wählbare Komprimeirungsgrösse | Zeitschätzung
+Story 7 | Taks für frei wählbare Komprimeirungsgrösse realisieren | Zeitschätzung
 ----|------|--------------------
 7.1 | Ein Fenster mit SceneBuilder erstellen, wobei 3 Buttons mit den ver. Komprimierungsstufen vorhanden sind. | 30min
 7.2 | Komprimierfunktionen hinter den Buttons erstellen (analog zur Komprimierung von vorher). | 2-Stunden
@@ -118,13 +118,12 @@ Story 7 | Taks für frei wählbare Komprimeirungsgrösse | Zeitschätzung
 7.4 | Controllerklasse für das Fenster mit den ver. Komprimierungsgrössen erstellen. Wobei dieses Fenster vom Willkommensfenser aus aufgerufen wird.| 30min
 7.5 | Im Willkommensfenster einen Button erstellen, wo man auf dieses Fenster zugreifen kann. | 15 min
 
-Story 8 | Taks für die Sprachauswahl | Zeitschätzung
+Story 8 | Taks für die Sprachauswahl realisieren | Zeitschätzung
 ----|------|--------------------
 8.1 | Ein Fenster mit SceneBuilder erstellen, wobei 2 Buttons mit der Beschriftung "Deutsch" und "Englisch" vorhanden sind. | 30min
 8.2 | Controllerklasse für das Sprachwahlfenster erstellen. Wobei die Sprachauswahl aus dem Willkommenfenster aufgerufen werden kann. | 30min
 8.3 | Im Willkommensfenster einen Sprachauswahl-Button erstellen. | 15 min
-8.4 | Eine Englische Version der Buttons und Labels erstellen und ins Programm einbinden.
-| 3-Stunden
+8.4 | Eine Englische Version der Buttons und Labels erstellen und ins Programm einbinden.| 3-Stunden
 
 ## Releaseplan
 
@@ -147,7 +146,7 @@ Der 3. Release kam nicht zu Stande, da wir für die beiden ersten Sprints mehr Z
 
 ## Sprints
 ### Sprint-Conditions
-Wir haben unsere Sprint's auf jeweils **fünf Stunden** festegelegg. Die Sprints werden von jedem Mitglied **individuell** durchgeführt. Das **Sprint Planning Meeting** wird somit anfangs woche, das **Daily Scrum Meeting** in der Wochenmitte und der **Sprint Review** am Freitag durchgeführt. Dies macht insofern Sinn da teilweise dependencies bestehen zwischen den verschiedenen Klasen und die Mitglieder auch nich alle zur selben Zeit frei haben für die Sprints. Wir schätzen unser Team kann jeweils 20 Story-Points behandeln pro Sprint. Dies ergibt 5 Storypoints pro Teammitglied. Da wir die Aufgaben gerne indiviudell machen würden, ist es unser Ziel die Stories in möglichst kleine Packete zu verpacken damit der Aufwand möglichst klein und im Zeitraum eines Sprints zu erledigen ist. 
+Wir haben unsere Sprint's auf jeweils **fünf Stunden** festegelegg. Die Sprints werden von jedem Mitglied **individuell** durchgeführt. Das **Sprint Planning Meeting** wird somit anfangs woche, das **Daily Scrum Meeting** in der Wochenmitte und der **Sprint Review** am Freitag durchgeführt. Dies macht insofern Sinn da teilweise dependencies bestehen zwischen den verschiedenen Klasen und die Mitglieder auch nich alle zur selben Zeit frei haben für die Sprints. Wir schätzen unser Team kann jeweils 20 Story-Points behandeln pro Sprint. Dies ergibt 5 Storypoints pro Teammitglied. Da wir die Aufgaben gerne indiviudell machen würden, ist es unser Ziel die Stories in möglichst kleine Packete zu verpacken damit der Aufwand möglichst klein und im Zeitraum eines Sprints zu erledigen ist. Dies setzt aber voraus, dass die Komunikation sehr intensiv statt findet, damit man die individuell erarbeiteten Teile dann auch zusammensetzen kann. 
 
 ### Sprint 1
 #### Sprint 1 Planning Meeting
