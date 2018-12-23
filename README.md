@@ -98,13 +98,13 @@ Story 2 | Schritte, um das DragAndDrop Fenster zu realisieren  | Zeitschätzung
 
 Story 3 | Tasks, um die Komprimierung realisieren | Zeitschätzung
 ----|------|--------------------
-3.1 | Eine Klasse erstellen, an die ein Link eines Fotos sowie der Link des Desktop Ordners weitergegeben werden kann für die Komprimierung. Darin soll eine Methode aufgerufen werden, die über den Link das Foto ladet, die Auflösung anpasst, das Bild komprimiert und im erstellten Ordner auf dem Desktop abspeichert. | 6 Stunden 
-3.2 | JUnit Klasse erstellen, um zu testen ob das Bild tatsächlich kleiner wird. | 2 Stunden
-3.3 | JUnit Klasse erstellen, um zu testen ob die Auflösung richtig angepasst wird. | 2 Stunden 
+3.1 | Eine Klasse erstellen, an die ein Link eines Fotos sowie der Link des Desktop Ordners weitergegeben werden kann für die Komprimierung. Darin soll eine Methode aufgerufen werden, die über den Link das Foto ladet, die Auflösung anpasst, das Bild komprimiert und im erstellten Ordner auf dem Desktop abspeichert. | 6 h 
+3.2 | JUnit Klasse erstellen, um zu testen ob das Bild tatsächlich kleiner wird. | 2 h
+3.3 | JUnit Klasse erstellen, um zu testen ob die Auflösung richtig angepasst wird. | 2 h 
 
 Story 4 | Tasks um die Abspeicherung auf dem Desktop zu realisieren | Zeitschätzung
 ----|------|--------------------
-4.1 | Eine weitere Klasse erstellen, die auf dem Desktop einen Ordner erstellt, in dem die komprimierten Dateien abgelegt werden können. Die Klasse soll eine Methode haben, die den Ordner erstellt und den Link des Ordners zurückgibt. | 2 Stunden
+4.1 | Eine weitere Klasse erstellen, die auf dem Desktop einen Ordner erstellt, in dem die komprimierten Dateien abgelegt werden können. Die Klasse soll eine Methode haben, die den Ordner erstellt und den Link des Ordners zurückgibt. | 2 h
 
 Story 5 | Tasks für die Fortschrittanzeige realisieren | Zeitschätzung
 ----|------|--------------------
@@ -118,8 +118,8 @@ Story 6 | Tasks für das Ende des Programmes realisieren | Zeitschätzung
 Story 7 | Tasks für frei wählbare Komprimierungsgrösse realisieren | Zeitschätzung
 ----|------|--------------------
 7.1 | Das Willkommensfenster erweitern mit einem zweiten Button, der "Fortgeschritten" heisst und den "Loslegen" Button umbenennen zu "Einfach". | 20 min
-7.2 | Hinter dem "Einfach" Button soll das bisherige Programm laufen. | 2 Stunden
-7.3 | Hinter dem "Fortgeschritten" Button soll eine neue Scene gestartet werden, auf der über zwei Labels die gewünschte Auflösung eingestellt werden. Danach soll per "OK" Button das normale Programm fortgeführt werden. | 2 Stunden
+7.2 | Hinter dem "Einfach" Button soll das bisherige Programm laufen. | 2 h
+7.3 | Hinter dem "Fortgeschritten" Button soll eine neue Scene gestartet werden, auf der über zwei Labels die gewünschte Auflösung eingestellt werden. Danach soll per "OK" Button das normale Programm fortgeführt werden. | 2 h
 7.4 | Einen Button mit SceneBuilder erstellen, damit man zum DragANdDrop Fenster kommmt, um dann die Bilder in das Fenster zu ziehen. | 40 min
 
 Story 8 | Tasks für die Sprachauswahl realisieren | Zeitschätzung
@@ -620,8 +620,8 @@ Die komprimierten Bilder werden nach dem Komprimieren in einem neuen Ordner auf 
 
 Story 7 | Task für frei wählbare Komprimierungsgrösse realisieren | Zeitschätzung
 ----|------|--------------------
-7.2 | Hinter dem "Einfach" Button soll das bisherige Programm laufen. | 2 Stunden
-7.3 | Hinter dem "Fortgeschritten" Button soll eine neue Scene starten auf der über zwei Labels die gewünschte Auflösung eingestellt werden kann. Danach soll mittels "OK" Button das normale Programm fortgesetzt werden können. | 2 Stunden
+7.2 | Hinter dem "Einfach" Button soll das bisherige Programm laufen. | 2 h
+7.3 | Hinter dem "Fortgeschritten" Button soll eine neue Scene starten auf der über zwei Labels die gewünschte Auflösung eingestellt werden kann. Danach soll mittels "OK" Button das normale Programm fortgesetzt werden können. | 2 h
 7.4 | Einen Button mit SceneBuilder erstellen, damit man zum DragAndDrop Fensert kommmt, um dann die Bilder in das Fenster ziehen zu können. | 40 min
 
 Story 8 | Task für die Sprachauswahl realisieren | Zeitschätzung
@@ -629,7 +629,7 @@ Story 8 | Task für die Sprachauswahl realisieren | Zeitschätzung
 8.1 | Ein Fenster mit SceneBuilder erstellen, wobei 2 Buttons mit der Beschriftung "Deutsch" und "Englisch" vorhanden sind. | 40 min
 8.2 | Controllerklasse für das Sprachwahlfenster erstellen. Die Sprachauswahl soll aus dem Willkommensfenster aufgerufen werden können. | 40 min
 8.3 | Im Willkommensfenster einen Sprachauswahl Button erstellen. | 20 min
-8.4 | Eine englische Version der Buttons und Labels erstellen und ins Programm einbinden.| 4 Stunden
+8.4 | Eine englische Version der Buttons und Labels erstellen und ins Programm einbinden.| 4 h
 
 
 ## Fazit
