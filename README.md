@@ -87,7 +87,7 @@ Story 2 | Schritte um das DragAndDrop Fenster zu realisieren  | Zeitschätzung
 2.3 | Mit SceneBuilder ein Fenster erstellen welches für die Fehlermeldungen individuell genutzt werden kann. und welches man über einfache handles ändern und anpassen kann. | 40 min 
 2.4 | Eine Controller Klasse für die Fehlermeldungen schreiben. Darin soll man über eine Methode die Nachricht des fehlers ändern können. Die Klasse soll einen boolean zurückgeben. | 80min
 2.5 | Im DragAndDropController die Links auf nichtunterstützte Formate untersuchen und diese ausfiltern. Falls es nicht unterstützte Dateien gibt, soll der Nutzer informiert werden über das Fehlerfenster. | 80 min
-2.6 | Im DragAndDropController die Links auf doppelgänger Untersuchen und diese aussortieren. Falls es Doppelgänger gibt soll der Nutzer über das Fehlerfenster darauf aufmerksam gemacht werden und entscheiden können ob er die Datei trotzdem hinzufügen will oder nicht.| 4 | 80min 
+2.6 | Im DragAndDropController die Links auf doppelgänger Untersuchen und diese aussortieren. Falls es Doppelgänger gibt soll der Nutzer über das Fehlerfenster darauf aufmerksam gemacht werden und entscheiden können ob er die Datei trotzdem hinzufügen will oder nicht.| 80min 
 2.7 | Im DragAndDropController die verbleibenden Links in eine ArrayList stecken. | 20min
 2.8 | Im DragAndDropController den Button so einrichten dass er die Links in die Main-Klasse speichert und die nächste Scene startet. | 40 min 
 
@@ -333,35 +333,36 @@ Dieses Code-Snippet zeigt, wie das eingelesene Bild komprimiert und danach im ne
 
 ### Sprint 2
 #### Updated Backlog
+
 Story 2 | Schritte um das DragAndDrop Fenster zu realisieren  | Zeitschätzung
 ----|------|--------------------
-2.3 | Mit SceneBuilder ein Fenster erstellen welches für die Fehlermeldungen individuell genutzt werden kann. und welches man über einfache handles ändern und anpassen kann. | 30 min 
-2.4 | Eine Controller Klasse für die Fehlermeldungen schreiben. Darin soll man über eine Methode die Nachricht des fehlers ändern können. Die Klasse soll einen boolean zurückgeben.
-2.5 | Im DragAndDropController die Links auf nichtunterstützte Formate untersuchen und diese ausfiltern. Falls es nicht unterstützte Dateien gibt, soll der Nutzer informiert werden über das Fehlerfenster. | 60 min
-2.6 | Im DragAndDropController die Links auf doppelgänger Untersuchen und diese aussortieren. Falls es Doppelgänger gibt soll der Nutzer über das Fehlerfenster darauf aufmerksam gemacht werden und entscheiden können ob er die Datei trotzdem hinzufügen will oder nicht.| 4 | 60 min 
+2.3 | Mit SceneBuilder ein Fenster erstellen welches für die Fehlermeldungen individuell genutzt werden kann. und welches man über einfache handles ändern und anpassen kann. | 40 min 
+2.4 | Eine Controller Klasse für die Fehlermeldungen schreiben. Darin soll man über eine Methode die Nachricht des fehlers ändern können. Die Klasse soll einen boolean zurückgeben. | 80min
+2.5 | Im DragAndDropController die Links auf nichtunterstützte Formate untersuchen und diese ausfiltern. Falls es nicht unterstützte Dateien gibt, soll der Nutzer informiert werden über das Fehlerfenster. | 80 min
+2.6 | Im DragAndDropController die Links auf doppelgänger Untersuchen und diese aussortieren. Falls es Doppelgänger gibt soll der Nutzer über das Fehlerfenster darauf aufmerksam gemacht werden und entscheiden können ob er die Datei trotzdem hinzufügen will oder nicht.| 4 | 80min 
 
 Story 3 | Tasks um die Komprimierung realisieren | Zeitschätzung
 ----|------|--------------------
-3.1 | Eine Klasse erstellen an die ein Link eines Fotos sowie der Link des Desktop-Ornders weitergegeben werden kann für die komprimierung. Darin soll eine Methode gerufen werden die über den Link das Foto ladet, die Auflösung anpasst und das Bild komprimiert sowie in den erstellten Ordner auf dem Desktop abspeichert. | 6 Stunden 
 3.2 | JUnit Klasse machen um zu testen ob das Bild tatsächlich kleiner geworden ist. | 2 Stunden
 3.3 | JUnit Klasse machen um zu testen ob die Auflösung richtig angepasst wird. | 2 Stunden 
 
-Story 4 | Tasks um die Abspeicherung auf dem Desktop zu realisieren | Zeitschätzung
+Story 5 | Tasks für die Fortschrittanzeige realisieren | Zeitschätzung
 ----|------|--------------------
-4.1 | Eine Weitere Klasse erstellen die auf dem Desktop einen Ordner erstellt in dem die komprimierten Dateien abgelegt werden können. Die Klasse soll eine Methode haben die den Ordner erstellt und den Link des Ordners zurückgibt. | 4 Stunden
+5.1 | Mit Scene Builder ein Fenster erstellen der den Fortschritt der Komprimierung anzeigt. Dafür soll es einen Ladebalken geben und ein schriftliche Information die anzeigt wie viele Fotos bereits komprimiert worden sind. | 40 min
+5.2 | Controllerklasse für die Fortschrittseite erstellen. Sie soll sich automatisch aktualisieren sobald ein Bild komprimiert wurde. | 40 min
 
-Story 5 | Tasks für die Fortschrittanzeige  | Zeitschätzung
+Story 7 | Taks für frei wählbare Komprimeirungsgrösse realisieren | Zeitschätzung
 ----|------|--------------------
-5.1 | Mit Scene Builder ein Fenster erstellen der den Fortschritt der Komprimierung anzeigt. Dafür soll es einen Ladebalken geben und ein schriftliche Information die anzeigt wie viele Fotos bereits komprimiert worden sind. | 30 min
-5.2 | Controllerklasse für die Fortschrittseite erstellen. Sie soll sich automatisch aktualisieren sobald ein Bild komprimiert wurde. | 30 min
+7.2 | Hinter Button Einfach soll das bisherige Programm laufen. | 2 Stunden
+7.2 | Hinter dem "Fortgeschritten" Button soll eine neue Scene starten auf der man über zwei Labels die gewünschte Auflösung einstellen kann. Danach soll per "OK" Knopf das normale Programm fortgeführt werden. | 2 Stunden
+7.3 | Einen Button mit SceneBuilder erstellen, damit zum DragANdDrop Fensert kommmt, um dann die Bilder rein zu ziehen. | 40 min
 
-Story 6 | Taks für das Ende des Programmes | Zeitschätzung
+Story 8 | Taks für die Sprachauswahl realisieren | Zeitschätzung
 ----|------|--------------------
-6.1 | Einen Button machen auf der Progressseite der "Fertig" heisst und den man erste Drücken kann wenn alle Fotos komprimiert wurden. | 30 min
-
-Story 7 | Taks für das Ende des Programmes | Zeitschätzung
-----|------|--------------------
-7.1 | Einen Button machen auf der Progressseite der "Fertig" heisst und den man erste Drücken kann wenn alle Fotos komprimiert wurden. | 30 min
+8.1 | Ein Fenster mit SceneBuilder erstellen, wobei 2 Buttons mit der Beschriftung "Deutsch" und "Englisch" vorhanden sind. | 40 min
+8.2 | Controllerklasse für das Sprachwahlfenster erstellen. Wobei die Sprachauswahl aus dem Willkommenfenster aufgerufen werden kann. | 40 min
+8.3 | Im Willkommensfenster einen Sprachauswahl-Button erstellen. | 20 min
+8.4 | Eine Englische Version der Buttons und Labels erstellen und ins Programm einbinden.| 4 Stunden
 
 #### Sprint 2 Planning Meeting
 Da wir pro Sprint 20 Punkte verarbeiten können was vierundzwanzig Stunden entspricht haben wir uns 
