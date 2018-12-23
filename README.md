@@ -1,37 +1,27 @@
 # **Java Bildkompression**
 
 
-## Inhaltsverzeichnis
+## Inhaltsverzeichniss
 
-  - [Einleitung](#einleitung)
-  - [Zielsetzung](#zielsetzung)
-  - [Randbedingung](#randbedingung)
-  - [Build-Anleitung](#build-anleitung)
-  - [User Stories](#user-stories)
-  - [Backlog](#backlog)
-  - [Releaseplan](#releaseplan)
-      - [Kommentar zum Releaseplan](#kommentar-zum-releaseplan)
-  - [Sprints](#sprints)
-    - [Sprint-Conditions](#sprint-conditions)
-    - [Sprint 1](#sprint-1)
-      - [Sprint 1 Planning Meeting](#sprint-1-planning-meeting)
-      - [Sprint 1 Review](#sprint-1-review)
-    - [Sprint 2](#sprint-2)
-      - [Updated Backlog](#updated-backlog)
-      - [Sprint 2 Planning Meeting](#sprint-2-planning-meeting)
-      - [Sprint 2 Review](#sprint-2-review)
-          - [JUnit Test - Komprimierung](#junit-test---komprimierung)
-          - [Neuer Ordner für komprimierte Bilder](#neuer-ordner-für-komprimierte-bilder)
-          - [Bild komprimieren und neuer Bildname](#bild-komprimieren-und-neuer-bildname)
-      - [Testfälle](#testfälle)
-      - [Klassen- und Sequenzdiagramm](#klassen--und-sequenzdiagramm)
-          - [Klassendiagramm](#klassendiagramm)
-          - [Sequenzdiagramm](#sequenzdiagramm)
-      - [Dokumentation wichtiger Code Snipplets](#dokumentation-wichtiger-code-snipplets)
-      - [Testfälle](#testfälle)
-  - [Bedienungsanleitung](#bedienungsanleitung)
-  - [Fazit](#fazit)
-
+1. [Einleitung](#einleitung)
+2. [Zielsetzung](#zielsetzung)
+3. [Randbedingung](#randbedingung)
+4. [Build-Anleitung](#build-anleitung)
+5. [User Stories](#user-stories)
+6. [Releaseplan](#releaseplan)
+7. [Sprint 1](#sprint-1)
+    + 7.1. [Taskliste](#taskliste)
+    + 7.2. [Anreicherung der User Stories](#anreicherung-der-user-stories)
+    + 7.3. [Dokumentation wichtiger Code Snipplets](#dokumentation-wichtiger-code-snipplets)
+    + 7.4. [Testfälle](#testfälle)
+8. [Sprint 2](#sprint-1)
+    + 8.1. [Taskliste](#taskliste)
+    + 8.2. [Anreicherung der User Stories](#anreicherung-der-user-stories)
+    + 8.3. [Klassen- und Sequenzdiagramm](#klassen--und-sequenzdiagramm)
+    + 8.4. [Dokumentation wichtiger Code Snipplets](#dokumentation-wichtiger-code-snipplets)
+    + 8.5. [Testfälle](#testfälle)
+9. [Bedienungsanleitung](#bedienungsanleitung)
+10. [Fazit](#fazit)
 
 
 ## Einleitung
@@ -64,7 +54,7 @@ Nr. | UserStory | Aufwand-schätzung (Story Points) | Priorität | Akzptanzkrite
 ----|-----------|----------------------------------|-----------|------------------
 1 | Der Kunde soll die Applikation zur Komprimierung von Bildern intuitiv bedienen können, damit er Zeit spart beim Komprimieren von Dateien. | 5 | 1 | Es sollen nicht mehr als drei Buttons auf einer Seite verwendet werden. Die Buttons sollen beschriftet sein, um eine intuitive 
 2 | Der Kunde soll alle Fotos einfach in ein Fenster ziehen können und das Programm soll dabei automatisch erkennen welche Fotos behandet werden können und welche nicht. Der Nutzer soll dabei über fehler benachrichtigt werden. DAbei soll ihm angezeigt werden was nicht gut ist und mit welcher Datei etwas nicht stimmt. | 13 | 1 | Dateien Können üer Drag and Drop fenster ausgewählt werden und das Programm muss automatisch erkennen welche Dateien fehlerhaft sind.
-3 | Der nutzer soll kleinere Dateien mit immer noch akzeptabler Qualität erhalten, ohne sich selber Gedanken zur Bildgrösse zu machen. | 8 | 1 | Die Komprimierten Dateien müssen kleiner sein als die Originale.
+3 | Der nutzer soll kleinere Dateien mit trotzdem akzeptabler Qualität erhalten. | 8 | 1 | Die Komprimierten Dateien müssen kleiner sein als die Originale.
 4 | Die Bilddateien sollen direkt auf den Desktop gespeichert werden, damit der Benutzer keinen Dateipfad eingeben muss. | 8 | 1 | Der Speichervorgang wird vom Programm übernommen, ohne dass der Benutzer etwas eingeben muss.
 5 | Während der potentiellen Wartezeit des Komprimiervorgangs soll der Kunde über die Aktion (also, dass das Programm komprimiert) informiert werden, damit er weiss, was das Programm macht. | 8 | 2 | Sobald eine Wartezeit entsteht, weil das Programm Daten verarbeitet, wird das mit einer «Progress Bar» angezeigt.
 6 | Der Kunde soll eine Meldung auf dem Bildschirm erhalten, sobald der Komprimiervorgang abgeschlossen ist, damit der Kunde eine Bestätigung hat, dass seine Bilder komprimiert wurden. | 5 | 3 | Die Meldung soll kurz formuliert sein, aber klar vermitteln, dass der Komprimierungsvorgang abgeschlossen ist.
@@ -108,14 +98,11 @@ Story 5 | Tasks für die Fortschrittanzeige  | Zeitschätzung
 
 Story 6 | Taks für das Ende des Programmes | Zeitschätzung
 ----|------|--------------------
-6.1 | Einen Button machen auf der Progressseite der "Fertig" heisst und den man erst Drücken kann wenn alle Fotos komprimiert wurden. | 30min
+6.1 | Einen Button machen auf der Progressseite der "Fertig" heisst und den man erste Drücken kann wenn alle Fotos komprimiert wurden. | 30min
 
-Story 7 | Taks für frei wählbare Komprimeirungsgrösse | Zeitschätzung
+Story 7 | Taks für das Ende des Programmes | Zeitschätzung
 ----|------|--------------------
-7.1 | Ein Fenster mit SceneBuilder erstellen, wobei 3 Buttons mit den ver. Komprimierungsstufen vorhanden sind. | 30min
-7.2 | Komprimierfunktionen hinter den Buttons erstellen (analog zur Komprimierung von vorher). | 2-Stunden
-7.3 | Einen Button mit SceneBuilder erstellen, damit zum DragANdDrop Fensert kommmt, um dann die Bilder rein zu ziehen. | 30min
-7.4 | Controllerklasse für das Fenster mit den ver. Komprimierungsgrössen erstellen. | 30min
+7.1 | Einen Button machen auf der Progressseite der "Fertig" heisst und den man erste Drücken kann wenn alle Fotos komprimiert wurden. | 30min
 ## Releaseplan
 
 User Story | Release 1 | Release 2 | Release 3
@@ -174,29 +161,15 @@ Story 2 | Schritte um das DragAndDrop Fenster zu realisieren  | Zeitschätzung
 
 Story 3 | Tasks um die Komprimierung realisieren | Zeitschätzung
 ----|------|--------------------
-3.1 | Eine Klasse erstellen an die ein Link eines Fotos sowie der Link des Desktop-Ornders weitergegeben werden kann für die komprimierung. Darin soll eine Methode gerufen werden die über den Link das Foto ladet, die Auflösung anpasst und das Bild komprimiert sowie in den erstellten Ordner auf dem Desktop abspeichert. | 6-Stunden 
 3.2 | JUnit Klasse machen um zu testen ob das Bild tatsächlich kleiner geworden ist. | 2Stunden
 3.3 | JUnit Klasse machen um zu testen ob die Auflösung richtig angepasst wird. | 2Stunden 
-
-Story 4 | Tasks um die Abspeicherung auf dem Desktop zu realisieren | Zeitschätzung
-----|------|--------------------
-4.1 | Eine Weitere Klasse erstellen die auf dem Desktop einen Ordner erstellt in dem die komprimierten Dateien abgelegt werden können. Die Klasse soll eine Methode haben die den Ordner erstellt und den Link des Ordners zurückgibt. | 4-Stunden
 
 Story 5 | Tasks für die Fortschrittanzeige  | Zeitschätzung
 ----|------|--------------------
 5.1 | Mit Scene Builder ein Fenster erstellen der den Fortschritt der Komprimierung anzeigt. Dafür soll es einen Ladebalken geben und ein schriftliche Information die anzeigt wie viele Fotos bereits komprimiert worden sind. | 30min
 5.2 | Controllerklasse für die Fortschrittseite erstellen. Sie soll sich automatisch aktualisieren sobald ein Bild komprimiert wurde. | 30min
 
-Story 6 | Taks für das Ende des Programmes | Zeitschätzung
-----|------|--------------------
-6.1 | Einen Button machen auf der Progressseite der "Fertig" heisst und den man erste Drücken kann wenn alle Fotos komprimiert wurden. | 30min
-
-Story 7 | Taks für das Ende des Programmes | Zeitschätzung
-----|------|--------------------
-7.1 | Einen Button machen auf der Progressseite der "Fertig" heisst und den man erste Drücken kann wenn alle Fotos komprimiert wurden. | 30min
-
 #### Sprint 2 Planning Meeting
-Da wir pro Sprint 20 Punkte verarbeiten können was vierundzwanzig Stunden entspricht haben wir uns 
 
 #### Sprint 2 Review
 
