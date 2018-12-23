@@ -153,7 +153,7 @@ Wir haben unsere Sprint's auf jeweils **fünf Stunden** festgelegt. Die Sprints 
 #### Sprint 1 Planning Meeting
 Pro Sprint können wir 20 Story Punkte verarbeiten, was zwanzig Arbeitsstunden entspricht. Für den ersten Sprint haben wir uns aber etwas weniger eingeteilt, um zu sehen, ob wir mit unserer Zeiteinschätzung richtig liegen. Wir erwarten, dass die Zeiten zwar stimmen, aber nebst den realen Arbeitszeiten noch viele Stunden verloren gehen werden mit der Teamkommunikation sowie Merge Konflikten. Deshalb beeinhaltet der erste Sprint einen Workload von etwas weniger wie 17 Stunden.
 
-##### In Progress
+##### In Progress:
 Tasknummer| Taskbezeichnung | Zeitschätzung
 ----|------|--------------------
 1.1 | Ordnerstruktur erstellen mit Maven. | 20 min
@@ -370,7 +370,7 @@ Dieses Code-snippet zeigt, wie das eingelesene Bild komprimiert und danach im ne
 #### Sprint 2 Planning Meeting
 In diesem Sprint haben wir einen Workload von 17 Stunden. Dies ist noch mehr als im letzten Sprint. Da wir nun aber eingespielter sind und uns mit SceneBuilder besser auskennen, hoffen wir, dass wir schneller Fortschritte machen.
 
-##### In Progress
+##### In Progress:
 Tasknummer| Taskbezeichnung | Zeitschätzung
 ----|------|--------------------
 2.3 | Mit SceneBuilder ein Fenster erstellen, welches für die Fehlermeldungen individuell genutzt werden kann und welches über einfache Handles geändert und angepasst werden kann. | 40 min 
