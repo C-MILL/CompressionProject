@@ -206,7 +206,7 @@ Story 8 | Tasks für die Sprachauswahl realisieren | Zeitschätzung
 
 
 #### DragAndDropController V0.1
-Dies ist der Teil des Codes der reagiert sobald eine Datei in das Fenster gezogen wird. Hier sind noch keine Kontrollmechanismen eingebaut die überprüfen ob diese Datei unterstützt wird von Java oder nicht.
+Dies ist der Teil des Codes der reagiert, sobald eine Datei in das Fenster gezogen wird. Hier sind noch keine Kontrollmechanismen eingebaut, die überprüfen ob dieses Dateiformat unterstützt wird oder nicht.
 
 ```ruby
  	@FXML
@@ -229,14 +229,14 @@ Dies ist der Teil des Codes der reagiert sobald eine Datei in das Fenster gezoge
 	}
  ```
  
- Danach wird der Anfang und das ende abgeschnitten da dort jeweils noch ein Anführungszeichen steht.
+ Danach wird der Anfang und das Ende abgeschnitten, da dort jeweils noch ein Anführungszeichen steht.
  ```ruby				
 		somelinks= somelinks.substring(1, (somelinks.length()-1));
 	}
  ```
  
  
- Dann wird der rest des Strings gesplitted in die einzelnen Links und in einem Array gespeichert. Das Array wird dann der ArrayList mit einer for schleife hinzugefügt.
+ Dann wird der Rest des Strings in die einzelnen Links gesplitted und in einem Array gespeichert. Das Array wird dann der ArrayList mit einer for Schleife hinzugefügt.
  ```ruby
 		String[] linkarray=somelinks.split(", ")	;	
 		for(int i =0; i<linkarray.length;i++) {
@@ -245,7 +245,7 @@ Dies ist der Teil des Codes der reagiert sobald eine Datei in das Fenster gezoge
 	}
  ```
  
- Zum schluss wird die Variabel die angibt wie viele Links schon der Liste hinzugefügt wurden gesetzt.
+ Zum Schluss wird die Variable, die angibt wie viele Links bereits der Liste hinzugefügt wurden, gesetzt.
  ```ruby
 		labelNumberToCompress.setText(Integer.toString(links.size()));	
 	}
