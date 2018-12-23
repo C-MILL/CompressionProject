@@ -16,14 +16,18 @@
     - [Sprint 1](#sprint-1)
       - [Sprint 1 Planning Meeting](#sprint-1-planning-meeting)
       - [Sprint 1 Review](#sprint-1-review)
+      - [Sprint 1 Code-Snipplets](sprint-1-code-snipples)
+       	  - [DragAndDropController V0.1](#draganddropcontroller-v0.1)
+	  - [Neuer Ordner für komprimierte Bilder](#neuer-ordner-für-komprimierte-bilder)
+	  - [Bild komprimieren und neuer Bildname](#bilder-komprimieren-und-neuer-bildname)
     - [Sprint 2](#sprint-2)
       - [Updated Backlog](#updated-backlog)
       - [Sprint 2 Planning Meeting](#sprint-2-planning-meeting)
       - [Sprint 2 Review](#sprint-2-review)
+      - [Sprint 2 Code-Snipplets](sprint-2-code-snipples)
           - [JUnit Test - Komprimierung](#junit-test---komprimierung)
           - [Neuer Ordner für komprimierte Bilder](#neuer-ordner-für-komprimierte-bilder)
           - [Bild komprimieren und neuer Bildname](#bild-komprimieren-und-neuer-bildname)
-      - [Testfälle](#testfälle)
       - [Klassen- und Sequenzdiagramm](#klassen--und-sequenzdiagramm)
           - [Klassendiagramm](#klassendiagramm)
           - [Sequenzdiagramm](#sequenzdiagramm)
@@ -200,7 +204,7 @@ Story 8 | Tasks für die Sprachauswahl realisieren | Zeitschätzung
 8.3 | Im Willkommensfenster einen Sprachauswahl Button erstellen. | 20 min
 8.4 | Eine englische Version der Buttons und Labels erstellen und ins Programm einbinden.| 4 Stunden
 
-#### Sprint 1 Code-snippets
+#### Sprint 1 Code-Snippets
 
 
 ##### DragAndDropController V0.1
@@ -289,7 +293,7 @@ public class createNewFolder {
 Die Klasse createFolder() erstellt einen neuen Ordner auf dem Desktop des Benutzers. Dazu wird das Home-Verzeichnis des Benutzers bestimmt und der Pfad für den Desktop mit der Funktion File.separator definiert. Danach wird diesem Pfad der Ordnername «Compressed Images Datum» hinzugefügt. Das aktuelle Datum wird am Anfang der Methode bestimmt. Als letztes wird eine Datei mit dem neuen Pfad erstellt und mit dem Befehl mkdirs() der Ordner im Ziel des Pfades hergestellt. Der Pfad des neuen Ordners wird von der Methode für weitere Zwecke übergeben. 
 
 
-####### Bild komprimieren und neuer Bildname
+##### Bild komprimieren und neuer Bildname
 
 ```ruby
 
@@ -623,13 +627,13 @@ Am Ende wird der Text gesetzt, der dann im Fenster angezeigt wird.
 Das Code-snippet oberhalb zeigt einen Teil des Codes aus dem JUnit-Test, der verwendet wird, um zu testen, ob die Bilddateien komprimiert wurden. Der Test unterscheidet kleine (small) Bilder und grosse (big) Bilder. Dabei ist die Pixelanzahl entscheidend, ob das Bild klein oder gross ist. Wenn das Bild weniger als 1080 Pixel (1080 Pixel = full HD Auflösung) misst, ist es klein und wird nicht komprimiert. Die Idee dahinter ist, dass die Bilder nicht zu stark komprimiert werden und dann irgendwann eine schlechte Qualität bekommen. Für den Test wurde ein kleines und ein grosses Bild genommen und mit dem Programm komprimiert und dann über den Dateipfad in den Test eingelesen.  Beim ersten Test wird geprüft, ob das kleine Bild nicht komprimiert wird, weil es ja zu klein zum Komprimieren ist. Beim zweiten Test wird geprüft, ob das Bild komprimiert wird. Diese Tests werden mit Hilfe von «assertEquals» gemacht. Dabei wird geprüft, ob das erwartete Ergebnis mit dem Programmoutput übereinstimmt.
 
 
-##### Klassen- und Sequenzdiagramm
+#### Klassen- und Sequenzdiagramm
 
-###### Klassendiagramm
+##### Klassendiagramm
 
 ![](https://github.com/atorha/CompressionProject/blob/master/Images/Class_Diagramm.JPG)
 
-###### Sequenzdiagramm
+##### Sequenzdiagramm
 
 ![](https://github.com/atorha/CompressionProject/blob/master/Images/Sequence_diagram.jpg)
 
