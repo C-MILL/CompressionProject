@@ -27,8 +27,6 @@
       - [Klassen- und Sequenzdiagramm](#klassen--und-sequenzdiagramm)
           - [Klassendiagramm](#klassendiagramm)
           - [Sequenzdiagramm](#sequenzdiagramm)
-      - [Dokumentation wichtiger Code Snipplets](#dokumentation-wichtiger-code-snipplets)
-      - [Testfälle](#testfälle)
   - [Bedienungsanleitung](#bedienungsanleitung)
   - [Fazit](#fazit)
 
@@ -170,7 +168,7 @@ Tasknummer| Taskbezeichnung | Zeitschätzung
 #### Sprint 1 Review
 Wir konnten im ersten Sprint alle Tasks erfüllen. Es muss aber gesagt werden, dass die geschätzten Zeiten **immer** überschritten wurden und jedes Teammitglied Überstunden leisten musste. Somit ist die To Do Liste des ersten Sprints nun eine Done Liste. 
 
-##### Backlog 2
+#### Backlog 2
 
 Story 2 | Schritte, um das DragAndDrop Fenster zu realisieren  | Zeitschätzung
 ----|------|--------------------
@@ -202,7 +200,7 @@ Story 8 | Tasks für die Sprachauswahl realisieren | Zeitschätzung
 8.3 | Im Willkommensfenster einen Sprachauswahl Button erstellen. | 20 min
 8.4 | Eine englische Version der Buttons und Labels erstellen und ins Programm einbinden.| 4 Stunden
 
-#### Sprint 1 einige Code snippets
+#### Sprint 1 Code-snippets
 
 
 ##### DragAndDropController V0.1
@@ -323,7 +321,7 @@ public class compress {
 
 ```
 
-Das obige Code-Snippet aus der Klasse «compress.java» zeigt, wie der Pfad des hinzugefügten Bildes, sowie der Ordner, der für die Komprimierung neu angelegt wird, der Methode «compress()» als Konstruktor hinzugefügt wird. Aus dem Pfad des hinzugefügten Bildes wird der Name des Bildes ausgelesen. Es wird daraufhin ein neuer Dateiname für das zu komprimierende Bild nach dem Format «alter Dateiname + _compr» generiert. 
+Das obige Code-snippet aus der Klasse «compress.java» zeigt, wie der Pfad des hinzugefügten Bildes, sowie der Ordner, der für die Komprimierung neu angelegt wird, der Methode «compress()» als Konstruktor hinzugefügt wird. Aus dem Pfad des hinzugefügten Bildes wird der Name des Bildes ausgelesen. Es wird daraufhin ein neuer Dateiname für das zu komprimierende Bild nach dem Format «alter Dateiname + _compr» generiert. 
 
 ```ruby
 			//Get resolution of image and divide trough 2
@@ -359,7 +357,7 @@ Das obige Code-Snippet aus der Klasse «compress.java» zeigt, wie der Pfad des 
 	}
 ```
 
-Dieses Code-Snippet zeigt, wie das eingelesene Bild komprimiert und danach im neu generierten Ordner mit dem neu generierten Dateinamen abgespeichert wird. Es wird dabei zuerst die Höhe und Breite des Bildes ausgelesen. Falls die Höhe des Bildes unterhalb der doppelten Full-HD Auflösung liegt, wird das Bild nicht komprimiert, da die Bildqualität ansonsten nicht auf einem akzeptablen Niveau wäre. Wenn die Bildhöhe grösser als 2160 Pixel ist, wird das Bild im weiteren Verlauf komprimiert. Dabei wird die Bildhöhe halbiert und das Bild entsprechend skaliert. Das komprimierte Bild besitzt damit immer eine Auflösung, die mindestens der Full-HD Auflösung entspricht. Danach wird das komprimierte Bild generiert. Das neue Bild wird danach als «jpeg» Datei im neu generierten Ordner auf dem Desktop unter dem neuen Bildnamen abgelegt. Es existieren weitere Konstruktoren, die erweiterte Funktionalitäten beim nächsten Release bieten werden. So soll für professionellere Anwender die Möglichkeit geschaffen werden, das Bild nach einer genauen Eingabe der Pixel oder nach der maximal erwünschten Dateigrösse zu komprimieren. 
+Dieses Code-snippet zeigt, wie das eingelesene Bild komprimiert und danach im neu generierten Ordner mit dem neu generierten Dateinamen abgespeichert wird. Es wird dabei zuerst die Höhe und Breite des Bildes ausgelesen. Falls die Höhe des Bildes unterhalb der doppelten Full-HD Auflösung liegt, wird das Bild nicht komprimiert, da die Bildqualität ansonsten nicht auf einem akzeptablen Niveau wäre. Wenn die Bildhöhe grösser als 2160 Pixel ist, wird das Bild im weiteren Verlauf komprimiert. Dabei wird die Bildhöhe halbiert und das Bild entsprechend skaliert. Das komprimierte Bild besitzt damit immer eine Auflösung, die mindestens der Full-HD Auflösung entspricht. Danach wird das komprimierte Bild generiert. Das neue Bild wird danach als «jpeg» Datei im neu generierten Ordner auf dem Desktop unter dem neuen Bildnamen abgelegt. Es existieren weitere Konstruktoren, die erweiterte Funktionalitäten beim nächsten Release bieten werden. So soll für professionellere Anwender die Möglichkeit geschaffen werden, das Bild nach einer genauen Eingabe der Pixel oder nach der maximal erwünschten Dateigrösse zu komprimieren. 
 
 
 ### Sprint 2
@@ -385,7 +383,7 @@ Tasknummer| Taskbezeichnung | Zeitschätzung
 8.3 | Im Willkommensfenster einen Sprachauswahl Button erstellen. | 20 min
 8.4 | Eine englische Version der Buttons und Labels erstellen und ins Programm einbinden.| 4 Stunden
 
-### Scrum Halftime Meeting
+#### Scrum Halftime Meeting
 In der Hälfte des Sprints haben wir festgestellt, dass die ProgressBar unserem Team erhebliche Schwierigkeiten bereitet. Nach 10 Arbeitsstunden funktioniert aber. Da uns diese 10 Stunden nun fehlen, müssen wir die zwei letzten Stories (7 und 8) auf einen zukünftigen Sprint verschieben, was jedoch nicht schlimm ist, da diese Stories unser Grundprogramm nicht beeinflusst. 
 
 
@@ -622,7 +620,7 @@ Am Ende wird der Text gesetzt, der dann im Fenster angezeigt wird.
 	}
 ```
 
-Das Code Snippet oberhalb zeigt einen Teil des Codes aus dem JUnit-Test, der verwendet wird, um zu testen, ob die Bilddateien komprimiert wurden. Der Test unterscheidet kleine (small) Bilder und grosse (big) Bilder. Dabei ist die Pixelanzahl entscheidend, ob das Bild klein oder gross ist. Wenn das Bild weniger als 1080 Pixel (1080 Pixel = full HD Auflösung) misst, ist es klein und wird nicht komprimiert. Die Idee dahinter ist, dass die Bilder nicht zu stark komprimiert werden und dann irgendwann eine schlechte Qualität bekommen. Für den Test wurde ein kleines und ein grosses Bild genommen und mit dem Programm komprimiert und dann über den Dateipfad in den Test eingelesen.  Beim ersten Test wird geprüft, ob das kleine Bild nicht komprimiert wird, weil es ja zu klein zum Komprimieren ist. Beim zweiten Test wird geprüft, ob das Bild komprimiert wird. Diese Tests werden mit Hilfe von «assertEquals» gemacht. Dabei wird geprüft, ob das erwartete Ergebnis mit dem Programmoutput übereinstimmt.
+Das Code-snippet oberhalb zeigt einen Teil des Codes aus dem JUnit-Test, der verwendet wird, um zu testen, ob die Bilddateien komprimiert wurden. Der Test unterscheidet kleine (small) Bilder und grosse (big) Bilder. Dabei ist die Pixelanzahl entscheidend, ob das Bild klein oder gross ist. Wenn das Bild weniger als 1080 Pixel (1080 Pixel = full HD Auflösung) misst, ist es klein und wird nicht komprimiert. Die Idee dahinter ist, dass die Bilder nicht zu stark komprimiert werden und dann irgendwann eine schlechte Qualität bekommen. Für den Test wurde ein kleines und ein grosses Bild genommen und mit dem Programm komprimiert und dann über den Dateipfad in den Test eingelesen.  Beim ersten Test wird geprüft, ob das kleine Bild nicht komprimiert wird, weil es ja zu klein zum Komprimieren ist. Beim zweiten Test wird geprüft, ob das Bild komprimiert wird. Diese Tests werden mit Hilfe von «assertEquals» gemacht. Dabei wird geprüft, ob das erwartete Ergebnis mit dem Programmoutput übereinstimmt.
 
 
 ##### Klassen- und Sequenzdiagramm
