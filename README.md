@@ -127,7 +127,7 @@ Story 8 | Tasks für die Sprachauswahl realisieren | Zeitschätzung
 8.1 | Ein Fenster mit SceneBuilder erstellen, wobei 2 Buttons mit der Beschriftung "Deutsch" und "Englisch" vorhanden sind. | 40 min
 8.2 | Controllerklasse für das Sprachwahlfenster erstellen. Die Sprachauswahl kann aus dem Willkommensfenster aufgerufen werden. | 40 min
 8.3 | Im Willkommensfenster einen Sprachauswahl Button erstellen. | 20 min
-8.4 | Eine englische Version der Buttons und Labels erstellen und ins Programm einbinden.| 4 Stunden
+8.4 | Eine englische Version der Buttons und Labels erstellen und ins Programm einbinden.| 4 h
 
 ## Releaseplan
 
@@ -350,8 +350,8 @@ Tasknummer| Taskbezeichnung | Zeitschätzung
 2.4 | Eine Controller Klasse für die Fehlermeldungen schreiben. Darin soll über eine Methode die Nachricht des fehlers geändert werden können. Die Klasse soll einen Boolean zurückgeben. | 80 min
 2.5 | Im DragAndDropController die Links auf nicht unterstützte Formate untersuchen und diese herausfiltern. Falls es nicht unterstützte Dateien gibt, soll der Nutzer informiert werden über ein Fehlerfenster. | 80 min
 2.6 | Im DragAndDropController die Links auf Doppelgänger untersuchen und diese aussortieren. Falls es Doppelgänger gibt, soll der Nutzer über das Fehlerfenster darauf aufmerksam gemacht werden und entscheiden können, ob er die Datei trotzdem hinzufügen will oder nicht.| 80 min 
-3.2 | JUnit Klasse machen, um zu testen, ob das Bild tatsächlich kleiner wurde. | 2 Stunden
-3.3 | JUnit Klasse machen, um zu testen, ob die Auflösung richtig angepasst wurde. | 2 Stunden 
+3.2 | JUnit Klasse machen, um zu testen, ob das Bild tatsächlich kleiner wurde. | 2 h
+3.3 | JUnit Klasse machen, um zu testen, ob die Auflösung richtig angepasst wurde. | 2 h 
 5.1 | Mit Scene Builder ein Fenster erstellen, das den Fortschritt der Komprimierung anzeigt. Dafür soll es einen Ladebalken geben und ein schriftliche Information, die anzeigt, wie viele Fotos bereits komprimiert wurden. | 40 min
 5.2 | Controllerklasse für die Fortschrittsseite erstellen. Sie soll sich automatisch aktualisieren, sobald ein Bild komprimiert wurde. | 40 min
  | | Total: 10h |
