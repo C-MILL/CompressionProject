@@ -90,14 +90,15 @@ Nr. | Task | User Story | Zeitschätzung
 1.5 | Im Controller einen WeiterButton erstellen der die nächste Scene startet. | 1 | 15min
 2.1 | Ein DragANdDrop Fenster gestalten mit SceneBuilder. | 2 | 30min
 2.2 | Der DragAndDropController erstellen der alle Drops in ein Array schreibt. | 4 | 60min
-2.3 | Im DragAndDropController die Links auf nichtunterstützte Formate untersuchen und diese ausfiltern. | 4 | 60min
-2.4 | Im DragAndDropController die Links auf doppelgänger Untersuchen und diese aussortieren. | 4 | 60min
-2.5 | Im DragAndDropController die verbleibenden Links in eine ArrayList stecken. | 2 | 2
-2.6 | Im DragAndDropController den Button so einrichten dass er die Links in die Main-Klasse speichert und die nächste Scene startet. | 
-3.1 | Eine Klasse erstellen an die die Bilder weitergegeben werden können für die komprimierung. 
-3.2 | In der Main Klasse eine Methode schreiben die alle Links an die Komprimierung weitergibt.
-3.2 | In der Komprimierungsklasse alle Links als Bilder einlesen und komprimieren lassen.
-3.3 | Eine Weitere Klasse erstellen die auf dem Desktop einen Ordner erstellt in dem die komprimierten Dateien abgelegt werden können. Die Klasse soll eine Methode haben die den Ordner erstellt und den Link des Ordners zurückgibt. 
+2.3 | Mit SceneBuilder ein Fenster erstellen welches für die Fehlermeldungen individuell genutzt werden kann. und welches man über einfache handles ändern und anpassen kann. | 2 | 30min 
+2.4 | Eine Controller Klasse für die Fehlermeldungen schreiben. Darin soll man über eine Methode die Nachricht des fehlers ändern können. Die Klasse soll einen boolean zurückgeben.
+2.5 | Im DragAndDropController die Links auf nichtunterstützte Formate untersuchen und diese ausfiltern. Falls es nicht unterstützte Dateien gibt, soll der Nutzer informiert werden über das Fehlerfenster. | 4 | 60min
+2.6 | Im DragAndDropController die Links auf doppelgänger Untersuchen und diese aussortieren. Falls es Doppelgänger gibt soll der Nutzer über das Fehlerfenster darauf aufmerksam gemacht werden und entscheiden können ob er die Datei trotzdem hinzufügen will oder nicht.| 4 | 60min
+2.7 | Im DragAndDropController die verbleibenden Links in eine ArrayList stecken. | 1 | 15min
+2.8 | Im DragAndDropController den Button so einrichten dass er die Links in die Main-Klasse speichert und die nächste Scene startet. | 2 | 30min 
+3 | Komprimierung und Dateisammlung sowie abspeicherung der Fotos in einem Ornder auf dem Desktop. | | 
+3.1 | Eine Weitere Klasse erstellen die auf dem Desktop einen Ordner erstellt in dem die komprimierten Dateien abgelegt werden können. Die Klasse soll eine Methode haben die den Ordner erstellt und den Link des Ordners zurückgibt. | 8 | 4-Stunden
+3.3 | Eine Klasse erstellen an die ein Link eines Fotos so wie der Link des Desktop-Ornders weitergegeben werden kann für die komprimierung. Darin soll eine Methode gerufen werden die über den Link das Foto ladet, die Auflösung anpasst und das Bild komprimiert sowie in den erstellten Ordner auf dem Desktop abspeichert. | 10 | 6-Stunden
 2 | Alle Bilder zum Komprimieren in Arraylist auflisten | 2 | 1
 3 | Komprimierung der Bilddatei | 5 | 6
 4 | Drag and Drop Bereich erstellen (2.Scene) | 5 | 6
