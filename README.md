@@ -189,14 +189,68 @@ Da wir pro Sprint 20 Punkte verarbeiten können was vierundzwanzig Stunden entsp
 
 ###### JUnit Test - Komprimierung
 
-![](https://github.com/atorha/CompressionProject/blob/master/Images/Code_Snipplet_JUnit.jpg)
+```ruby
+	@Test
+	public void testCompressResolutionResizingToSmallResolution() throws IOException { 
+		try {
+			new compress(linkOfSmallFile, "./src/test/resources/testCompressed");
+			smallImage= new ImageIcon(ImageIO.read(new File(linkOfSmallFile))).getImage();
+			smallCompressedImage  = new ImageIcon(ImageIO.read(new File(linkOfSmallCompressedFile))).getImage();
+			assertEquals(smallImage.getHeight(null), smallCompressedImage.getHeight(null), "The small images got compressed, even though they should not get compressed.");
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	
+	@Test
+	public void testCompressResolutionResizingBigFile() throws IOException { 
+		try {
+			new compress(linkOfBigFile, "./src/test/resources/testCompressed");
+			bigImage= new ImageIcon(ImageIO.read(new File(linkOfBigFile))).getImage();
+			bigCompressedImage  = new ImageIcon(ImageIO.read(new File(linkOfBigCompressedFile))).getImage();
+			assertEquals(bigImage.getHeight(null)/2, bigCompressedImage.getHeight(null), "The small images got compressed, even though they should not get compressed.");
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+```
 
 Das Code Snippet (oberhalb) zeigt einen Teil des Codes aus dem JUnit-Test, um zu testen, ob die Bilddateien komprimiert wurden. Der Test unterscheidet kleine (small) Bilder und grosse (big) Bilder, dabei ist die Pixelanzahl entscheidend, ob das Bild klein oder gross ist. Wenn das Bild weniger als 1080 Pixel (1080 Pixel = full HD Auflösung) hat, ist es klein und wird nicht komprimiert. Die Idee dahinter ist, dass die Bilder nicht zu stark komprimiert werden und dann irgendwann eine schlechte Qualität bekommen. Für den Test haben wir ein kleines und ein grosses Bild genommen und dieses mit unserem Programm komprimiert und dann über den Dateipfad in den Test eingelesen.  Beim ersten Test wird geprüft, ob das kleine Bild nicht komprimiert wird, weil es ja zu klein zum Komprimieren ist. Beim zweiten Test wird geprüft, ob das Bild komprimiert wird. Diese Tests werden mit Hilfe von «assertEquals» gemacht. Dabei wird geprüft, ob das erwartete Ergebnis mit dem Programmoutput übereinstimmt.
 
 
 ###### Neuer Ordner für komprimierte Bilder
 
-![](https://github.com/atorha/CompressionProject/blob/master/Images/Code_Snipplet_New_Folder.JPG)
+```ruby
+
+public class createNewFolder {
+
+	public String createFolder() {
+		String linkOfNewFolder = null;
+
+		try {
+
+			// Gets todays Date
+			DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy.MM.dd");
+			LocalDateTime today = LocalDateTime.now();
+
+
+			// Gets users home directory and splits it at Desktop
+			// Creates new folder with e.g. following path: C:\Users\mkaun\Desktop\Compressed 2018.12.14
+			String path = System.getProperty("user.home") + File.separator + "Desktop";
+			path += File.separator + "Compressed Images " + dtf.format(today);
+			File customDir = new File(path);
+			customDir.mkdirs();
+			linkOfNewFolder = path.replace("\\","/");
+			System.out.println(linkOfNewFolder);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return linkOfNewFolder;
+	}
+}
+
+```
 
 Die Klasse createFolder() erstellt einen neuen Ordner auf dem Desktop des Benutzers. Dazu wird das Home-Verzeichnis des Benutzers bestimmt und der Pfad für den Desktop mit der Funktion File.separator definiert. Danach wird diesem Pfad der Ordnername «Compressed Images Datum» hinzugefügt. Das aktuelle Datum wird am Anfang der Methode bestimmt. Als letztes wird eine Datei mit dem neuen Pfad erstellt und mit dem Befehl mkdirs() der Ordner im Ziel des Pfades hergestellt. Der Pfad des neuen Ordners wird von der Methode für weitere Zwecke übergeben. 
 
