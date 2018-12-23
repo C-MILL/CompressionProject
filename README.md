@@ -521,14 +521,14 @@ Diese Methode, die aufgerufen wird, sobald etwas in die Drop-Area gezogen wird, 
 ```
 
 
-Hier ist eine verkettung von zwei For schleifen. Sie sollen die bereits gespeicherten Links mit den Links vergleichen die neu dazukommen. 
+Hier zu sehen ist eine Verkettung von zwei For Schleifen. Sie sollen die bereits gespeicherten Links mit den Links vergleichen, die neu dazukommen. 
 
 ```ruby
 
 		for(int i =0; i<linkarray.length;i++) {
 			for(int j=0; j<links.size(); j++) {
 ```
-Wenn eine Datei den genau gleichen Link hat wie ein bereits gespeicherten Link dann wird die Variable alreadyCatched als wahr gesetzt.
+Wenn eine Datei den genau gleichen Link hat, wie ein bereits gespeicherter Link, dann wird die Variable alreadyCatched auf true gesetzt.
 			
 ```ruby
 				if(linkarray[i].equals(links.get(j))){
@@ -537,7 +537,7 @@ Wenn eine Datei den genau gleichen Link hat wie ein bereits gespeicherten Link d
 				}
 				
 ```
-Ist die Datei schon vorhanden wird ein ERROR ausgeführt welcher das Error Fenster aufruft und den OK Button disabled damit der Benutzer nicht trotz des Fehlers weitergehen kann. Dies würde nämlich das Programm crashen.
+Ist die Datei schon vorhanden, wird ein ERROR ausgeführt, welcher das Error Fenster aufruft und den OK Button deaktiviert, damit der Benutzer nicht weitergehen kann, während der Fehler besteht. Dies würde zu einem Programmabsturz führen.
 	
 ```ruby
 			if(alreadyCatched==true) {
@@ -550,7 +550,7 @@ Ist die Datei schon vorhanden wird ein ERROR ausgeführt welcher das Error Fenst
 ```
 
 			
-Wenn der Benutzer im ERROR Fenster bestimmt hat wie er fortfahren möchte oder wenn gar kein alreadyCatched vorliegt, wird in diesem if überprüft ob die Datei ein Kompatibles foto ist. Wenn nicht kann es nämlich auch zu einem Crah führen. Hier wird auch wieder ein Error ausgeführt wo der Benutzer gefragt wird ob er die Datei trotzdem speichern möchte.
+Wenn der Benutzer im Error Fenster bestimmt hat, wie er fortfahren möchte oder wenn gar kein alreadyCatched vorliegt, wird in dieser if Schlaufe überprüft, ob die Datei ein kompatibles Dateiformat besitzt. Wenn nicht, könnte es auch zu einem Programmabsturz führen. Hier wird auch wieder eine Error Meldung aufgerufen, in der der Benutzer gefragt wird, ob er die Datei trotzdem speichern möchte.
 
 
 ```ruby
@@ -579,7 +579,7 @@ Wenn der Benutzer im ERROR Fenster bestimmt hat wie er fortfahren möchte oder w
 ```
 				
 				
-Ganz am schluss wird noch der Text gesetzt der dann im Fenster angezeigt wird.
+Am Ende wird der Text gesetzt, der dann im Fenster angezeigt wird.
 
 ```ruby
 			}
