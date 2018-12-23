@@ -149,22 +149,22 @@ Wir haben unsere Sprint's auf jeweils **fünf Stunden** festgelegt. Die Sprints 
 
 ## Sprint 1
 ### Sprint 1 Planning Meeting
-Da wir pro Sprint 20 Punkte verarbeiten können was zwanzig Stunden entspricht. Für den ersten Sprint haben wir uns aber etwas weniger eingeteilt um zu sehen wie die Zeit aufgeht. Wir erwarten dass die Zeiten zwar stimmen, dass aber zwischen den wirklichen arbeitszeiten noch viele Stunden verloren gehen werden mit absprechen sowie Merge problemen. Deshalb beeinhaltet der erste Sprint einen Workload von etwas weniger wie 17 Stunden.
+Pro Sprint können wir 20 Story Punkte verarbeiten, was zwanzig Arbeitsstunden entspricht. Für den ersten Sprint haben wir uns aber etwas weniger eingeteilt, um zu sehen, ob wir mit unserer Zeiteinschätzung richtig liegen. Wir erwarten, dass die Zeiten zwar stimmen, aber nebst den realen Arbeitszeiten noch viele Stunden verloren gehen werden mit der Teamkommunikation sowie Merge Konflikten. Deshalb beeinhaltet der erste Sprint einen Workload von etwas weniger wie 17 Stunden.
 
-Tasknummer| Taksbezeichnung | Zeitschätzung
+Tasknummer| Taskbezeichnung | Zeitschätzung
 ----|------|--------------------
 1.1 | Ordnerstruktur erstellen mit Maven. | 20 min
 1.2 | Grundstruktur des Programmes schreiben, main-JavaFx klasse erstellen. | 20 min
 1.3 | Willkommen Fenster mit Scene Builder gestalten. | 20 min
 1.4 | Die Controller Klasse für das Willkommenfenster erstellen. | 40 min
-1.5 | Im Controller einen WeiterButton erstellen der die nächste Scene startet. | 40 min
-2.1 | Ein DragANdDrop Fenster gestalten mit SceneBuilder. | 40 min
-2.2 | Der DragAndDropController erstellen der alle Drops in ein Array schreibt. | 80 min
-2.7 | Im DragAndDropController die verbleibenden Links in eine ArrayList stecken. | 20min
-2.8 | Im DragAndDropController den Button so einrichten dass er die Links in die Main-Klasse speichert und die nächste Scene startet. | 40 min 
-3.1 | Eine Klasse erstellen an die ein Link eines Fotos sowie der Link des Desktop-Ornders weitergegeben werden kann für die komprimierung. Darin soll eine Methode gerufen werden die über den Link das Foto ladet, die Auflösung anpasst und das Bild komprimiert sowie in den erstellten Ordner auf dem Desktop abspeichert. | 6 Stunden 
-4.1 | Eine Weitere Klasse erstellen die auf dem Desktop einen Ordner erstellt in dem die komprimierten Dateien abgelegt werden können. Die Klasse soll eine Methode haben die den Ordner erstellt und den Link des Ordners zurückgibt. | 2 Stunden
-6.1 | Einen Button machen auf der Progressseite der "Fertig" heisst und den man erste Drücken kann wenn alle Fotos komprimiert wurden. | 40 min
+1.5 | Im Controller einen weiter Button erstellen, der die nächste Scene startet. | 40 min
+2.1 | Ein DragAndDrop Fenster gestalten mit SceneBuilder. | 40 min
+2.2 | Den DragAndDropController erstellen, der alle Drops in ein Array schreibt. | 80 min
+2.7 | Im DragAndDropController die verbleibenden Links in eine ArrayList schreiben. | 20min
+2.8 | Im DragAndDropController den Button so einrichten, dass er die Links in die Main-Klasse speichert und die nächste Scene startet. | 40 min 
+3.1 | Eine Klasse erstellen, an die ein Link eines Fotos sowie der Link des Desktop-Ornders weitergegeben werden kann für die Komprimierung. Darin soll eine Methode aufgerufen werden, die über den Link das Foto ladet, die Auflösung anpasst und das Bild komprimiert sowie im erstellten Ordner auf dem Desktop abspeichert. | 6 Stunden 
+4.1 | Eine weitere Klasse erstellen, die auf dem Desktop einen Ordner erstellt, in dem die komprimierten Dateien abgelegt werden können. Die Klasse soll eine Methode haben, die den Ordner erstellt und den Link des Ordners zurückgibt. | 2 Stunden
+6.1 | Einen Button auf der Progressseite erstellen, der "Fertig" heisst und den man erst Drücken kann, wenn alle Fotos komprimiert wurden. | 40 min
  |         | Total: 16h 40min
 
 ### Sprint 1 Review
