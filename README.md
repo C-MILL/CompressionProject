@@ -64,7 +64,7 @@ Nr. | UserStory | Aufwand-schätzung (Story Points) | Priorität | Akzptanzkrite
 ----|-----------|----------------------------------|-----------|------------------
 1 | Der Kunde soll die Applikation zur Komprimierung von Bildern intuitiv bedienen können, damit er Zeit spart beim Komprimieren von Dateien. | 5 | 1 | Es sollen nicht mehr als drei Buttons auf einer Seite verwendet werden. Die Buttons sollen beschriftet sein, um eine intuitive Bedienung zu gewährleisten.
 2 | Der Kunde soll alle Fotos einfach in ein Fenster ziehen können und das Programm soll dabei automatisch erkennen, welche Fotos komprimiert werden können und welche nicht. Der Nutzer soll dabei über Fehler benachrichtigt werden. Dabei soll ihm angezeigt werden, was nicht gut ist und mit welcher Datei etwas nicht stimmt. | 13 | 1 | Dateien können über ein Drag and Drop Fenster ausgewählt werden und das Programm muss automatisch erkennen, welche Dateien fehlerhaft sind.
-3 | Der Kunde soll kleinere Dateien mit immer noch akzeptabler Qualität erhalten, ohne sich selber Gedanken zur Bildgrösse zu machen. | 8 | 1 | Die komprimierten Dateien müssen kleiner sein als die Originalen.
+3 | Der Kunde soll kleinere Dateien mit immer noch akzeptabler Qualität erhalten, ohne sich selber Gedanken zur Bildgrösse zu machen. | 8 | 1 | Die komprimierten Dateien müssen kleiner sein als die Originaldateien.
 4 | Die Bilddateien sollen direkt auf dem Desktop gespeichert werden, damit der Benutzer keinen Dateipfad eingeben muss. | 8 | 1 | Der Speichervorgang wird vom Programm übernommen, ohne dass der Benutzer etwas eingeben muss.
 5 | Während der potentiellen Wartezeit des Komprimiervorgangs soll der Kunde über die Aktion (also dass das Programm komprimiert) informiert werden, damit er weiss, was das Programm macht. | 8 | 2 | Sobald eine Wartezeit entsteht, weil das Programm Daten verarbeitet, wird das mit einer «Progress Bar» angezeigt.
 6 | Der Kunde soll eine Meldung auf dem Bildschirm erhalten, sobald der Komprimiervorgang abgeschlossen ist, damit der Kunde eine Bestätigung hat, dass seine Bilder komprimiert wurden. | 5 | 3 | Die Meldung soll kurz formuliert sein, aber klar vermitteln, dass der Komprimierungsvorgang abgeschlossen ist.
@@ -76,7 +76,7 @@ Story 1 | Grundgerüst erstellen für eine übersichtliche Oberfläche  | Zeitsc
 ----|------|--------------------
 1.1 | Ordnerstruktur erstellen mit Maven. | 20 min
 1.2 | Grundstruktur des Programmes schreiben, main-JavaFx klasse erstellen. | 20 min
-1.3 | Willkommen Fenster mit Scene Builder gestalten. | 20 min
+1.3 | Willkommen Fenster mit SceneBuilder gestalten. | 20 min
 1.4 | Die Controller Klasse für das Willkommensfenster erstellen. | 40 min
 1.5 | Im Controller einen weiter Button erstellen, der die nächste Scene startet. | 40 min
 
@@ -87,7 +87,7 @@ Story 2 | Schritte, um das DragAndDrop Fenster zu realisieren  | Zeitschätzung
 2.3 | Mit SceneBuilder ein Fenster erstellen, welches für die Fehlermeldungen individuell genutzt werden kann. Das Fenster kann über einfache Handles geändert und angepasst werden. | 40 min 
 2.4 | Eine Controller Klasse für die Fehlermeldungen schreiben. Darin soll man über eine Methode die Nachricht des Fehlers ändern können. Die Klasse soll einen Boolean zurückgeben. | 80 min
 2.5 | Im DragAndDropController die Links auf nicht unterstützte Formate untersuchen und diese herausfiltern. Falls es nicht unterstützte Dateien gibt, soll der Nutzer informiert werden mithilfe eines Fehlerfensters. | 80 min
-2.6 | Im DragAndDropController die Links auf Doppelgänger untersuchen und diese aussortieren. Falls es Doppelgänger gibt, soll der Nutzer über das Fehlerfenster darauf aufmerksam gemacht werden und entscheiden können, ob er die Datei trotzdem hinzufügen will oder nicht.| 80min 
+2.6 | Im DragAndDropController die Links auf Doppelgänger untersuchen und diese aussortieren. Falls es Doppelgänger gibt, soll der Nutzer über das Fehlerfenster darauf aufmerksam gemacht werden und entscheiden können, ob er die Datei trotzdem hinzufügen will oder nicht.| 80 min 
 2.7 | Im DragAndDropController die verbleibenden Links in eine ArrayList schreiben. | 20 min
 2.8 | Im DragAndDropController den Button so einrichten, dass er die Links in die Main-Klasse speichert und die nächste Scene startet. | 40 min 
 
@@ -103,7 +103,7 @@ Story 4 | Tasks um die Abspeicherung auf dem Desktop zu realisieren | Zeitschät
 
 Story 5 | Tasks für die Fortschrittanzeige realisieren | Zeitschätzung
 ----|------|--------------------
-5.1 | Mit Scene Builder ein Fenster erstellen, das den Fortschritt der Komprimierung anzeigt. Dafür soll es einen Ladebalken geben und ein schriftliche Information, die anzeigt, wie viele Fotos bereits komprimiert worden sind. | 40 min
+5.1 | Mit SceneBuilder ein Fenster erstellen, das den Fortschritt der Komprimierung anzeigt. Dafür soll es einen Ladebalken geben und ein schriftliche Information, die anzeigt, wie viele Fotos bereits komprimiert worden sind. | 40 min
 5.2 | Controllerklasse für die Fortschrittseite erstellen. Sie soll sich automatisch aktualisieren, sobald ein Bild komprimiert wurde. | 40 min
 
 Story 6 | Tasks für das Ende des Programmes realisieren | Zeitschätzung
@@ -147,8 +147,8 @@ Der 3. Release kam nicht zu Stande, da für die ersten beiden Sprints mehr Zeit 
 ### Sprint-Conditions
 Wir haben unsere Sprint's auf jeweils **fünf Stunden** festgelegt. Die Sprints werden von jedem Mitglied **individuell** durchgeführt. Das **Sprint Planning Meeting** wird somit anfangs der Woche, das **Daily Scrum Meeting** in der mitte der Woche und der **Sprint Review** am Freitag durchgeführt. Dies macht insofern Sinn, da teilweise Abhängigkeiten zwischen den verschiedenen Klassen bestehen und die Mitglieder auch nicht alle zur selben Zeit frei haben für die Sprints. Wir schätzen, dass unser Team jeweils 20 Story-Points behandeln kann pro Sprint. Dies ergibt 5 Storypoints pro Teammitglied. Da wir die Aufgaben gerne indiviudell bearbeiten, ist es unser Ziel, die Stories in möglichst kleine Pakete zu verpacken, damit der Aufwand möglichst klein und im Zeitraum eines Sprints zu erledigen bleibt. Dies setzt aber voraus, dass die Kommunikation sehr intensiv stattfindet, damit man die individuell erarbeiteten Teile dann auch zusammensetzen kann.
 
-## Sprint 1
-### Sprint 1 Planning Meeting
+### Sprint 1
+#### Sprint 1 Planning Meeting
 Pro Sprint können wir 20 Story Punkte verarbeiten, was zwanzig Arbeitsstunden entspricht. Für den ersten Sprint haben wir uns aber etwas weniger eingeteilt, um zu sehen, ob wir mit unserer Zeiteinschätzung richtig liegen. Wir erwarten, dass die Zeiten zwar stimmen, aber nebst den realen Arbeitszeiten noch viele Stunden verloren gehen werden mit der Teamkommunikation sowie Merge Konflikten. Deshalb beeinhaltet der erste Sprint einen Workload von etwas weniger wie 17 Stunden.
 
 Tasknummer| Taskbezeichnung | Zeitschätzung
@@ -160,17 +160,17 @@ Tasknummer| Taskbezeichnung | Zeitschätzung
 1.5 | Im Controller einen weiter Button erstellen, der die nächste Scene startet. | 40 min
 2.1 | Ein DragAndDrop Fenster gestalten mit SceneBuilder. | 40 min
 2.2 | Den DragAndDropController erstellen, der alle Drops in ein Array schreibt. | 80 min
-2.7 | Im DragAndDropController die verbleibenden Links in eine ArrayList schreiben. | 20min
+2.7 | Im DragAndDropController die verbleibenden Links in eine ArrayList schreiben. | 20 min
 2.8 | Im DragAndDropController den Button so einrichten, dass er die Links in die Main-Klasse speichert und die nächste Scene startet. | 40 min 
-3.1 | Eine Klasse erstellen, an die ein Link eines Fotos sowie der Link des Desktop-Ornders weitergegeben werden kann für die Komprimierung. Darin soll eine Methode aufgerufen werden, die über den Link das Foto ladet, die Auflösung anpasst und das Bild komprimiert sowie im erstellten Ordner auf dem Desktop abspeichert. | 6 Stunden 
+3.1 | Eine Klasse erstellen, an die ein Link eines Fotos sowie der Link des Desktop-Ordners weitergegeben werden kann für die Komprimierung. Darin soll eine Methode aufgerufen werden, die über den Link das Foto ladet, die Auflösung anpasst und das Bild komprimiert sowie im erstellten Ordner auf dem Desktop abspeichert. | 6 Stunden 
 4.1 | Eine weitere Klasse erstellen, die auf dem Desktop einen Ordner erstellt, in dem die komprimierten Dateien abgelegt werden können. Die Klasse soll eine Methode haben, die den Ordner erstellt und den Link des Ordners zurückgibt. | 2 Stunden
 6.1 | Einen Button auf der Progressseite erstellen, der "Fertig" heisst und den man erst Drücken kann, wenn alle Fotos komprimiert wurden. | 40 min
- |         | Total: 16h 40min
+ |         | Total: 14h 40min
 
-### Sprint 1 Review
+#### Sprint 1 Review
 Wir konnten im ersten Sprint alle Tasks erfüllen. Es muss aber gesagt werden, dass die geschätzten Zeiten **immer** überschritten wurden und jedes Teammitglied Überstunden leisten musste. Somit ist die To Do Liste des ersten Sprints nun eine Done Liste. 
 
-#### Backlog 2
+##### Backlog 2
 
 Story 2 | Schritte, um das DragAndDrop Fenster zu realisieren  | Zeitschätzung
 ----|------|--------------------
@@ -202,10 +202,10 @@ Story 8 | Tasks für die Sprachauswahl realisieren | Zeitschätzung
 8.3 | Im Willkommensfenster einen Sprachauswahl Button erstellen. | 20 min
 8.4 | Eine englische Version der Buttons und Labels erstellen und ins Programm einbinden.| 4 Stunden
 
-### Sprint 1 einige Code snippets
+#### Sprint 1 einige Code snippets
 
 
-#### DragAndDropController V0.1
+##### DragAndDropController V0.1
 Dies ist der Teil des Codes der reagiert, sobald eine Datei in das Fenster gezogen wird. Hier sind noch keine Kontrollmechanismen eingebaut, die überprüfen ob dieses Dateiformat unterstützt wird oder nicht.
 
 ```ruby
@@ -255,7 +255,7 @@ Dies ist der Teil des Codes der reagiert, sobald eine Datei in das Fenster gezog
  
  
  
-#### Neuer Ordner für komprimierte Bilder
+##### Neuer Ordner für komprimierte Bilder
 
 ```ruby
 
@@ -291,7 +291,7 @@ public class createNewFolder {
 Die Klasse createFolder() erstellt einen neuen Ordner auf dem Desktop des Benutzers. Dazu wird das Home-Verzeichnis des Benutzers bestimmt und der Pfad für den Desktop mit der Funktion File.separator definiert. Danach wird diesem Pfad der Ordnername «Compressed Images Datum» hinzugefügt. Das aktuelle Datum wird am Anfang der Methode bestimmt. Als letztes wird eine Datei mit dem neuen Pfad erstellt und mit dem Befehl mkdirs() der Ordner im Ziel des Pfades hergestellt. Der Pfad des neuen Ordners wird von der Methode für weitere Zwecke übergeben. 
 
 
-###### Bild komprimieren und neuer Bildname
+####### Bild komprimieren und neuer Bildname
 
 ```ruby
 
@@ -362,10 +362,10 @@ Das obige Code-Snippet aus der Klasse «compress.java» zeigt, wie der Pfad des 
 Dieses Code-Snippet zeigt, wie das eingelesene Bild komprimiert und danach im neu generierten Ordner mit dem neu generierten Dateinamen abgespeichert wird. Es wird dabei zuerst die Höhe und Breite des Bildes ausgelesen. Falls die Höhe des Bildes unterhalb der doppelten Full-HD Auflösung liegt, wird das Bild nicht komprimiert, da die Bildqualität ansonsten nicht auf einem akzeptablen Niveau wäre. Wenn die Bildhöhe grösser als 2160 Pixel ist, wird das Bild im weiteren Verlauf komprimiert. Dabei wird die Bildhöhe halbiert und das Bild entsprechend skaliert. Das komprimierte Bild besitzt damit immer eine Auflösung, die mindestens der Full-HD Auflösung entspricht. Danach wird das komprimierte Bild generiert. Das neue Bild wird danach als «jpeg» Datei im neu generierten Ordner auf dem Desktop unter dem neuen Bildnamen abgelegt. Es existieren weitere Konstruktoren, die erweiterte Funktionalitäten beim nächsten Release bieten werden. So soll für professionellere Anwender die Möglichkeit geschaffen werden, das Bild nach einer genauen Eingabe der Pixel oder nach der maximal erwünschten Dateigrösse zu komprimieren. 
 
 
-## Sprint 2
+### Sprint 2
 
-### Sprint 2 Planning Meeting
-In diesem Sprint haben wir einen Workload von 17 Stunden. Dies ist noch mehr als im letzten Sprint. Da wir nun aber eingespielter sind und uns mit Scene Builder besser auskennen, hoffen wir, dass wir schneller Fortschritte machen.
+#### Sprint 2 Planning Meeting
+In diesem Sprint haben wir einen Workload von 17 Stunden. Dies ist noch mehr als im letzten Sprint. Da wir nun aber eingespielter sind und uns mit SceneBuilder besser auskennen, hoffen wir, dass wir schneller Fortschritte machen.
 
 Tasknummer| Taskbezeichnung | Zeitschätzung
 ----|------|--------------------
@@ -389,10 +389,10 @@ Tasknummer| Taskbezeichnung | Zeitschätzung
 In der Hälfte des Sprints haben wir festgestellt, dass die ProgressBar unserem Team erhebliche Schwierigkeiten bereitet. Nach 10 Arbeitsstunden funktioniert aber. Da uns diese 10 Stunden nun fehlen, müssen wir die zwei letzten Stories (7 und 8) auf einen zukünftigen Sprint verschieben, was jedoch nicht schlimm ist, da diese Stories unser Grundprogramm nicht beeinflusst. 
 
 
-### Sprint 2 Review
-Rückblickend hat uns dieser Sprint unerwartet viel Zeit gekostet und dementsprechend ist der Backlog weniger geschrumpft als bei unserem ersten Sprint.
+#### Sprint 2 Review
+Rückblickend hat uns dieser Sprint unerwartet viel Zeit gekostet und dementsprechend ist der Backlog weniger geschrumpft als bei unserem ersten Sprint. Insofern sind wir froh, dass wir zu Beginn der Sprints eine Priorisierung gemacht haben und in diesem Sinne auch wirklich das wichtigste am Anfang gemacht haben und nicht bspw. mit der Sprachauswahl begonnen haben.
 
-### Backlog 3
+#### Backlog 3
 
 Story 7 | Task für frei wählbare Komprimierungsgrösse realisieren | Zeitschätzung
 ----|------|--------------------
@@ -411,7 +411,7 @@ Story 8 | Task für die Sprachauswahl realisieren | Zeitschätzung
 #### Sprint 2 Code-snippets
 
 
-#### ProgressController
+##### ProgressController
 Dieser Teil des Programmes stellt die grösste Herausforderung dieses Projektes dar. Die Scene mit der ProgressBar soll laufend aktualisiert werden. Damit dies funktioniert, muss mit Threads gearbeitet werden. Es wurden insgesamt mehr als 10 Stunden Arbeit in diese Klasse investiert. Die erste Idee bestand daraus, für jede Aktualisierung einen neuen Thread zu erstellen, der dann in eine Warteschlange gesteckt wird. Dies hat so nicht funktioniert. Nach einigen Versuchen konnte die Progress Bar dann zum Laufen gebracht werden. Es wird nun nur ein Task ausgeführt, der sowohl die ProgressBar aktualisiert, als auch die Scene ändert und am Ende den "Fertig" Button aktiviert. Wir vermuten, dass die Scene nicht wie überlicherweise nach und nach aktualisiert wird, sondern dass die For Schleife dominanter ist und deshalb nur ein einzelner Thread gestartet werden muss. Da die For Schleife nun aber in einem Thread ist, wird der Thread beiseite geschoben und zuerst die Scene aktualisiert, bevor der Thread wieder hervorgenommen und weiter bearbeitet wird.
 
 	
@@ -463,7 +463,7 @@ Dieser Teil des Programmes stellt die grösste Herausforderung dieses Projektes 
 ```    
     
     
-#### DragAndDropController Finale Version
+##### DragAndDropController Finale Version
 Diese Methode, die aufgerufen wird, sobald etwas in die Drop-Area gezogen wird, hat sich im zweiten Sprint sehr verändert. Der erste Teil wird hier ich nicht mehr präzisiert, da er schon nach dem ersten Sprint erklärt wurde.
 	
 ```ruby
@@ -593,7 +593,7 @@ Am Ende wird der Text gesetzt, der dann im Fenster angezeigt wird.
 	
 ```
 
-#### JUnit Test - Komprimierung
+##### JUnit Test - Komprimierung
 
 ```ruby
 	@Test
@@ -625,7 +625,7 @@ Am Ende wird der Text gesetzt, der dann im Fenster angezeigt wird.
 Das Code Snippet oberhalb zeigt einen Teil des Codes aus dem JUnit-Test, der verwendet wird, um zu testen, ob die Bilddateien komprimiert wurden. Der Test unterscheidet kleine (small) Bilder und grosse (big) Bilder. Dabei ist die Pixelanzahl entscheidend, ob das Bild klein oder gross ist. Wenn das Bild weniger als 1080 Pixel (1080 Pixel = full HD Auflösung) misst, ist es klein und wird nicht komprimiert. Die Idee dahinter ist, dass die Bilder nicht zu stark komprimiert werden und dann irgendwann eine schlechte Qualität bekommen. Für den Test wurde ein kleines und ein grosses Bild genommen und mit dem Programm komprimiert und dann über den Dateipfad in den Test eingelesen.  Beim ersten Test wird geprüft, ob das kleine Bild nicht komprimiert wird, weil es ja zu klein zum Komprimieren ist. Beim zweiten Test wird geprüft, ob das Bild komprimiert wird. Diese Tests werden mit Hilfe von «assertEquals» gemacht. Dabei wird geprüft, ob das erwartete Ergebnis mit dem Programmoutput übereinstimmt.
 
 
-#### Klassen- und Sequenzdiagramm
+##### Klassen- und Sequenzdiagramm
 
 ###### Klassendiagramm
 
@@ -634,10 +634,6 @@ Das Code Snippet oberhalb zeigt einen Teil des Codes aus dem JUnit-Test, der ver
 ###### Sequenzdiagramm
 
 ![](https://github.com/atorha/CompressionProject/blob/master/Images/Sequence_diagram.jpg)
-
-#### Dokumentation wichtiger Code Snipplets
-
-#### Testfälle
 
 
 ## Bedienungsanleitung
@@ -665,9 +661,9 @@ Die komprimierten Bilder werden nach dem Komprimieren in einem neuen Ordner auf 
 
 ## Fazit
 
-Im Rahmen dieser Arbeit konnten die Grundprinzipien der Entwicklungsprogramme Eclipse, Maven und Git erarbeitet und mit einer vertieften Anwendungsbasis von Java verknüpft werden. Das erstellte Programm zur Komprimierung von Bildern hat die ursprünglichen Erwartungen übertroffen. Die Komprimierung von Bildern wurde durch diese Software tatsächlich stark vereinfacht und arbeitet nun kombiniert mit einer grafischen Oberfläche und diversen Sicherheitsfeatures, wie etwa der Dateierweiterungsbegrenzung oder dem Schutz vor duplizierten Dateien zuverlässig. Durch zwei realisierten Sprints konnten die meisten Anforderungen an das Programm bereits implementiert werden. Einige Komponenten des Programms erwiesen sich während der Realisierung als Zeitintensiver als geplant. Vor allem die Möglichkeit zur Anzeige des Programmfortschritts in Form einer Progress Bar gestaltete sich als schwierig, da diese die Implementierung von Threads erforderte. In kommenden Releases werden noch verbliebene Anforderungen an das Programm hinzugefügt. Wichtigste Neuerungen werden sein, dass das Programm auf allen Betriebssystemen lauffähig sein wird, dass die Sprache zwischen Englisch, Französisch und Deutsch gewechselt werden kann und dass die Komprimierungsgrösse nach entsprechenden Kriterien frei wählbar sein wird.
+Im Rahmen dieser Arbeit konnten die Grundprinzipien der Entwicklungsprogramme Eclipse, Maven und Git erarbeitet und mit einer vertieften Anwendungsbasis von Java verknüpft werden. Das erstellte Programm zur Komprimierung von Bildern hat die ursprünglichen Erwartungen übertroffen. Die Komprimierung von Bildern wurde durch diese Software tatsächlich stark vereinfacht und arbeitet nun kombiniert mit einer grafischen Oberfläche und diversen Sicherheitsfeatures, wie etwa der Dateierweiterungsbegrenzung oder dem Schutz vor duplizierten Dateien zuverlässig. Durch zwei realisierten Sprints konnten die meisten Anforderungen an das Programm bereits implementiert werden. Einige Komponenten des Programms erwiesen sich während der Realisierung als Zeitintensiver als geplant. Vor allem die Möglichkeit zur Anzeige des Programmfortschritts in Form einer Progress Bar gestaltete sich als schwierig, da diese die Implementierung von Threads erforderte. In kommenden Releases werden noch verbliebene Anforderungen an das Programm hinzugefügt. Wichtigste Neuerungen werden sein, dass das Programm auf allen Betriebssystemen lauffähig sein wird, dass die Sprache zwischen Englisch und Deutsch gewechselt werden kann und dass die Komprimierungsgrösse nach entsprechenden Kriterien frei wählbar sein wird.
 
-Wir möchten uns an dieser Stelle ganz herzlich bei unserem Betreuer, Matthias Bachmann, bedanken für die kontinuierliche Hilfeleistungen und im Besonderen für seine nützlichen Inputs zur Erstellung von Threads. 
+Wir möchten uns an dieser Stelle ganz herzlich bei unserem Betreuer, Herrn Matthias Bachmann, bedanken für die kontinuierliche Hilfeleistungen und im Besonderen für seine nützlichen Inputs zur Erstellung von Threads. 
 
 Mit unserer Arbeit sind wir zufrieden, da das Programm tatsächlich Gebrauch findet und einen erheblichen Mehrwert darstellt bei unserer Zielgruppe, die ansonsten nicht von einer einfachen Bildkomprimierung profitieren könnte. Durch das Arbeiten in einem Team konnten wir uns in die Sichtweise der Programmierer grosser Softwares versetzen und haben auch verstanden, inwiefern User Stories, Tasks und Sprints zu einem effizienteren Arbeiten gemäss Software Engineering beitragen können. 
 
