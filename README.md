@@ -673,5 +673,8 @@ Mit unserer Arbeit sind wir zufrieden, da das Programm tatsächlich Gebrauch fin
 
 
 
-<   Christof Müller, Irene Näf, Mikaela Kaunisaho, Nicolas Krüsi   >
+< Christof Müller > 
+< Irene Näf >
+< Mikaela Kaunisaho >
+< Nicolas Krüsi >
 
