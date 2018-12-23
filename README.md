@@ -21,6 +21,7 @@
     + 8.4. [Dokumentation wichtiger Code Snipplets](#dokumentation-wichtiger-code-snipplets)
     + 8.5. [Testfälle](#testfälle)
 9. [Bedienungsanleitung](#bedienungsanleitung)
+10. [Fazit](#fazit)
 
 
 ## Einleitung
