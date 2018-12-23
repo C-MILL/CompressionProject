@@ -373,6 +373,59 @@ Da wir pro Sprint 20 Punkte verarbeiten können was vierundzwanzig Stunden entsp
 
 #### Sprint 2 Code-snippets
 
+
+#### ProgressController
+Dieser teil des Programmes stellt die Grösste herausforderung unseres Projektes dar. Es soll die Scene mit der ProgressBar regelmässig updaten. Damit dies funktioniert muss man mit Threads arbeiten. Ehrlichgesagt wissen wir nicht genau warum es schlussendlich so funkktioniert hat. Wir haben über zehn stunden an dieser Klasse gearbeitet. Die erste Idee war für jede Aktualisierung einen nuen Thread zu erstellen der dann in eine warteschlange gesteckt wird. Warum dies nicht funktioniert hat wissen wir nicht. Irgendwann haben wir es dann per Zufall zum laufen gebracht. Hier wird nun also eigentlich nur einen Task ausgeführt der sowohl die ProgressBar updated wie auch die Scene ändert und am schluss den Fertig Button aktiviert. Was für einen Sinn das macht dass man einen einzelnen Thread startet, obwohl threads ja eigentlich dafür genutzt werden um parallel sachen abarbeiten zu können. Aber wir denken dass es damit zu tun hat dass die Scene nicht, wie normalerweise im code, nach und nach aktualisiert wird sondern dass die For schleife dominanter ist. Da die For Schleife nun aber in einem Thread ist, wird der Thread auf die seite geschoben und zuerst die Scene aktualisiert bevor der thread wieder hervorgenommen und weiter bearbeitet wird. Sicher sind wir uns aber mit dieser Theorie nicht. Es funktioniert aber erst einmal.
+
+	
+```ruby
+	public void setProgressBar(ArrayList<String> link, String linkOfNewFolder) {
+		this.links=link;
+		this.linkOfNewFolder=linkOfNewFolder;
+		progressBar.progressProperty().unbind();
+        progressBar.setProgress(0);
+        copyWorker = createWorker();
+        progressBar.progressProperty().bind(copyWorker.progressProperty());
+        copyWorker.messageProperty().addListener(new ChangeListener<String>() {
+            public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
+                System.out.println(newValue);
+            }
+        });
+
+        new Thread(copyWorker).start();
+        
+        
+	}
+	
+	
+	public Task createWorker() {
+        return new Task() {
+            @Override
+            protected Object call() throws Exception {
+                for (i = 0; i < numberToDo; i++) {
+                    Thread.sleep(5);
+                    updateMessage("5 milliseconds");
+                    updateProgress(i+1, numberToDo);
+                    new compress(links.get(i), linkOfNewFolder);
+                    
+                    Platform.runLater(new Runnable() {
+                        public void run() {
+                        	doneLabel.setText(i+"");
+                        	if(i==numberToDo) {
+                        		infoLabel.setText("Komprimierung war erfolgreich.");
+                        	}
+                        }
+                  });
+                }
+                finishButtonDisabled(false);
+                
+                return true;
+            }
+        };
+    }
+    
+    
+    
 #### DragAndDropController Finale Version
 Diese Methode die aufgerufen wird sobald etwas in die Drop-Area gezogen wird hat sich sehr verändert im zweiten Sprint. Auf denersten Teil will ich nicht mehr eingehen da ich es schon nach dem ersten Sprint erklärt habe.
 	
