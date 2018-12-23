@@ -365,25 +365,25 @@ Dieses Code-Snippet zeigt, wie das eingelesene Bild komprimiert und danach im ne
 ## Sprint 2
 
 ### Sprint 2 Planning Meeting
-In diesem Sprint haben wir eine Workload von siebzehn Stunden. Dies ist noch mehr als in der letzten Runde. Da wir nun aber eingespielter sind und uns mit Scene Builder besser auskennen hoffen wir dass wir schneller vorwärtskommen.
+In diesem Sprint haben wir einen Workload von 17 Stunden. Dies ist noch mehr als im letzten Sprint. Da wir nun aber eingespielter sind und uns mit Scene Builder besser auskennen, hoffen wir, dass wir schneller Fortschritte machen.
 
-Tasknummer| Taksbezeichnung | Zeitschätzung
+Tasknummer| Taskbezeichnung | Zeitschätzung
 ----|------|--------------------
-2.3 | Mit SceneBuilder ein Fenster erstellen welches für die Fehlermeldungen individuell genutzt werden kann. und welches man über einfache handles ändern und anpassen kann. | 40 min 
-2.4 | Eine Controller Klasse für die Fehlermeldungen schreiben. Darin soll man über eine Methode die Nachricht des fehlers ändern können. Die Klasse soll einen boolean zurückgeben. | 80min
-2.5 | Im DragAndDropController die Links auf nichtunterstützte Formate untersuchen und diese ausfiltern. Falls es nicht unterstützte Dateien gibt, soll der Nutzer informiert werden über das Fehlerfenster. | 80 min
-2.6 | Im DragAndDropController die Links auf doppelgänger Untersuchen und diese aussortieren. Falls es Doppelgänger gibt soll der Nutzer über das Fehlerfenster darauf aufmerksam gemacht werden und entscheiden können ob er die Datei trotzdem hinzufügen will oder nicht.| 80min 
-3.2 | JUnit Klasse machen um zu testen ob das Bild tatsächlich kleiner geworden ist. | 2 Stunden
-3.3 | JUnit Klasse machen um zu testen ob die Auflösung richtig angepasst wird. | 2 Stunden 
-5.1 | Mit Scene Builder ein Fenster erstellen der den Fortschritt der Komprimierung anzeigt. Dafür soll es einen Ladebalken geben und ein schriftliche Information die anzeigt wie viele Fotos bereits komprimiert worden sind. | 40 min
-5.2 | Controllerklasse für die Fortschrittseite erstellen. Sie soll sich automatisch aktualisieren sobald ein Bild komprimiert wurde. | 40 min
-7.2 | Hinter Button Einfach soll das bisherige Programm laufen. | 2 Stunden
-7.2 | Hinter dem "Fortgeschritten" Button soll eine neue Scene starten auf der man über zwei Labels die gewünschte Auflösung einstellen kann. Danach soll per "OK" Knopf das normale Programm fortgeführt werden. | 2 Stunden
-7.3 | Einen Button mit SceneBuilder erstellen, damit zum DragANdDrop Fensert kommmt, um dann die Bilder rein zu ziehen. | 40 min
+2.3 | Mit SceneBuilder ein Fenster erstellen, welches für die Fehlermeldungen individuell genutzt werden kann und welches über einfache Handles geändert und angepasst werden kann. | 40 min 
+2.4 | Eine Controller Klasse für die Fehlermeldungen schreiben. Darin soll über eine Methode die Nachricht des fehlers geändert werden können. Die Klasse soll einen Boolean zurückgeben. | 80 min
+2.5 | Im DragAndDropController die Links auf nicht unterstützte Formate untersuchen und diese herausfiltern. Falls es nicht unterstützte Dateien gibt, soll der Nutzer informiert werden über ein Fehlerfenster. | 80 min
+2.6 | Im DragAndDropController die Links auf Doppelgänger untersuchen und diese aussortieren. Falls es Doppelgänger gibt, soll der Nutzer über das Fehlerfenster darauf aufmerksam gemacht werden und entscheiden können, ob er die Datei trotzdem hinzufügen will oder nicht.| 80 min 
+3.2 | JUnit Klasse machen, um zu testen, ob das Bild tatsächlich kleiner wurde. | 2 Stunden
+3.3 | JUnit Klasse machen, um zu testen, ob die Auflösung richtig angepasst wurde. | 2 Stunden 
+5.1 | Mit Scene Builder ein Fenster erstellen, das den Fortschritt der Komprimierung anzeigt. Dafür soll es einen Ladebalken geben und ein schriftliche Information, die anzeigt, wie viele Fotos bereits komprimiert wurden. | 40 min
+5.2 | Controllerklasse für die Fortschrittsseite erstellen. Sie soll sich automatisch aktualisieren, sobald ein Bild komprimiert wurde. | 40 min
+7.2 | Hinter dem "Einfach" Button soll das bisherige Programm laufen. | 2 Stunden
+7.2 | Hinter dem "Fortgeschritten" Button soll eine neue Scene gestartet werden, auf der über zwei Labels die gewünschte Auflösung eingestellt werden kann. Danach soll per "OK" Button das normale Programm fortgesetzt werden können. | 2 Stunden
+7.3 | Einen Button mit SceneBuilder erstellen, damit man zum DragAndDrop Fenster kommmt, um dann die Bilder in das Fenster zu ziehen. | 40 min
 8.1 | Ein Fenster mit SceneBuilder erstellen, wobei 2 Buttons mit der Beschriftung "Deutsch" und "Englisch" vorhanden sind. | 40 min
-8.2 | Controllerklasse für das Sprachwahlfenster erstellen. Wobei die Sprachauswahl aus dem Willkommenfenster aufgerufen werden kann. | 40 min
-8.3 | Im Willkommensfenster einen Sprachauswahl-Button erstellen. | 20 min
-8.4 | Eine Englische Version der Buttons und Labels erstellen und ins Programm einbinden.| 4 Stunden
+8.2 | Controllerklasse für das Sprachwahlfenster erstellen. Wobei die Sprachauswahl aus dem Willkommensfenster aufgerufen werden kann. | 40 min
+8.3 | Im Willkommensfenster einen Sprachauswahl Button erstellen. | 20 min
+8.4 | Eine englische Version der Buttons und Labels erstellen und ins Programm einbinden.| 4 Stunden
 
 ### Scrum Halftime Meeting
 In der hälfte des Sprints haben wir festgestellt dass die ProgressBar uns erheblich schwierigkeiten macht. Nach zehn arbeitsstunden läuft sie dann. Da die zehn Stunden uns aber fehlen, müssen wir die zwei letzten Stories (7 und 8) auf einen zukünftigen Sprint verschieben, was jedoch nicht so schlim ist da diese Stories unser Grundprogramm nicht beeinflusst. 
