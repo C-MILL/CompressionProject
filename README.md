@@ -390,7 +390,7 @@ In der Hälfte des Sprints haben wir festgestellt, dass die ProgressBar unserem 
 
 
 ### Sprint 2 Review
-Rückblickend hat uns dieser Sprint unerwartet viel Zeit gekostet und dementsprechend ist der Backlog weniger geschrumpft wie bei unserem letzten Sprint.
+Rückblickend hat uns dieser Sprint unerwartet viel Zeit gekostet und dementsprechend ist der Backlog weniger geschrumpft als bei unserem ersten Sprint.
 
 ### Backlog V3
 
