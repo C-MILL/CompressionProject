@@ -74,7 +74,6 @@ Nr. | UserStory | Aufwand-schätzung (Story Points) | Priorität | Akzptanzkrite
 ## Backlog
 Story 1 | Grundgerüst erstellen für eine Übersichtliche Oberfläche  | Zeitschätzung
 ----|------|--------------------
-
 1.1 | Ordnerstruktur erstellen mit Maven. | 20 min
 1.2 | Grundstruktur des Programmes schreiben, main-JavaFx klasse erstellen. | 20 min
 1.3 | Willkommen Fenster mit Scene Builder gestalten. | 20 min
@@ -104,7 +103,6 @@ Story 4 | Tasks um die Abspeicherung auf dem Desktop zu realisieren | Zeitschät
 
 Story 5 | Tasks für die Fortschrittanzeige realisieren | Zeitschätzung
 ----|------|--------------------
-
 5.1 | Mit Scene Builder ein Fenster erstellen der den Fortschritt der Komprimierung anzeigt. Dafür soll es einen Ladebalken geben und ein schriftliche Information die anzeigt wie viele Fotos bereits komprimiert worden sind. | 40 min
 5.2 | Controllerklasse für die Fortschrittseite erstellen. Sie soll sich automatisch aktualisieren sobald ein Bild komprimiert wurde. | 40 min
 
