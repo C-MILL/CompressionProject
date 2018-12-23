@@ -84,10 +84,10 @@ Nr. | Task | User Story | Zeit Schätzung in h
 1 | Bilder einlesen | 1 | 2
 2 | Alle Bilder zum Komprimieren in Arraylist auflisten | 1 | 0,5
 3 | Komprimierung der Bilddatei | 1 | 6
-4 | Drag and Drop Bereich erstellen (2.Scene) | 2 | 1,5
-5 | 2 Buttons und Label erstellen (2.Scene) | 2 | 0,5
-6 | Zählerfunktion erstellen (2.Scene) | 2 | 1
-7 | Start-Button (1.Scene)  | 2 | 1
+4 | Drag and Drop Bereich erstellen (2.Scene) | 3 | 4
+5 | 2 Buttons und Label erstellen (2.Scene) | 1 | 0,5
+6 | Zählerfunktion erstellen (2.Scene) | 3 | 4
+7 | Start-Button (1.Scene)  | 1 | 0,5
 
 
 #### Anreicherung der User Stories
