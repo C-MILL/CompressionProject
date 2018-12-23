@@ -460,11 +460,11 @@ Dieser Teil des Programmes stellt die grösste Herausforderung dieses Projektes 
             }
         };
     }
-    
+```    
     
     
 #### DragAndDropController Finale Version
-Diese Methode die aufgerufen wird sobald etwas in die Drop-Area gezogen wird hat sich sehr verändert im zweiten Sprint. Auf denersten Teil will ich nicht mehr eingehen da ich es schon nach dem ersten Sprint erklärt habe.
+Diese Methode, die aufgerufen wird, sobald etwas in die Drop-Area gezogen wird, hat sich im zweiten Sprint sehr verändert. Der erste Teil wird hier ich nicht mehr präzisiert, da er schon nach dem ersten Sprint erklärt wurde.
 	
 ```ruby
 	@FXML
