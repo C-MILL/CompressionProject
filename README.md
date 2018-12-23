@@ -96,6 +96,8 @@ Nr. | Task | User Story | Zeit Schätzung in h
 
 ###### Klassendiagramm
 
+![](https://github.com/atorha/CompressionProject/blob/master/Images/Class_Diagramm.JPG)
+
 ###### Sequenzdiagramm
 
 #### Dokumentation wichtiger Code Snipplets
