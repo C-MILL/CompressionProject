@@ -1,10 +1,8 @@
 # **Java Bildkompression**
 
 
-## Inhaltsverzeichniss
+## Inhaltsverzeichnis
 
-- [**Java Bildkompression**](#java-bildkompression)
-  - [Inhaltsverzeichniss](#inhaltsverzeichniss)
   - [Einleitung](#einleitung)
   - [Zielsetzung](#zielsetzung)
   - [Randbedingung](#randbedingung)
