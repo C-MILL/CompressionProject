@@ -127,8 +127,8 @@ Der 3. Release kam nicht zu Stande, da wir für die beiden ersten Sprints mehr Z
 Wir haben unsere Sprint's auf jeweils **fünf Stunden** festegelegg. Die Sprints werden von jedem Mitglied **individuell** durchgeführt. Das **Sprint Planning Meeting** wird somit anfangs woche, das **Daily Scrum Meeting** in der Wochenmitte und der **Sprint Review** am Freitag durchgeführt. Dies macht insofern Sinn da teilweise dependencies bestehen zwischen den verschiedenen Klasen und die Mitglieder auch nich alle zur selben Zeit frei haben für die Sprints. Wir schätzen unser Team kann jeweils 20 Story-Points behandeln pro Sprint. Dies ergibt 5 Storypoints pro Teammitglied. Da wir die Aufgaben gerne indiviudell machen würden, ist es unser Ziel die Stories in möglichst kleine Packete zu verpacken damit der Aufwand möglichst klein und im Zeitraum eines Sprints zu erledigen ist. 
 
 ### Sprint 1
-#### Sprint 2 Planning Meeting
-Da wir pro Sprint 20 Punkte verarbeiten können was zwanzig Stunden entspricht haben wir uns dementsprechend Tasks mit einem geschätzten Zeitaufwand von 
+#### Sprint 1 Planning Meeting
+Da wir pro Sprint 20 Punkte verarbeiten können was zwanzig Stunden entspricht. Für den ersten Sprint haben wir uns aber etwas weniger eingeteilt um zu sehen wie die Zeit aufgeht. Wir erwarten dass die Zeiten zwar stimmen, dass aber zwischen den wirklichen arbeitszeiten noch viele Stunden verloren gehen werden mit absprechen sowie Merge problemen. Deshalb beeinhaltet der erste Sprint einen Workload von etwas weniger wie 17 Stunden.
 
 Tasknummer| Taksbezeichnung | Zeitschätzung
 ----|------|--------------------
@@ -145,8 +145,10 @@ Tasknummer| Taksbezeichnung | Zeitschätzung
 4.1 | Eine Klasse erstellen an die ein Link eines Fotos sowie der Link des Desktop-Ornders weitergegeben werden kann für die komprimierung. Darin soll eine Methode gerufen werden die über den Link das Foto ladet, die Auflösung anpasst und das Bild komprimiert sowie in den erstellten Ordner auf dem Desktop abspeichert. | 6Stunden
 6.1 | Einen Button machen auf der Progressseite der "Fertig" heisst und den man erste Drücken kann wenn alle Fotos komprimiert wurden. | 40min
 7.1 | Einen Button machen auf der Progressseite der "Fertig" heisst und den man erste Drücken kann wenn alle Fotos komprimiert wurden. | 40min
+ |         | Total: 16h 40min
 
-#### Sprint Review
+#### Sprint 1 Review
+Wir konnten im ersten Sprint tatsächlich alle Tasks erfüllen. Man muss aber  sagen dass die geschätzten Zeiten IMMER überschritten wurde und jedes Teammitglied überstunden machen musste. 
 
 ### Sprint 2
 #### Sprint 2 Planning Meeting
@@ -224,12 +226,3 @@ ArrayList<String> links = new ArrayList<String>();
 	public void setMain(Main main) {
 		this.main=main;
 		'''
-
-## Fazit
-
-Im Rahmen dieser Arbeit konnten die Grundprinzipien der Entwicklungsprogramme Eclipse, Maven und Git erarbeitet und mit einer vertieften Anwendungsbasis von Java verknüpft werden. Das erstellte Programm zur Komprimierung von Bildern hat die ursprünglichen Erwartungen übertroffen. Die Komprimierung von Bildern wurde durch diese Software tatsächlich stark vereinfacht und arbeitet nun kombiniert mit einer grafischen Oberfläche und diversen Sicherheitsfeatures, wie etwa der Dateierweiterungsbegrenzung oder dem Schutz vor duplizierten Dateien zuverlässig. Durch zwei realisierte Sprints konnten die meisten Anforderungen an das Programm bereits implementiert werden. Einige Komponenten des Programms erwiesen sich während der Realisierung als Zeitintensiver als geplant. Vor allem die Möglichkeit zur Anzeige des Programmfortschritts in Form einer Progress Bar gestaltete sich als schwierig, da diese die Implementierung von Threads erforderte. In kommenden Releases werden noch verbliebene Anforderungen an das Programm hinzugefügt. Wichtigste Neuerungen werden sein, dass das Programm auf allen Betriebssystemen lauffähig sein wird, dass die Sprache zwischen Englisch, Französisch und Deutsch gewechselt werden kann und dass die Komprimierungsgrösse nach entsprechenden Kriterien frei wählbar sein wird.
-
-Wir möchten uns an dieser Stelle ganz herzlich bei unserem Betreuer, Matthias Bachmann, bedanken für die kontinuierliche Hilfeleistungen und im Besonderen für seine nützlichen Inputs zur Erstellung von Threads. 
-
-Mit unserer Arbeit sind wir zufrieden, da das Programm tatsächlich Gebrauch findet und einen erheblichen Mehrwert darstellt bei unserer Zielgruppe, die ansonsten nicht von einer einfachen Bildkomprimierung profitieren könnte. Durch das Arbeiten in einem Team konnten wir uns in die Sichtweise der Programmierer grosser Softwares versetzen und haben auch verstanden, inwiefern User Stories, Tasks und Sprints zu einem effizienteren Arbeiten gemäss Software Engineering beitragen können. 
-
