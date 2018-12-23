@@ -169,8 +169,8 @@ Tasknummer| Taskbezeichnung | Zeitschätzung
 2.2 | Den DragAndDropController erstellen, der alle Drops in ein Array schreibt. | 80 min
 2.7 | Im DragAndDropController die verbleibenden Links in eine ArrayList schreiben. | 20 min
 2.8 | Im DragAndDropController den Button so einrichten, dass er die Links in die Main-Klasse speichert und die nächste Scene startet. | 40 min 
-3.1 | Eine Klasse erstellen, an die ein Link eines Fotos sowie der Link des Desktop-Ordners weitergegeben werden kann für die Komprimierung. Darin soll eine Methode aufgerufen werden, die über den Link das Foto ladet, die Auflösung anpasst und das Bild komprimiert sowie im erstellten Ordner auf dem Desktop abspeichert. | 6 Stunden 
-4.1 | Eine weitere Klasse erstellen, die auf dem Desktop einen Ordner erstellt, in dem die komprimierten Dateien abgelegt werden können. Die Klasse soll eine Methode haben, die den Ordner erstellt und den Link des Ordners zurückgibt. | 2 Stunden
+3.1 | Eine Klasse erstellen, an die ein Link eines Fotos sowie der Link des Desktop-Ordners weitergegeben werden kann für die Komprimierung. Darin soll eine Methode aufgerufen werden, die über den Link das Foto ladet, die Auflösung anpasst und das Bild komprimiert sowie im erstellten Ordner auf dem Desktop abspeichert. | 6 h 
+4.1 | Eine weitere Klasse erstellen, die auf dem Desktop einen Ordner erstellt, in dem die komprimierten Dateien abgelegt werden können. Die Klasse soll eine Methode haben, die den Ordner erstellt und den Link des Ordners zurückgibt. | 2 h
 6.1 | Einen Button auf der Progressseite erstellen, der "Fertig" heisst und den man erst Drücken kann, wenn alle Fotos komprimiert wurden. | 40 min
  |         | Total: 14h 40min
 
