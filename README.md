@@ -289,7 +289,39 @@ public class compress {
 
 Das obige Code-Snippet aus der Klasse «compress.java» zeigt, wie der Pfad des hinzugefügten Bildes, sowie der Ordner, der für die Komprimierung neu angelegt wird, der Methode «compress()» als Konstruktor hinzugefügt wird. Aus dem Pfad des hinzugefügten Bildes wird der Name des Bildes ausgelesen. Es wird daraufhin ein neuer Dateiname für das zu komprimierende Bild nach dem Format [«alter Dateiname» + «_compr»] generiert. 
 
-![](https://github.com/atorha/CompressionProject/blob/master/Images/Code_Snipplet_Compress_2.jpg)
+```ruby
+			//Get resolution of image and divide trough 2
+			int newheight=(image.getHeight(null));
+			int newWidth = (image.getWidth(null));
+			if(image.getHeight(null)>2*1080) {
+				newheight=(image.getHeight(null))/2;
+				newWidth = (image.getWidth(null))/2;
+			}
+
+			//Compress
+			Image scaledImage = image.getScaledInstance(newWidth, newheight,Image.SCALE_SMOOTH);
+			BufferedImage outImg = new BufferedImage(newWidth, newheight,BufferedImage.TYPE_INT_RGB);
+
+			//Does some stuff 
+			Graphics g = outImg.getGraphics();
+			g.drawImage(scaledImage, 0, 0, null);
+			g.dispose();
+
+			// Writes compressed image to the newly generated folder with the newly generated filename.
+			ImageIO.write(outImg, "jpeg", new File(linkOfNewFolder + "/"+newImageName + ".jpeg"));
+
+		} catch (IOException e) {
+			e.printStackTrace();
+		}}
+
+	//Constructor 2 for extended functionality
+	public compress(String linkOfFile, String linkOfNewFolder, int width, int height) {
+	}
+
+	//Constructor 3 for extended functionality
+	public compress(String linkOfFile, String linkOfNewFolder, int maxSizeOfFile) {
+	}
+```
 
 Dieses Code-Snippet zeigt, wie das eingelesene Bild komprimiert und danach im neu generierten Ordner mit dem neu generierten Dateinamen abgespeichert wird. Es wird dabei zuerst die Höhe und Breite des Bildes ausgelesen. Falls die Höhe des Bildes unterhalb der doppelten Full-HD Auflösung liegt, wird das Bild nicht komprimiert, da die Bildqualität ansonsten nicht auf einem akzeptablen Niveau wäre. Wenn die Bildhöhe grösser als 2160 Pixel ist, wird das Bild im weiteren Verlauf komprimiert. Dabei wird die Bildhöhe halbiert und das Bild entsprechend skaliert. Das komprimierte Bild besitzt damit immer eine Auflösung, die mindestens der Full-HD Auflösung entspricht. Danach wird das komprimierte Bild generiert. Das neue Bild wird danach als «jpeg» Datei im neu generierten Ordner auf dem Desktop unter dem neuen Bildnamen abgelegt. Es existieren weitere Konstruktoren, die erweiterte Funktionalitäten beim nächsten Release bieten werden. So soll für professionellere Anwender die Möglichkeit geschaffen werden, das Bild nach einer genauen Eingabe der Pixel oder nach der maximal erwünschten Dateigrösse zu komprimieren. 
 
