@@ -223,7 +223,8 @@ ArrayList<String> links = new ArrayList<String>();
 ```ruby
 	public void setMain(Main main) {
 		this.main=main;
-		'''
+```
+
 
 ## Fazit
 
