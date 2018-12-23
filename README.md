@@ -8,7 +8,7 @@
 - [Randbedingung](#randbedingung)
 - [Build-Anleitung](#build-anleitung)
 - [User Stories](#user-stories)
-- [Backlog](#backlog)
+- [Product Backlog](#product-backlog)
 - [Releaseplan](#releaseplan)
     + [Kommentar zum Releaseplan](#kommentar-zum-releaseplan)
 - [Sprints](#sprints)
@@ -17,7 +17,7 @@
     + [Sprint 1 Planning Meeting](#sprint-1-planning-meeting)
       - [In Progress:](#in-progress)
     + [Sprint 1 Review](#sprint-1-review)
-    + [Backlog](#backlog-1)
+    + [Sprint Backlog 1](#sprint-backlog-1)
     + [Sprint 1 Code-Snippets](#sprint-1-code-snippets)
       - [DragAndDropController V0.1](#draganddropcontroller-v01)
       - [Neuer Ordner für komprimierte Bilder](#neuer-ordner-für-komprimierte-bilder)
@@ -27,7 +27,7 @@
       - [In Progress:](#in-progress-1)
     + [Scrum Halftime Meeting](#scrum-halftime-meeting)
     + [Sprint 2 Review](#sprint-2-review)
-    + [Backlog](#backlog-2)
+    + [Sprint Backlog 2](#sprint-backlog-2)
     + [Sprint 2 Code-snippets](#sprint-2-code-snippets)
       - [ProgressController](#progresscontroller)
       - [DragAndDropController Finale Version](#draganddropcontroller-finale-version)
@@ -77,7 +77,7 @@ Nr. | UserStory | Aufwand-schätzung (Story Points) | Priorität | Akzptanzkrite
 7 | Der Kunde soll die Komprimierungsgröße frei wählen können, um so mehrere Abstufungen der Komprimierung zu haben. | 3 | 4 | Es müssen 3 verschiedene Komprimierungsstufen zur Auswahl stehen, die der Kunde über einen Button anwählen kann.
 8 | Die Applikation soll eine Sprachauswahl beinhalten, damit sie für deutschsprachige sowie englischsprachige Benutzer einfach zu verstehen ist. | 5 | 4 | Auf dem Startfenster der Applikation soll der Kunde über einen Button die Sprache Deutsch oder Englisch auswählen können.
 
-## Backlog
+## Product Backlog
 Story 1 | Grundgerüst erstellen für eine übersichtliche Oberfläche  | Zeitschätzung
 ----|------|--------------------
 1.1 | Ordnerstruktur erstellen mit Maven. | 20 min
@@ -177,7 +177,7 @@ Tasknummer| Taskbezeichnung | Zeitschätzung
 #### Sprint 1 Review
 Wir konnten im ersten Sprint alle Tasks erfüllen. Es muss aber gesagt werden, dass die geschätzten Zeiten **immer** überschritten wurden und jedes Teammitglied Überstunden leisten musste. Somit ist die To Do Liste des ersten Sprints nun eine Done Liste. 
 
-#### Backlog
+#### Sprint Backlog 1
 
 Story 2 | Schritte, um das DragAndDrop Fenster zu realisieren  | Zeitschätzung
 ----|------|--------------------
@@ -400,7 +400,7 @@ In der Hälfte des Sprints haben wir festgestellt, dass die ProgressBar unserem 
 #### Sprint 2 Review
 Rückblickend hat uns dieser Sprint unerwartet viel Zeit gekostet und dementsprechend ist der Backlog weniger geschrumpft als bei unserem ersten Sprint. Insofern sind wir froh, dass wir zu Beginn der Sprints eine Priorisierung gemacht haben und in diesem Sinne auch wirklich das wichtigste am Anfang gemacht haben und nicht bspw. mit der Sprachauswahl begonnen haben.
 
-#### Backlog
+#### Sprint Backlog 2
 
 Story 7 | Task für frei wählbare Komprimierungsgrösse realisieren | Zeitschätzung
 ----|------|--------------------
