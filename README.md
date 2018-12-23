@@ -115,7 +115,17 @@ Story 7 | Taks für frei wählbare Komprimeirungsgrösse | Zeitschätzung
 7.1 | Ein Fenster mit SceneBuilder erstellen, wobei 3 Buttons mit den ver. Komprimierungsstufen vorhanden sind. | 30min
 7.2 | Komprimierfunktionen hinter den Buttons erstellen (analog zur Komprimierung von vorher). | 2-Stunden
 7.3 | Einen Button mit SceneBuilder erstellen, damit zum DragANdDrop Fensert kommmt, um dann die Bilder rein zu ziehen. | 30min
-7.4 | Controllerklasse für das Fenster mit den ver. Komprimierungsgrössen erstellen. | 30min
+7.4 | Controllerklasse für das Fenster mit den ver. Komprimierungsgrössen erstellen. Wobei dieses Fenster vom Willkommensfenser aus aufgerufen wird.| 30min
+7.5 | Im Willkommensfenster einen Button erstellen, wo man auf dieses Fenster zugreifen kann. | 15 min
+
+Story 8 | Taks für die Sprachauswahl | Zeitschätzung
+----|------|--------------------
+8.1 | Ein Fenster mit SceneBuilder erstellen, wobei 2 Buttons mit der Beschriftung "Deutsch" und "Englisch" vorhanden sind. | 30min
+8.2 | Controllerklasse für das Sprachwahlfenster erstellen. Wobei die Sprachauswahl aus dem Willkommenfenster aufgerufen werden kann. | 30min
+8.3 | Im Willkommensfenster einen Sprachauswahl-Button erstellen. | 15 min
+8.4 | Eine Englische Version der Buttons und Labels erstellen und ins Programm einbinden.
+| 3-Stunden
+
 ## Releaseplan
 
 User Story | Release 1 | Release 2 | Release 3
