@@ -153,5 +153,7 @@ Die komprimierten Bilder werden nach dem Komprimieren in einem neuen Ordner auf 
 ArrayList<String> links = new ArrayList<String>();
 	public Main main;
 
+```ruby
 	public void setMain(Main main) {
 		this.main=main;
+		'''
