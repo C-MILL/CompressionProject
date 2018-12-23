@@ -91,7 +91,7 @@ Story 2 | Schritte, um das DragAndDrop Fenster zu realisieren  | Zeitschätzung
 2.7 | Im DragAndDropController die verbleibenden Links in eine ArrayList stecken. | 15 min
 2.8 | Im DragAndDropController den Button so einrichten dass er die Links in die Main-Klasse speichert und die nächste Scene startet. | 30 min 
 
-Story 3 | Tasks, um die Komprimierung realisieren | Zeitschätzung
+Story 3 | Tasks, um die Komprimierung zu realisieren | Zeitschätzung
 ----|------|--------------------
 3.1 | Eine Klasse erstellen, an die ein Link eines Fotos sowie der Link des Desktop-Ordners weitergegeben werden kann für die Komprimierung. Darin soll eine Methode aufgerufen werden, die über den Link das Foto ladet, die Auflösung anpasst und das Bild komprimiert sowie im erstellten Ordner auf dem Desktop speichert. | 6 Stunden 
 3.2 | JUnit Klasse machen, um zu testen, ob das Bild tatsächlich kleiner geworden ist. | 2 Stunden
