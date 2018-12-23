@@ -119,8 +119,8 @@ Story 7 | Tasks für frei wählbare Komprimierungsgrösse realisieren | Zeitsch�
 ----|------|--------------------
 7.1 | Das Willkommensfenster erweitern mit einem zweiten Button, der "Fortgeschritten" heisst und den "Loslegen" Button umbenennen zu "Einfach". | 20 min
 7.2 | Hinter dem "Einfach" Button soll das bisherige Programm laufen. | 2 Stunden
-7.2 | Hinter dem "Fortgeschritten" Button soll eine neue Scene gestartet werden, auf der über zwei Labels die gewünschte Auflösung eingestellt werden. Danach soll per "OK" Button das normale Programm fortgeführt werden. | 2 Stunden
-7.3 | Einen Button mit SceneBuilder erstellen, damit man zum DragANdDrop Fenster kommmt, um dann die Bilder in das Fenster zu ziehen. | 40 min
+7.3 | Hinter dem "Fortgeschritten" Button soll eine neue Scene gestartet werden, auf der über zwei Labels die gewünschte Auflösung eingestellt werden. Danach soll per "OK" Button das normale Programm fortgeführt werden. | 2 Stunden
+7.4 | Einen Button mit SceneBuilder erstellen, damit man zum DragANdDrop Fenster kommmt, um dann die Bilder in das Fenster zu ziehen. | 40 min
 
 Story 8 | Tasks für die Sprachauswahl realisieren | Zeitschätzung
 ----|------|--------------------
@@ -354,13 +354,8 @@ Tasknummer| Taskbezeichnung | Zeitschätzung
 3.3 | JUnit Klasse machen, um zu testen, ob die Auflösung richtig angepasst wurde. | 2 Stunden 
 5.1 | Mit Scene Builder ein Fenster erstellen, das den Fortschritt der Komprimierung anzeigt. Dafür soll es einen Ladebalken geben und ein schriftliche Information, die anzeigt, wie viele Fotos bereits komprimiert wurden. | 40 min
 5.2 | Controllerklasse für die Fortschrittsseite erstellen. Sie soll sich automatisch aktualisieren, sobald ein Bild komprimiert wurde. | 40 min
-7.2 | Hinter dem "Einfach" Button soll das bisherige Programm laufen. | 2 Stunden
-7.2 | Hinter dem "Fortgeschritten" Button soll eine neue Scene gestartet werden, auf der über zwei Labels die gewünschte Auflösung eingestellt werden kann. Danach soll per "OK" Button das normale Programm fortgesetzt werden können. | 2 Stunden
-7.3 | Einen Button mit SceneBuilder erstellen, damit man zum DragAndDrop Fenster kommmt, um dann die Bilder in das Fenster zu ziehen. | 40 min
-8.1 | Ein Fenster mit SceneBuilder erstellen, wobei 2 Buttons mit der Beschriftung "Deutsch" und "Englisch" vorhanden sind. | 40 min
-8.2 | Controllerklasse für das Sprachwahlfenster erstellen. Wobei die Sprachauswahl aus dem Willkommensfenster aufgerufen werden kann. | 40 min
-8.3 | Im Willkommensfenster einen Sprachauswahl Button erstellen. | 20 min
-8.4 | Eine englische Version der Buttons und Labels erstellen und ins Programm einbinden.| 4 Stunden
+ | | Total: 10h |
+
 
 #### Scrum Halftime Meeting
 In der Hälfte des Sprints haben wir festgestellt, dass die ProgressBar unserem Team erhebliche Schwierigkeiten bereitet. Nach 10 Arbeitsstunden funktioniert sie aber. Da uns diese 10 Stunden nun fehlen, müssen wir die zwei letzten Stories (7 und 8) auf einen zukünftigen Sprint verschieben, was jedoch nicht schlimm ist, da diese Stories unser Grundprogramm nicht beeinflusst. 
@@ -626,8 +621,8 @@ Die komprimierten Bilder werden nach dem Komprimieren in einem neuen Ordner auf 
 Story 7 | Task für frei wählbare Komprimierungsgrösse realisieren | Zeitschätzung
 ----|------|--------------------
 7.2 | Hinter dem "Einfach" Button soll das bisherige Programm laufen. | 2 Stunden
-7.2 | Hinter dem "Fortgeschritten" Button soll eine neue Scene starten auf der über zwei Labels die gewünschte Auflösung eingestellt werden kann. Danach soll mittels "OK" Button das normale Programm fortgesetzt werden können. | 2 Stunden
-7.3 | Einen Button mit SceneBuilder erstellen, damit man zum DragAndDrop Fensert kommmt, um dann die Bilder in das Fenster ziehen zu können. | 40 min
+7.3 | Hinter dem "Fortgeschritten" Button soll eine neue Scene starten auf der über zwei Labels die gewünschte Auflösung eingestellt werden kann. Danach soll mittels "OK" Button das normale Programm fortgesetzt werden können. | 2 Stunden
+7.4 | Einen Button mit SceneBuilder erstellen, damit man zum DragAndDrop Fensert kommmt, um dann die Bilder in das Fenster ziehen zu können. | 40 min
 
 Story 8 | Task für die Sprachauswahl realisieren | Zeitschätzung
 ----|------|--------------------
