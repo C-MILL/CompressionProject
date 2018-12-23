@@ -376,7 +376,7 @@ Da wir pro Sprint 20 Punkte verarbeiten können was vierundzwanzig Stunden entsp
 #### DragAndDropController Finale Version
 Diese Methode die aufgerufen wird sobald etwas in die Drop-Area gezogen wird hat sich sehr verändert im zweiten Sprint. Auf denersten Teil will ich nicht mehr eingehen da ich es schon nach dem ersten Sprint erklärt habe.
 	
-	```ruby
+```ruby
 	@FXML
 	private void handleDragDropped(DragEvent event) throws IOException {
 		Dragboard DragboardLinks = event.getDragboard();
@@ -428,7 +428,7 @@ Diese Methode die aufgerufen wird sobald etwas in die Drop-Area gezogen wird hat
 		infoLabel.setText("Sie können weiterhin beliebig viele Fotos hinzufügen.");	//set label
 
 	}
-	```
+```
 
 
 Hier ist eine verkettung von zwei For schleifen. Sie sollen die bereits gespeicherten Links mit den Links vergleichen die neu dazukommen. 
