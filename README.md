@@ -63,10 +63,10 @@ Das Programm soll in Java innerhalb der Eclipse Programmierumgebung geschrieben 
 Nr. | UserStory | Aufwand-schätzung (Story Points) | Priorität | Akzptanzkriterium
 ----|-----------|----------------------------------|-----------|------------------
 1 | Der Kunde soll die Applikation zur Komprimierung von Bildern intuitiv bedienen können, damit er Zeit spart beim Komprimieren von Dateien. | 5 | 1 | Es sollen nicht mehr als drei Buttons auf einer Seite verwendet werden. Die Buttons sollen beschriftet sein, um eine intuitive Bedienung zu gewährleisten.
-2 | Der Kunde soll alle Fotos einfach in ein Fenster ziehen können und das Programm soll dabei automatisch erkennen welche Fotos behandet werden können und welche nicht. Der Nutzer soll dabei über Fehler benachrichtigt werden. Dabei soll ihm angezeigt werden was nicht gut ist und mit welcher Datei etwas nicht stimmt. | 13 | 1 | Dateien können üer Drag and Drop fenster ausgewählt werden und das Programm muss automatisch erkennen welche Dateien fehlerhaft sind.
-3 | Der Nutzer soll kleinere Dateien mit immer noch akzeptabler Qualität erhalten, ohne sich selber Gedanken zur Bildgrösse zu machen. | 8 | 1 | Die Komprimierten Dateien müssen kleiner sein als die Originale.
+2 | Der Kunde soll alle Fotos einfach in ein Fenster ziehen können und das Programm soll dabei automatisch erkennen, welche Fotos komprimiert werden können und welche nicht. Der Nutzer soll dabei über Fehler benachrichtigt werden. Dabei soll ihm angezeigt werden, was nicht gut ist und mit welcher Datei etwas nicht stimmt. | 13 | 1 | Dateien können über ein Drag and Drop Fenster ausgewählt werden und das Programm muss automatisch erkennen, welche Dateien fehlerhaft sind.
+3 | Der Kunde soll kleinere Dateien mit immer noch akzeptabler Qualität erhalten, ohne sich selber Gedanken zur Bildgrösse zu machen. | 8 | 1 | Die komprimierten Dateien müssen kleiner sein als die Originalen.
 4 | Die Bilddateien sollen direkt auf den Desktop gespeichert werden, damit der Benutzer keinen Dateipfad eingeben muss. | 8 | 1 | Der Speichervorgang wird vom Programm übernommen, ohne dass der Benutzer etwas eingeben muss.
-5 | Während der potentiellen Wartezeit des Komprimiervorgangs soll der Kunde über die Aktion (also, dass das Programm komprimiert) informiert werden, damit er weiss, was das Programm macht. | 8 | 2 | Sobald eine Wartezeit entsteht, weil das Programm Daten verarbeitet, wird das mit einer «Progress Bar» angezeigt.
+5 | Während der potentiellen Wartezeit des Komprimiervorgangs soll der Kunde über die Aktion (also dass das Programm komprimiert) informiert werden, damit er weiss, was das Programm macht. | 8 | 2 | Sobald eine Wartezeit entsteht, weil das Programm Daten verarbeitet, wird das mit einer «Progress Bar» angezeigt.
 6 | Der Kunde soll eine Meldung auf dem Bildschirm erhalten, sobald der Komprimiervorgang abgeschlossen ist, damit der Kunde eine Bestätigung hat, dass seine Bilder komprimiert wurden. | 5 | 3 | Die Meldung soll kurz formuliert sein, aber klar vermitteln, dass der Komprimierungsvorgang abgeschlossen ist.
 7 | Der Kunde soll die Komprimierungsgröße frei wählen können, um so mehrere Abstufungen der Komprimierung zu haben. | 3 | 4 | Es müssen 3 verschiedene Komprimierungsstufen zur Auswahl stehen, die der Kunde über einen Button anwählen kann.
 8 | Die Applikation soll eine Sprachauswahl beinhalten, damit sie für deutschsprachige sowie englischsprachige Benutzer einfach zu verstehen ist. | 5 | 4 | Auf dem Startfenster der Applikation soll der Kunde über einen Button die Sprache Deutsch oder Englisch auswählen können.
@@ -74,22 +74,23 @@ Nr. | UserStory | Aufwand-schätzung (Story Points) | Priorität | Akzptanzkrite
 ## Backlog
 Story 1 | Grundgerüst erstellen für eine Übersichtliche Oberfläche  | Zeitschätzung
 ----|------|--------------------
-1.1 | Ordnerstruktur erstellen mit Maven. | 15 min
-1.2 | Grundstruktur des Programmes schreiben, Main-JavaFx-Klasse erstellen. | 15 min
-1.3 | Willkommen Fenster mit Scene Builder gestalten. | 15 min
-1.4 | Die Controller Klasse für das Willkommen Fenster erstellen. | 30 min
-1.5 | Im Controller einen Weiter-Button erstellen der die nächste Scene startet. | 15 min
+
+1.1 | Ordnerstruktur erstellen mit Maven. | 20 min
+1.2 | Grundstruktur des Programmes schreiben, main-JavaFx klasse erstellen. | 20 min
+1.3 | Willkommen Fenster mit Scene Builder gestalten. | 20 min
+1.4 | Die Controller Klasse für das Willkommenfenster erstellen. | 40 min
+1.5 | Im Controller einen WeiterButton erstellen der die nächste Scene startet. | 40 min
 
 Story 2 | Schritte um das DragAndDrop Fenster zu realisieren  | Zeitschätzung
 ----|------|--------------------
-2.1 | Ein DragAndDrop Fenster gestalten mit SceneBuilder. | 30 min
-2.2 | Den DragAndDropController erstellen der alle Drops in ein Array schreibt. | 60 min
-2.3 | Mit SceneBuilder ein Fenster erstellen welches für die Fehlermeldungen individuell genutzt werden kann und welches man über einfache handles ändern und anpassen kann. | 30 min 
-2.4 | Eine Controller Klasse für die Fehlermeldungen schreiben. Darin soll man über eine Methode die Nachricht des Fehlers ändern können. Die Klasse soll einen boolean zurückgeben.
-2.5 | Im DragAndDropController die Links auf nichtunterstützte Formate untersuchen und diese ausfiltern. Falls es nicht unterstützte Dateien gibt, soll der Nutzer über das Fehlerfenster informiert werden. | 60 min
-2.6 | Im DragAndDropController die Links auf Doppelgänger untersuchen und diese aussortieren. Falls es Doppelgänger gibt, soll der Nutzer über das Fehlerfenster darauf aufmerksam gemacht werden und entscheiden können, ob er die Datei trotzdem hinzufügen will oder nicht.| 4 | 60 min 
-2.7 | Im DragAndDropController die verbleibenden Links in eine ArrayList stecken. | 15 min
-2.8 | Im DragAndDropController den Button so einrichten dass er die Links in die Main-Klasse speichert und die nächste Scene startet. | 30 min 
+2.1 | Ein DragANdDrop Fenster gestalten mit SceneBuilder. | 40 min
+2.2 | Der DragAndDropController erstellen der alle Drops in ein Array schreibt. | 80 min
+2.3 | Mit SceneBuilder ein Fenster erstellen welches für die Fehlermeldungen individuell genutzt werden kann. und welches man über einfache handles ändern und anpassen kann. | 40 min 
+2.4 | Eine Controller Klasse für die Fehlermeldungen schreiben. Darin soll man über eine Methode die Nachricht des fehlers ändern können. Die Klasse soll einen boolean zurückgeben. | 80min
+2.5 | Im DragAndDropController die Links auf nichtunterstützte Formate untersuchen und diese ausfiltern. Falls es nicht unterstützte Dateien gibt, soll der Nutzer informiert werden über das Fehlerfenster. | 80 min
+2.6 | Im DragAndDropController die Links auf doppelgänger Untersuchen und diese aussortieren. Falls es Doppelgänger gibt soll der Nutzer über das Fehlerfenster darauf aufmerksam gemacht werden und entscheiden können ob er die Datei trotzdem hinzufügen will oder nicht.| 4 | 80min 
+2.7 | Im DragAndDropController die verbleibenden Links in eine ArrayList stecken. | 20min
+2.8 | Im DragAndDropController den Button so einrichten dass er die Links in die Main-Klasse speichert und die nächste Scene startet. | 40 min 
 
 Story 3 | Tasks um die Komprimierung realisieren | Zeitschätzung
 ----|------|--------------------
@@ -99,31 +100,31 @@ Story 3 | Tasks um die Komprimierung realisieren | Zeitschätzung
 
 Story 4 | Tasks um die Abspeicherung auf dem Desktop zu realisieren | Zeitschätzung
 ----|------|--------------------
-4.1 | Eine Weitere Klasse erstellen die auf dem Desktop einen Ordner erstellt in dem die komprimierten Dateien abgelegt werden können. Die Klasse soll eine Methode haben die den Ordner erstellt und den Link des Ordners zurückgibt. | 4 Stunden
+4.1 | Eine Weitere Klasse erstellen die auf dem Desktop einen Ordner erstellt in dem die komprimierten Dateien abgelegt werden können. Die Klasse soll eine Methode haben die den Ordner erstellt und den Link des Ordners zurückgibt. | 2 Stunden
 
 Story 5 | Tasks für die Fortschrittanzeige realisieren | Zeitschätzung
 ----|------|--------------------
-5.1 | Mit Scene Builder ein Fenster erstellen der den Fortschritt der Komprimierung anzeigt. Dafür soll es einen Ladebalken und ein schriftliche Information geben die anzeigt wie viele Fotos bereits komprimiert worden sind. | 30 min
-5.2 | Controllerklasse für die Fortschrittseite erstellen. Sie soll sich automatisch aktualisieren sobald ein Bild komprimiert wurde. | 30 min
+
+5.1 | Mit Scene Builder ein Fenster erstellen der den Fortschritt der Komprimierung anzeigt. Dafür soll es einen Ladebalken geben und ein schriftliche Information die anzeigt wie viele Fotos bereits komprimiert worden sind. | 40 min
+5.2 | Controllerklasse für die Fortschrittseite erstellen. Sie soll sich automatisch aktualisieren sobald ein Bild komprimiert wurde. | 40 min
 
 Story 6 | Taks für das Ende des Programmes realisieren | Zeitschätzung
 ----|------|--------------------
-6.1 | Einen Button machen auf der Progressseite der "Fertig" heisst und den man erst Drücken kann wenn alle Fotos komprimiert wurden. | 30 min
+6.1 | Einen Button machen auf der Progressseite der "Fertig" heisst und den man erst Drücken kann wenn alle Fotos komprimiert wurden. | 40 min
 
 Story 7 | Taks für frei wählbare Komprimeirungsgrösse realisieren | Zeitschätzung
 ----|------|--------------------
-7.1 | Ein Fenster mit SceneBuilder erstellen, wobei 3 Buttons mit den ver. Komprimierungsstufen vorhanden sind. | 30 min
-7.2 | Komprimierfunktionen hinter den Buttons erstellen (analog zur Komprimierung von vorher). | 2 Stunden
-7.3 | Einen Button mit SceneBuilder erstellen, damit zum DragANdDrop Fensert kommmt, um dann die Bilder rein zu ziehen. | 30 min
-7.4 | Controllerklasse für das Fenster mit den ver. Komprimierungsgrössen erstellen. Wobei dieses Fenster vom Willkommensfenser aus aufgerufen wird.| 30 min
-7.5 | Im Willkommensfenster einen Button erstellen, wo man auf dieses Fenster zugreifen kann. | 15 min
+7.1 | Das Willkommen Fenster erweitern mit einem zweiten Button der "Fortgeschritten" heisst und den "Loslegen" Button unbenennen zu "Einfach". | 20 min
+7.2 | Hinter Button Einfach soll das bisherige Programm laufen. | 2 Stunden
+7.2 | Hinter dem "Fortgeschritten" Button soll eine neue Scene starten auf der man über zwei Labels die gewünschte Auflösung einstellen kann. Danach soll per "OK" Knopf das normale Programm fortgeführt werden. | 2 Stunden
+7.3 | Einen Button mit SceneBuilder erstellen, damit zum DragANdDrop Fensert kommmt, um dann die Bilder rein zu ziehen. | 40 min
 
 Story 8 | Taks für die Sprachauswahl realisieren | Zeitschätzung
 ----|------|--------------------
-8.1 | Ein Fenster mit SceneBuilder erstellen, wobei 2 Buttons mit der Beschriftung "Deutsch" und "Englisch" vorhanden sind. | 30 min
-8.2 | Controllerklasse für das Sprachwahlfenster erstellen. Wobei die Sprachauswahl aus dem Willkommenfenster aufgerufen werden kann. | 30 min
-8.3 | Im Willkommensfenster einen Sprachauswahl-Button erstellen. | 15 min
-8.4 | Eine Englische Version der Buttons und Labels erstellen und ins Programm einbinden.| 3 Stunden
+8.1 | Ein Fenster mit SceneBuilder erstellen, wobei 2 Buttons mit der Beschriftung "Deutsch" und "Englisch" vorhanden sind. | 40 min
+8.2 | Controllerklasse für das Sprachwahlfenster erstellen. Wobei die Sprachauswahl aus dem Willkommenfenster aufgerufen werden kann. | 40 min
+8.3 | Im Willkommensfenster einen Sprachauswahl-Button erstellen. | 20 min
+8.4 | Eine Englische Version der Buttons und Labels erstellen und ins Programm einbinden.| 4 Stunden
 
 ## Releaseplan
 
@@ -148,8 +149,8 @@ Der 3. Release kam nicht zu Stande, da wir für die beiden ersten Sprints mehr Z
 ### Sprint-Conditions
 Wir haben unsere Sprint's auf jeweils **fünf Stunden** festegelegg. Die Sprints werden von jedem Mitglied **individuell** durchgeführt. Das **Sprint Planning Meeting** wird somit anfangs Woche, das **Daily Scrum Meeting** in der Wochenmitte und der **Sprint Review** am Freitag durchgeführt. Dies macht insofern Sinn, da teilweise dependencies bestehen zwischen den verschiedenen Klasen und die Mitglieder auch nicht alle zur selben Zeit für die Sprints haben . Wir schätzen unser Team kann jeweils 20 Story-Points behandeln pro Sprint. Dies ergibt 5 Storypoints pro Teammitglied. Da wir die Aufgaben gerne indiviudell machen würden, ist es unser Ziel die Stories in möglichst kleine Packete zu verpacken damit der Aufwand möglichst klein und im Zeitraum eines Sprints zu erledigen ist. Dies setzt aber voraus, dass die Komunikation sehr intensiv statt findet, damit man die individuell erarbeiteten Teile dann auch zusammensetzen kann. 
 
-### Sprint 1
-#### Sprint 1 Planning Meeting
+## Sprint 1
+### Sprint 1 Planning Meeting
 Da wir pro Sprint 20 Punkte verarbeiten können was zwanzig Stunden entspricht. Für den ersten Sprint haben wir uns aber etwas weniger eingeteilt um zu sehen wie die Zeit aufgeht. Wir erwarten dass die Zeiten zwar stimmen, dass aber zwischen den wirklichen arbeitszeiten noch viele Stunden verloren gehen werden mit absprechen sowie Merge problemen. Deshalb beeinhaltet der erste Sprint einen Workload von etwas weniger wie 17 Stunden.
 
 Tasknummer| Taksbezeichnung | Zeitschätzung
@@ -161,20 +162,22 @@ Tasknummer| Taksbezeichnung | Zeitschätzung
 1.5 | Im Controller einen WeiterButton erstellen der die nächste Scene startet. | 40 min
 2.1 | Ein DragANdDrop Fenster gestalten mit SceneBuilder. | 40 min
 2.2 | Der DragAndDropController erstellen der alle Drops in ein Array schreibt. | 80 min
-2.7 | Im DragAndDropController die verbleibenden Links in eine ArrayList stecken. | 20 min
+nicht.| 4 | 80min 
+2.7 | Im DragAndDropController die verbleibenden Links in eine ArrayList stecken. | 20min
 2.8 | Im DragAndDropController den Button so einrichten dass er die Links in die Main-Klasse speichert und die nächste Scene startet. | 40 min 
-3.1 | Eine Weitere Klasse erstellen die auf dem Desktop einen Ordner erstellt in dem die komprimierten Dateien abgelegt werden können. Die Klasse soll eine Methode haben die den Ordner erstellt und den Link des Ordners zurückgibt. | 4 Stunden
-4.1 | Eine Klasse erstellen an die ein Link eines Fotos sowie der Link des Desktop-Ornders weitergegeben werden kann für die komprimierung. Darin soll eine Methode gerufen werden die über den Link das Foto ladet, die Auflösung anpasst und das Bild komprimiert sowie in den erstellten Ordner auf dem Desktop abspeichert. | 6 Stunden
+3.1 | Eine Klasse erstellen an die ein Link eines Fotos sowie der Link des Desktop-Ornders weitergegeben werden kann für die komprimierung. Darin soll eine Methode gerufen werden die über den Link das Foto ladet, die Auflösung anpasst und das Bild komprimiert sowie in den erstellten Ordner auf dem Desktop abspeichert. | 6 Stunden 
+4.1 | Eine Weitere Klasse erstellen die auf dem Desktop einen Ordner erstellt in dem die komprimierten Dateien abgelegt werden können. Die Klasse soll eine Methode haben die den Ordner erstellt und den Link des Ordners zurückgibt. | 2 Stunden
+
 6.1 | Einen Button machen auf der Progressseite der "Fertig" heisst und den man erste Drücken kann wenn alle Fotos komprimiert wurden. | 40 min
-7.1 | Einen Button machen auf der Progressseite der "Fertig" heisst und den man erste Drücken kann wenn alle Fotos komprimiert wurden. | 40 min
  |         | Total: 16h 40min
 
-#### Sprint 1 Review
-Wir konnten im ersten Sprint tatsächlich alle Tasks erfüllen. Man muss aber sagen, dass die geschätzten Zeiten IMMER überschritten wurde und jedes Teammitglied Überstunden machen musste. Somit ist die ToDo Liste des ersten Sprints nun eine Done Liste. 
+### Sprint 1 Review
+Wir konnten im ersten Sprint tatsächlich alle Tasks erfüllen. Man muss aber  sagen dass die geschätzten Zeiten IMMER überschritten wurde und jedes Teammitglied überstunden machen musste. Somit ist die ToDo Liste des ersten Sprints nun eine Done Liste. 
 
-#### Sprint 1 Code snippets
+### Sprint 1 einige Code snippets
 
-## DragAndDropController V0.1
+
+#### DragAndDropController V0.1
 Dies ist der Teil des Codes der reagiert sobald eine Datei in das Fenster gezogen wird. Hier sind noch keine Kontrollmechanismen eingebaut die überprüfen ob diese Datei unterstützt wird von Java oder nicht.
 
 ```ruby
@@ -370,10 +373,63 @@ Da wir pro Sprint 20 Punkte verarbeiten können was vierundzwanzig Stunden entsp
 
 #### Sprint 2 Code-snippets
 
+
+#### ProgressController
+Dieser teil des Programmes stellt die Grösste herausforderung unseres Projektes dar. Es soll die Scene mit der ProgressBar regelmässig updaten. Damit dies funktioniert muss man mit Threads arbeiten. Ehrlichgesagt wissen wir nicht genau warum es schlussendlich so funkktioniert hat. Wir haben über zehn stunden an dieser Klasse gearbeitet. Die erste Idee war für jede Aktualisierung einen nuen Thread zu erstellen der dann in eine warteschlange gesteckt wird. Warum dies nicht funktioniert hat wissen wir nicht. Irgendwann haben wir es dann per Zufall zum laufen gebracht. Hier wird nun also eigentlich nur einen Task ausgeführt der sowohl die ProgressBar updated wie auch die Scene ändert und am schluss den Fertig Button aktiviert. Was für einen Sinn das macht dass man einen einzelnen Thread startet, obwohl threads ja eigentlich dafür genutzt werden um parallel sachen abarbeiten zu können. Aber wir denken dass es damit zu tun hat dass die Scene nicht, wie normalerweise im code, nach und nach aktualisiert wird sondern dass die For schleife dominanter ist. Da die For Schleife nun aber in einem Thread ist, wird der Thread auf die seite geschoben und zuerst die Scene aktualisiert bevor der thread wieder hervorgenommen und weiter bearbeitet wird. Sicher sind wir uns aber mit dieser Theorie nicht. Es funktioniert aber erst einmal.
+
+	
+```ruby
+	public void setProgressBar(ArrayList<String> link, String linkOfNewFolder) {
+		this.links=link;
+		this.linkOfNewFolder=linkOfNewFolder;
+		progressBar.progressProperty().unbind();
+        progressBar.setProgress(0);
+        copyWorker = createWorker();
+        progressBar.progressProperty().bind(copyWorker.progressProperty());
+        copyWorker.messageProperty().addListener(new ChangeListener<String>() {
+            public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
+                System.out.println(newValue);
+            }
+        });
+
+        new Thread(copyWorker).start();
+        
+        
+	}
+	
+	
+	public Task createWorker() {
+        return new Task() {
+            @Override
+            protected Object call() throws Exception {
+                for (i = 0; i < numberToDo; i++) {
+                    Thread.sleep(5);
+                    updateMessage("5 milliseconds");
+                    updateProgress(i+1, numberToDo);
+                    new compress(links.get(i), linkOfNewFolder);
+                    
+                    Platform.runLater(new Runnable() {
+                        public void run() {
+                        	doneLabel.setText(i+"");
+                        	if(i==numberToDo) {
+                        		infoLabel.setText("Komprimierung war erfolgreich.");
+                        	}
+                        }
+                  });
+                }
+                finishButtonDisabled(false);
+                
+                return true;
+            }
+        };
+    }
+    
+    
+    
 #### DragAndDropController Finale Version
 Diese Methode die aufgerufen wird sobald etwas in die Drop-Area gezogen wird hat sich sehr verändert im zweiten Sprint. Auf denersten Teil will ich nicht mehr eingehen da ich es schon nach dem ersten Sprint erklärt habe.
 	
-	```ruby
+```ruby
 	@FXML
 	private void handleDragDropped(DragEvent event) throws IOException {
 		Dragboard DragboardLinks = event.getDragboard();
@@ -425,7 +481,7 @@ Diese Methode die aufgerufen wird sobald etwas in die Drop-Area gezogen wird hat
 		infoLabel.setText("Sie können weiterhin beliebig viele Fotos hinzufügen.");	//set label
 
 	}
-	```
+```
 
 
 Hier ist eine verkettung von zwei For schleifen. Sie sollen die bereits gespeicherten Links mit den Links vergleichen die neu dazukommen. 
@@ -530,9 +586,6 @@ Ganz am schluss wird noch der Text gesetzt der dann im Fenster angezeigt wird.
 ```
 
 Das Code Snippet (oberhalb) zeigt einen Teil des Codes aus dem JUnit-Test, um zu testen, ob die Bilddateien komprimiert wurden. Der Test unterscheidet kleine (small) Bilder und grosse (big) Bilder, dabei ist die Pixelanzahl entscheidend, ob das Bild klein oder gross ist. Wenn das Bild weniger als 1080 Pixel (1080 Pixel = full HD Auflösung) hat, ist es klein und wird nicht komprimiert. Die Idee dahinter ist, dass die Bilder nicht zu stark komprimiert werden und dann irgendwann eine schlechte Qualität bekommen. Für den Test haben wir ein kleines und ein grosses Bild genommen und dieses mit unserem Programm komprimiert und dann über den Dateipfad in den Test eingelesen.  Beim ersten Test wird geprüft, ob das kleine Bild nicht komprimiert wird, weil es ja zu klein zum Komprimieren ist. Beim zweiten Test wird geprüft, ob das Bild komprimiert wird. Diese Tests werden mit Hilfe von «assertEquals» gemacht. Dabei wird geprüft, ob das erwartete Ergebnis mit dem Programmoutput übereinstimmt.
-
-
-#### Testfälle
 
 
 #### Klassen- und Sequenzdiagramm
