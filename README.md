@@ -47,7 +47,7 @@ Das Programm soll in Java innerhalb der Eclipse Programmierumgebung geschrieben 
 Nr. | UserStory | Aufwand-schätzung (Story Points) | Priorität | Akzptanzkriterium
 ----|-----------|----------------------------------|-----------|------------------
 1 | Der Kunde soll die Applikation zur Komprimierung von Bildern intuitiv bedienen können, damit er Zeit spart beim Komprimieren von Dateien. | 7 | 1 | Es sollen nicht mehr als drei Buttons auf einer Seite verwendet werden. Die Buttons sollen beschriftet sein, um eine intuitive 
-2 | Der Kunde soll die Aktionen über eine intuitiv verständliche Benutzeroberfläche eingeben können, damit er vorher keinen Kurs belegen muss. | 5 | 1 | Buttons müssen unmissverständlich beschriftet sein.
+2 | Der Kunde soll alle Fotos einfach in ein Fenster ziehen können und das Programm soll dabei automatisch erkennen welche Fotos behandet werden können und welche nicht. Der Nutzer soll dabei über fehler benachrichtigt werden. DAbei soll ihm angezeigt werden was nicht gut ist und mit welcher Datei etwas nicht stimmt. | 5 | 1 | Dateien Können üer Drag and Drop fenster ausgewählt werden und das Programm muss automatisch erkennen welche Dateien fehlerhaft sind.
 3 | Die Bilddateien sollen direkt auf den Desktop gespeichert werden, damit der Benutzer keinen Dateipfad eingeben muss. | 2 | 1 | Der Speichervorgang wird vom Programm übernommen, ohne dass der Benutzer etwas eingeben muss.
 4 | Während der potentiellen Wartezeit des Komprimiervorgangs soll der Kunde über die Aktion (also, dass das Programm komprimiert) informiert werden, damit er weiss, was das Programm macht. | 5 | 2 | Sobald eine Wartezeit entsteht, weil das Programm Daten verarbeitet, wird das mit einer «Progress Bar» angezeigt.
 5 | Der Kunde soll eine Meldung auf dem Bildschirm erhalten, sobald der Komprimiervorgang abgeschlossen ist, damit der Kunde eine Bestätigung hat, dass seine Bilder komprimiert wurden. | 1 | 3 | Die Meldung soll kurz formuliert sein, aber klar vermitteln, dass der Komprimierungsvorgang abgeschlossen ist.
@@ -80,21 +80,24 @@ Wir haben unsere Sprint's auf jeweils **sechs Stunden** festegelegg. Die Sprints
 ### Sprint 1
 #### Sprint Planning Meeting
 
-Nr. | Task | User Story | Zeit Schätzung in h
+Nr. | Task | User Story | Zeitschätzung
 ----|------|------------|--------------------
-1.1 | Ordnerstruktur erstellen mit Maven. | 2 | 1
-1.2 | Grundstruktur des Programmes schreiben, main-JavaFx klasse erstellen. | 2 | 1
-1.3 | Willkommen Fenster mit Scene Builder gestalten. | 2 | 1
-1.4 | Die Controller Klasse für das Willkommenfenster erstellen. | 2 | 1
-1.5 | Im Controller einen WeiterButton erstellen der die nächste Scene startet. | 2 | 1
-2.1 | Ein DragANdDrop Fenster gestalten mit SceneBuilder. | 3 | 4
-2.2 | Der DragAndDropController erstellen der alle Drops in ein Array schreibt. | 2 | 2
-2.3 | Im DragAndDropController die Links auf nichtunterstützte Formate untersuchen und diese ausfiltern. | 2 | 2
-2.4 | Im DragAndDropController die Links auf doppelgänger Untersuchen und diese aussortieren. | 2 | 2
+1 | Grundgerüst für eine Übersichtliche Oberfläche | |
+1.1 | Ordnerstruktur erstellen mit Maven. | 1 | 15min
+1.2 | Grundstruktur des Programmes schreiben, main-JavaFx klasse erstellen. | 1 | 15min
+1.3 | Willkommen Fenster mit Scene Builder gestalten. | 1 | 15min
+1.4 | Die Controller Klasse für das Willkommenfenster erstellen. | 2 | 30min
+1.5 | Im Controller einen WeiterButton erstellen der die nächste Scene startet. | 1 | 15min
+2.1 | Ein DragANdDrop Fenster gestalten mit SceneBuilder. | 2 | 30min
+2.2 | Der DragAndDropController erstellen der alle Drops in ein Array schreibt. | 4 | 60min
+2.3 | Im DragAndDropController die Links auf nichtunterstützte Formate untersuchen und diese ausfiltern. | 4 | 60min
+2.4 | Im DragAndDropController die Links auf doppelgänger Untersuchen und diese aussortieren. | 4 | 60min
 2.5 | Im DragAndDropController die verbleibenden Links in eine ArrayList stecken. | 2 | 2
-2.6 | Im DragAndDropController den Button so einrichten dass er die Links in die Main-Klasse speichert und die nächste Scene startet. | 2 | 2
+2.6 | Im DragAndDropController den Button so einrichten dass er die Links in die Main-Klasse speichert und die nächste Scene startet. | 
 3.1 | Eine Klasse erstellen an die die Bilder weitergegeben werden können für die komprimierung. 
 3.2 | In der Main Klasse eine Methode schreiben die alle Links an die Komprimierung weitergibt.
+3.2 | In der Komprimierungsklasse alle Links als Bilder einlesen und komprimieren lassen.
+3.3 | Eine Weitere Klasse erstellen die auf dem Desktop einen Ordner erstellt in dem die komprimierten Dateien abgelegt werden können. Die Klasse soll eine Methode haben die den Ordner erstellt und den Link des Ordners zurückgibt. 
 2 | Alle Bilder zum Komprimieren in Arraylist auflisten | 2 | 1
 3 | Komprimierung der Bilddatei | 5 | 6
 4 | Drag and Drop Bereich erstellen (2.Scene) | 5 | 6
