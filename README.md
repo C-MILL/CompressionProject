@@ -82,13 +82,16 @@ Story 3 | Tasks um die Komprimierung und Abspeicherung auf dem Desktop zu realis
 
 Story 4 | Tasks für die Fortschrittanzeige  | Zeitschätzung
 ----|------|--------------------
-4 | Eine neue Klasse erstellen der den Fortschritt der Komprimierung anzeigt. Dafür soll es einen Ladebalken geben und ein schriftliche Information die anzeigt wie viele Fotos bereits komprimiert worden sind. | 30min
+4.1 | Mit Scene Builder ein Fenster erstellen der den Fortschritt der Komprimierung anzeigt. Dafür soll es einen Ladebalken geben und ein schriftliche Information die anzeigt wie viele Fotos bereits komprimiert worden sind. | 30min
 4.2 | Controllerklasse für die Fortschrittseite erstellen. Sie soll sich automatisch aktualisieren sobald ein Bild komprimiert wurde. | 30min
 
 Story 5 | Taks für das Ende des Programmes | Zeitschätzung
 ----|------|--------------------
 5.1 | Einen Button machen auf der Progressseite der "Fertig" heisst und den man erste Drücken kann wenn alle Fotos komprimiert wurden. | 30min
 
+Story 6 | Taks für das Ende des Programmes | Zeitschätzung
+----|------|--------------------
+5.1 | Einen Button machen auf der Progressseite der "Fertig" heisst und den man erste Drücken kann wenn alle Fotos komprimiert wurden. | 30min
 ## Releaseplan
 
 User Story | Release 1 | Release 2 | Release 3
