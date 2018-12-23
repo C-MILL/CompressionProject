@@ -64,44 +64,44 @@ Nr. | UserStory | Aufwand-schätzung (Story Points) | Priorität | Akzptanzkrite
 ## Tasks
 Story 1 | Grundgerüst erstellen für eine Übersichtliche Oberfläche  | Zeitschätzung
 ----|------|--------------------
-1.1 | Ordnerstruktur erstellen mit Maven. | 15min
-1.2 | Grundstruktur des Programmes schreiben, main-JavaFx klasse erstellen. | 15min
-1.3 | Willkommen Fenster mit Scene Builder gestalten. | 15min
-1.4 | Die Controller Klasse für das Willkommenfenster erstellen. | 30min
-1.5 | Im Controller einen WeiterButton erstellen der die nächste Scene startet. | 15min
+1.1 | Ordnerstruktur erstellen mit Maven. | 20min
+1.2 | Grundstruktur des Programmes schreiben, main-JavaFx klasse erstellen. | 20min
+1.3 | Willkommen Fenster mit Scene Builder gestalten. | 20min
+1.4 | Die Controller Klasse für das Willkommenfenster erstellen. | 40min
+1.5 | Im Controller einen WeiterButton erstellen der die nächste Scene startet. | 40min
 
 Story 2 | Schritte um das DragAndDrop Fenster zu realisieren  | Zeitschätzung
 ----|------|--------------------
-2.1 | Ein DragANdDrop Fenster gestalten mit SceneBuilder. | 30min
-2.2 | Der DragAndDropController erstellen der alle Drops in ein Array schreibt. | 60min
-2.3 | Mit SceneBuilder ein Fenster erstellen welches für die Fehlermeldungen individuell genutzt werden kann. und welches man über einfache handles ändern und anpassen kann. | 30min 
+2.1 | Ein DragANdDrop Fenster gestalten mit SceneBuilder. | 40min
+2.2 | Der DragAndDropController erstellen der alle Drops in ein Array schreibt. | 80min
+2.3 | Mit SceneBuilder ein Fenster erstellen welches für die Fehlermeldungen individuell genutzt werden kann. und welches man über einfache handles ändern und anpassen kann. | 40min 
 2.4 | Eine Controller Klasse für die Fehlermeldungen schreiben. Darin soll man über eine Methode die Nachricht des fehlers ändern können. Die Klasse soll einen boolean zurückgeben.
-2.5 | Im DragAndDropController die Links auf nichtunterstützte Formate untersuchen und diese ausfiltern. Falls es nicht unterstützte Dateien gibt, soll der Nutzer informiert werden über das Fehlerfenster. | 60min
-2.6 | Im DragAndDropController die Links auf doppelgänger Untersuchen und diese aussortieren. Falls es Doppelgänger gibt soll der Nutzer über das Fehlerfenster darauf aufmerksam gemacht werden und entscheiden können ob er die Datei trotzdem hinzufügen will oder nicht.| 4 | 60min
-2.7 | Im DragAndDropController die verbleibenden Links in eine ArrayList stecken. | 15min
-2.8 | Im DragAndDropController den Button so einrichten dass er die Links in die Main-Klasse speichert und die nächste Scene startet. | 30min 
+2.5 | Im DragAndDropController die Links auf nichtunterstützte Formate untersuchen und diese ausfiltern. Falls es nicht unterstützte Dateien gibt, soll der Nutzer informiert werden über das Fehlerfenster. | 80min
+2.6 | Im DragAndDropController die Links auf doppelgänger Untersuchen und diese aussortieren. Falls es Doppelgänger gibt soll der Nutzer über das Fehlerfenster darauf aufmerksam gemacht werden und entscheiden können ob er die Datei trotzdem hinzufügen will oder nicht.| 4 | 80min
+2.7 | Im DragAndDropController die verbleibenden Links in eine ArrayList stecken. | 20min
+2.8 | Im DragAndDropController den Button so einrichten dass er die Links in die Main-Klasse speichert und die nächste Scene startet. | 40min 
 
 Story 3 | Tasks um die Komprimierung realisieren | Zeitschätzung
 ----|------|--------------------
-3.1 | Eine Weitere Klasse erstellen die auf dem Desktop einen Ordner erstellt in dem die komprimierten Dateien abgelegt werden können. Die Klasse soll eine Methode haben die den Ordner erstellt und den Link des Ordners zurückgibt. | 4-Stunden
-3.2 | Eine Klasse erstellen an die ein Link eines Fotos sowie der Link des Desktop-Ornders weitergegeben werden kann für die komprimierung. Darin soll eine Methode gerufen werden die über den Link das Foto ladet, die Auflösung anpasst und das Bild komprimiert sowie in den erstellten Ordner auf dem Desktop abspeichert. | 6-Stunden
+3.1 | Eine Weitere Klasse erstellen die auf dem Desktop einen Ordner erstellt in dem die komprimierten Dateien abgelegt werden können. Die Klasse soll eine Methode haben die den Ordner erstellt und den Link des Ordners zurückgibt. | 4Stunden
+3.2 | Eine Klasse erstellen an die ein Link eines Fotos sowie der Link des Desktop-Ornders weitergegeben werden kann für die komprimierung. Darin soll eine Methode gerufen werden die über den Link das Foto ladet, die Auflösung anpasst und das Bild komprimiert sowie in den erstellten Ordner auf dem Desktop abspeichert. | 6Stunden
 
 Story 4 | Tasks um die Abspeicherung auf dem Desktop zu realisieren | Zeitschätzung
 ----|------|--------------------
-4.1 | Eine Klasse erstellen an die ein Link eines Fotos sowie der Link des Desktop-Ornders weitergegeben werden kann für die komprimierung. Darin soll eine Methode gerufen werden die über den Link das Foto ladet, die Auflösung anpasst und das Bild komprimiert sowie in den erstellten Ordner auf dem Desktop abspeichert. | 6-Stunden
+4.1 | Eine Klasse erstellen an die ein Link eines Fotos sowie der Link des Desktop-Ornders weitergegeben werden kann für die komprimierung. Darin soll eine Methode gerufen werden die über den Link das Foto ladet, die Auflösung anpasst und das Bild komprimiert sowie in den erstellten Ordner auf dem Desktop abspeichert. | 6Stunden
 
 Story 5 | Tasks für die Fortschrittanzeige  | Zeitschätzung
 ----|------|--------------------
-5.1 | Mit Scene Builder ein Fenster erstellen der den Fortschritt der Komprimierung anzeigt. Dafür soll es einen Ladebalken geben und ein schriftliche Information die anzeigt wie viele Fotos bereits komprimiert worden sind. | 30min
-5.2 | Controllerklasse für die Fortschrittseite erstellen. Sie soll sich automatisch aktualisieren sobald ein Bild komprimiert wurde. | 30min
+5.1 | Mit Scene Builder ein Fenster erstellen der den Fortschritt der Komprimierung anzeigt. Dafür soll es einen Ladebalken geben und ein schriftliche Information die anzeigt wie viele Fotos bereits komprimiert worden sind. | 40min
+5.2 | Controllerklasse für die Fortschrittseite erstellen. Sie soll sich automatisch aktualisieren sobald ein Bild komprimiert wurde. | 40min
 
 Story 6 | Taks für das Ende des Programmes | Zeitschätzung
 ----|------|--------------------
-6.1 | Einen Button machen auf der Progressseite der "Fertig" heisst und den man erste Drücken kann wenn alle Fotos komprimiert wurden. | 30min
+6.1 | Einen Button machen auf der Progressseite der "Fertig" heisst und den man erste Drücken kann wenn alle Fotos komprimiert wurden. | 40min
 
 Story 7 | Taks für das Ende des Programmes | Zeitschätzung
 ----|------|--------------------
-7.1 | Einen Button machen auf der Progressseite der "Fertig" heisst und den man erste Drücken kann wenn alle Fotos komprimiert wurden. | 30min
+7.1 | Einen Button machen auf der Progressseite der "Fertig" heisst und den man erste Drücken kann wenn alle Fotos komprimiert wurden. | 40min
 ## Releaseplan
 
 User Story | Release 1 | Release 2 | Release 3
