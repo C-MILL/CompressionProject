@@ -135,8 +135,9 @@ Das Programm ermöglicht das Komprimieren von Bildern. Beim Komprimieren wird di
 Um das Programm zu starten, drücken Sie auf den Button «Loslegen».
 
 ![](https://github.com/atorha/CompressionProject/blob/master/Images/bedienungsanleitung_2.jpg)
+![](https://github.com/atorha/CompressionProject/blob/master/Images/bedienungsanleitung_6.JPG)
 
-Durch das drücken des «Loslegen» Buttons öffnet sich ein neues Fenster. Ziehen Sie mit Hilfe von Drag-and-Drop alle Bilder, die Sie komprimieren wollen, in das Feld in der Mitte des Fensters. (Drag-and-Drop: Bilder auswählen und mit der Maus ins Fenster ziehen)
+Durch das drücken des «Loslegen» Buttons öffnet sich ein neues Fenster. Ziehen Sie mit Hilfe von Drag-and-Drop alle Bilder, die Sie komprimieren wollen, in das Feld in der Mitte des Fensters. (Drag-and-Drop: Bilder auswählen und mit der Maus ins Fenster ziehen) Falls Sie das gleiche Bild mehrmals in das Fenster ziehen, erscheint eine Fehlermeldung. In der Fehlermeldung werden Sie gefragt, ob Sie das Bild tatsächlich ein zweites Mal hinzufügen und komprimieren wollen.
 
 ![](https://github.com/atorha/CompressionProject/blob/master/Images/bedienungsanleitung_3.jpg)
 
