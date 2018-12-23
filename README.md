@@ -386,7 +386,7 @@ Tasknummer| Taskbezeichnung | Zeitschätzung
 8.4 | Eine englische Version der Buttons und Labels erstellen und ins Programm einbinden.| 4 Stunden
 
 ### Scrum Halftime Meeting
-In der hälfte des Sprints haben wir festgestellt dass die ProgressBar uns erheblich schwierigkeiten macht. Nach zehn arbeitsstunden läuft sie dann. Da die zehn Stunden uns aber fehlen, müssen wir die zwei letzten Stories (7 und 8) auf einen zukünftigen Sprint verschieben, was jedoch nicht so schlim ist da diese Stories unser Grundprogramm nicht beeinflusst. 
+In der Hälfte des Sprints haben wir festgestellt, dass die ProgressBar unserem Team erhebliche Schwierigkeiten bereitet. Nach 10 Arbeitsstunden funktioniert aber. Da uns diese 10 Stunden nun fehlen, müssen wir die zwei letzten Stories (7 und 8) auf einen zukünftigen Sprint verschieben, was jedoch nicht schlimm ist, da diese Stories unser Grundprogramm nicht beeinflusst. 
 
 
 ### Sprint 2 Review
