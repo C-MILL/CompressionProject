@@ -74,6 +74,7 @@ Nr. | UserStory | Aufwand-schätzung (Story Points) | Priorität | Akzptanzkrite
 ## Backlog
 Story 1 | Grundgerüst erstellen für eine Übersichtliche Oberfläche  | Zeitschätzung
 ----|------|--------------------
+
 1.1 | Ordnerstruktur erstellen mit Maven. | 20 min
 1.2 | Grundstruktur des Programmes schreiben, main-JavaFx klasse erstellen. | 20 min
 1.3 | Willkommen Fenster mit Scene Builder gestalten. | 20 min
@@ -103,6 +104,7 @@ Story 4 | Tasks um die Abspeicherung auf dem Desktop zu realisieren | Zeitschät
 
 Story 5 | Tasks für die Fortschrittanzeige realisieren | Zeitschätzung
 ----|------|--------------------
+
 5.1 | Mit Scene Builder ein Fenster erstellen der den Fortschritt der Komprimierung anzeigt. Dafür soll es einen Ladebalken geben und ein schriftliche Information die anzeigt wie viele Fotos bereits komprimiert worden sind. | 40 min
 5.2 | Controllerklasse für die Fortschrittseite erstellen. Sie soll sich automatisch aktualisieren sobald ein Bild komprimiert wurde. | 40 min
 
@@ -160,15 +162,49 @@ Tasknummer| Taksbezeichnung | Zeitschätzung
 1.5 | Im Controller einen WeiterButton erstellen der die nächste Scene startet. | 40 min
 2.1 | Ein DragANdDrop Fenster gestalten mit SceneBuilder. | 40 min
 2.2 | Der DragAndDropController erstellen der alle Drops in ein Array schreibt. | 80 min
+nicht.| 80min 
 2.7 | Im DragAndDropController die verbleibenden Links in eine ArrayList stecken. | 20min
 2.8 | Im DragAndDropController den Button so einrichten dass er die Links in die Main-Klasse speichert und die nächste Scene startet. | 40 min 
 3.1 | Eine Klasse erstellen an die ein Link eines Fotos sowie der Link des Desktop-Ornders weitergegeben werden kann für die komprimierung. Darin soll eine Methode gerufen werden die über den Link das Foto ladet, die Auflösung anpasst und das Bild komprimiert sowie in den erstellten Ordner auf dem Desktop abspeichert. | 6 Stunden 
 4.1 | Eine Weitere Klasse erstellen die auf dem Desktop einen Ordner erstellt in dem die komprimierten Dateien abgelegt werden können. Die Klasse soll eine Methode haben die den Ordner erstellt und den Link des Ordners zurückgibt. | 2 Stunden
+
 6.1 | Einen Button machen auf der Progressseite der "Fertig" heisst und den man erste Drücken kann wenn alle Fotos komprimiert wurden. | 40 min
-| Total: 16h 40min | 
+ |         | Total: 16h 40min
 
 ### Sprint 1 Review
 Wir konnten im ersten Sprint tatsächlich alle Tasks erfüllen. Man muss aber  sagen dass die geschätzten Zeiten IMMER überschritten wurde und jedes Teammitglied überstunden machen musste. Somit ist die ToDo Liste des ersten Sprints nun eine Done Liste. 
+
+#### Backlog 2
+
+Story 2 | Schritte um das DragAndDrop Fenster zu realisieren  | Zeitschätzung
+----|------|--------------------
+2.3 | Mit SceneBuilder ein Fenster erstellen welches für die Fehlermeldungen individuell genutzt werden kann. und welches man über einfache handles ändern und anpassen kann. | 40 min 
+2.4 | Eine Controller Klasse für die Fehlermeldungen schreiben. Darin soll man über eine Methode die Nachricht des fehlers ändern können. Die Klasse soll einen boolean zurückgeben. | 80min
+2.5 | Im DragAndDropController die Links auf nichtunterstützte Formate untersuchen und diese ausfiltern. Falls es nicht unterstützte Dateien gibt, soll der Nutzer informiert werden über das Fehlerfenster. | 80 min
+2.6 | Im DragAndDropController die Links auf doppelgänger Untersuchen und diese aussortieren. Falls es Doppelgänger gibt soll der Nutzer über das Fehlerfenster darauf aufmerksam gemacht werden und entscheiden können ob er die Datei trotzdem hinzufügen will oder nicht.| 80min 
+
+Story 3 | Tasks um die Komprimierung realisieren | Zeitschätzung
+----|------|--------------------
+3.2 | JUnit Klasse machen um zu testen ob das Bild tatsächlich kleiner geworden ist. | 2 Stunden
+3.3 | JUnit Klasse machen um zu testen ob die Auflösung richtig angepasst wird. | 2 Stunden 
+
+Story 5 | Tasks für die Fortschrittanzeige realisieren | Zeitschätzung
+----|------|--------------------
+5.1 | Mit Scene Builder ein Fenster erstellen der den Fortschritt der Komprimierung anzeigt. Dafür soll es einen Ladebalken geben und ein schriftliche Information die anzeigt wie viele Fotos bereits komprimiert worden sind. | 40 min
+5.2 | Controllerklasse für die Fortschrittseite erstellen. Sie soll sich automatisch aktualisieren sobald ein Bild komprimiert wurde. | 40 min
+
+Story 7 | Taks für frei wählbare Komprimeirungsgrösse realisieren | Zeitschätzung
+----|------|--------------------
+7.2 | Hinter Button Einfach soll das bisherige Programm laufen. | 2 Stunden
+7.2 | Hinter dem "Fortgeschritten" Button soll eine neue Scene starten auf der man über zwei Labels die gewünschte Auflösung einstellen kann. Danach soll per "OK" Knopf das normale Programm fortgeführt werden. | 2 Stunden
+7.3 | Einen Button mit SceneBuilder erstellen, damit zum DragANdDrop Fensert kommmt, um dann die Bilder rein zu ziehen. | 40 min
+
+Story 8 | Taks für die Sprachauswahl realisieren | Zeitschätzung
+----|------|--------------------
+8.1 | Ein Fenster mit SceneBuilder erstellen, wobei 2 Buttons mit der Beschriftung "Deutsch" und "Englisch" vorhanden sind. | 40 min
+8.2 | Controllerklasse für das Sprachwahlfenster erstellen. Wobei die Sprachauswahl aus dem Willkommenfenster aufgerufen werden kann. | 40 min
+8.3 | Im Willkommensfenster einen Sprachauswahl-Button erstellen. | 20 min
+8.4 | Eine Englische Version der Buttons und Labels erstellen und ins Programm einbinden.| 4 Stunden
 
 ### Sprint 1 einige Code snippets
 
@@ -330,25 +366,37 @@ Das obige Code-Snippet aus der Klasse «compress.java» zeigt, wie der Pfad des 
 Dieses Code-Snippet zeigt, wie das eingelesene Bild komprimiert und danach im neu generierten Ordner mit dem neu generierten Dateinamen abgespeichert wird. Es wird dabei zuerst die Höhe und Breite des Bildes ausgelesen. Falls die Höhe des Bildes unterhalb der doppelten Full-HD Auflösung liegt, wird das Bild nicht komprimiert, da die Bildqualität ansonsten nicht auf einem akzeptablen Niveau wäre. Wenn die Bildhöhe grösser als 2160 Pixel ist, wird das Bild im weiteren Verlauf komprimiert. Dabei wird die Bildhöhe halbiert und das Bild entsprechend skaliert. Das komprimierte Bild besitzt damit immer eine Auflösung, die mindestens der Full-HD Auflösung entspricht. Danach wird das komprimierte Bild generiert. Das neue Bild wird danach als «jpeg» Datei im neu generierten Ordner auf dem Desktop unter dem neuen Bildnamen abgelegt. Es existieren weitere Konstruktoren, die erweiterte Funktionalitäten beim nächsten Release bieten werden. So soll für professionellere Anwender die Möglichkeit geschaffen werden, das Bild nach einer genauen Eingabe der Pixel oder nach der maximal erwünschten Dateigrösse zu komprimieren. 
 
 
-### Sprint 2
-#### Updated Backlog
+## Sprint 2
 
-Story 2 | Schritte um das DragAndDrop Fenster zu realisieren  | Zeitschätzung
+### Sprint 2 Planning Meeting
+In diesem Sprint haben wir eine Workload von siebzehn Stunden. Dies ist noch mehr als in der letzten Runde. Da wir nun aber eingespielter sind und uns mit Scene Builder besser auskennen hoffen wir dass wir schneller vorwärtskommen.
+
+Tasknummer| Taksbezeichnung | Zeitschätzung
 ----|------|--------------------
 2.3 | Mit SceneBuilder ein Fenster erstellen welches für die Fehlermeldungen individuell genutzt werden kann. und welches man über einfache handles ändern und anpassen kann. | 40 min 
 2.4 | Eine Controller Klasse für die Fehlermeldungen schreiben. Darin soll man über eine Methode die Nachricht des fehlers ändern können. Die Klasse soll einen boolean zurückgeben. | 80min
 2.5 | Im DragAndDropController die Links auf nichtunterstützte Formate untersuchen und diese ausfiltern. Falls es nicht unterstützte Dateien gibt, soll der Nutzer informiert werden über das Fehlerfenster. | 80 min
 2.6 | Im DragAndDropController die Links auf doppelgänger Untersuchen und diese aussortieren. Falls es Doppelgänger gibt soll der Nutzer über das Fehlerfenster darauf aufmerksam gemacht werden und entscheiden können ob er die Datei trotzdem hinzufügen will oder nicht.| 80min 
-
-Story 3 | Tasks um die Komprimierung realisieren | Zeitschätzung
-----|------|--------------------
 3.2 | JUnit Klasse machen um zu testen ob das Bild tatsächlich kleiner geworden ist. | 2 Stunden
 3.3 | JUnit Klasse machen um zu testen ob die Auflösung richtig angepasst wird. | 2 Stunden 
-
-Story 5 | Tasks für die Fortschrittanzeige realisieren | Zeitschätzung
-----|------|--------------------
 5.1 | Mit Scene Builder ein Fenster erstellen der den Fortschritt der Komprimierung anzeigt. Dafür soll es einen Ladebalken geben und ein schriftliche Information die anzeigt wie viele Fotos bereits komprimiert worden sind. | 40 min
 5.2 | Controllerklasse für die Fortschrittseite erstellen. Sie soll sich automatisch aktualisieren sobald ein Bild komprimiert wurde. | 40 min
+7.2 | Hinter Button Einfach soll das bisherige Programm laufen. | 2 Stunden
+7.2 | Hinter dem "Fortgeschritten" Button soll eine neue Scene starten auf der man über zwei Labels die gewünschte Auflösung einstellen kann. Danach soll per "OK" Knopf das normale Programm fortgeführt werden. | 2 Stunden
+7.3 | Einen Button mit SceneBuilder erstellen, damit zum DragANdDrop Fensert kommmt, um dann die Bilder rein zu ziehen. | 40 min
+8.1 | Ein Fenster mit SceneBuilder erstellen, wobei 2 Buttons mit der Beschriftung "Deutsch" und "Englisch" vorhanden sind. | 40 min
+8.2 | Controllerklasse für das Sprachwahlfenster erstellen. Wobei die Sprachauswahl aus dem Willkommenfenster aufgerufen werden kann. | 40 min
+8.3 | Im Willkommensfenster einen Sprachauswahl-Button erstellen. | 20 min
+8.4 | Eine Englische Version der Buttons und Labels erstellen und ins Programm einbinden.| 4 Stunden
+
+### Scrum Halftime Meeting
+In der hälfte des Sprints haben wir festgestellt dass die ProgressBar uns erheblich schwierigkeiten macht. Nach zehn arbeitsstunden läuft sie dann. Da die zehn Stunden uns aber fehlen, müssen wir die zwei letzten Stories (7 und 8) auf einen zukünftigen Sprint verschieben, was jedoch nicht so schlim ist da diese Stories unser Grundprogramm nicht beeinflusst. 
+
+
+### Sprint 2 Review
+Rückblickend hat uns dieser Sprint unerwartet viel Zeit gekostet und dementsprechend ist der Backlog weniger geschrumpft wie bei unserem letzten Sprint.
+
+### Backlog V3
 
 Story 7 | Taks für frei wählbare Komprimeirungsgrösse realisieren | Zeitschätzung
 ----|------|--------------------
@@ -363,10 +411,6 @@ Story 8 | Taks für die Sprachauswahl realisieren | Zeitschätzung
 8.3 | Im Willkommensfenster einen Sprachauswahl-Button erstellen. | 20 min
 8.4 | Eine Englische Version der Buttons und Labels erstellen und ins Programm einbinden.| 4 Stunden
 
-#### Sprint 2 Planning Meeting
-Da wir pro Sprint 20 Punkte verarbeiten können was vierundzwanzig Stunden entspricht haben wir uns 
-
-#### Sprint 2 Review
 
 #### Sprint 2 Code-snippets
 
