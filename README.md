@@ -392,20 +392,20 @@ In der Hälfte des Sprints haben wir festgestellt, dass die ProgressBar unserem 
 ### Sprint 2 Review
 Rückblickend hat uns dieser Sprint unerwartet viel Zeit gekostet und dementsprechend ist der Backlog weniger geschrumpft als bei unserem ersten Sprint.
 
-### Backlog V3
+### Backlog 3
 
-Story 7 | Taks für frei wählbare Komprimeirungsgrösse realisieren | Zeitschätzung
+Story 7 | Task für frei wählbare Komprimierungsgrösse realisieren | Zeitschätzung
 ----|------|--------------------
-7.2 | Hinter Button Einfach soll das bisherige Programm laufen. | 2 Stunden
-7.2 | Hinter dem "Fortgeschritten" Button soll eine neue Scene starten auf der man über zwei Labels die gewünschte Auflösung einstellen kann. Danach soll per "OK" Knopf das normale Programm fortgeführt werden. | 2 Stunden
-7.3 | Einen Button mit SceneBuilder erstellen, damit zum DragANdDrop Fensert kommmt, um dann die Bilder rein zu ziehen. | 40 min
+7.2 | Hinter dem "Einfach" Button soll das bisherige Programm laufen. | 2 Stunden
+7.2 | Hinter dem "Fortgeschritten" Button soll eine neue Scene starten auf der über zwei Labels die gewünschte Auflösung eingestellt werden kann. Danach soll mittels "OK" Button das normale Programm fortgesetzt werden können. | 2 Stunden
+7.3 | Einen Button mit SceneBuilder erstellen, damit man zum DragAndDrop Fensert kommmt, um dann die Bilder in das Fenster ziehen zu können. | 40 min
 
-Story 8 | Taks für die Sprachauswahl realisieren | Zeitschätzung
+Story 8 | Task für die Sprachauswahl realisieren | Zeitschätzung
 ----|------|--------------------
 8.1 | Ein Fenster mit SceneBuilder erstellen, wobei 2 Buttons mit der Beschriftung "Deutsch" und "Englisch" vorhanden sind. | 40 min
-8.2 | Controllerklasse für das Sprachwahlfenster erstellen. Wobei die Sprachauswahl aus dem Willkommenfenster aufgerufen werden kann. | 40 min
-8.3 | Im Willkommensfenster einen Sprachauswahl-Button erstellen. | 20 min
-8.4 | Eine Englische Version der Buttons und Labels erstellen und ins Programm einbinden.| 4 Stunden
+8.2 | Controllerklasse für das Sprachwahlfenster erstellen. Die Sprachauswahl soll aus dem Willkommensfenster aufgerufen werden können. | 40 min
+8.3 | Im Willkommensfenster einen Sprachauswahl Button erstellen. | 20 min
+8.4 | Eine englische Version der Buttons und Labels erstellen und ins Programm einbinden.| 4 Stunden
 
 
 #### Sprint 2 Code-snippets
