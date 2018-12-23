@@ -63,6 +63,7 @@ public class DragAndDropController {
 						linkarray[i].endsWith(".TIFF")){
 							links.add(linkarray[i]);
 				}else {
+					setDragAndDropButtonOk(true);
 					File f = new File(linkarray[i]);
 					String originalImageName = f.getName();
 					main.error(("Wollen sie die Datei: "+originalImageName+" trotzdem hinzufügen?"),"Bitte wählen sie nur Fotos mit der Dateiendung jpg, jpeg, png oder gif.");
