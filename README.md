@@ -23,31 +23,31 @@
 9. [Bedienungsanleitung](#bedienungsanleitung)
 
 
-## 1. Einleitung
+## Einleitung
 
 Das vorliegende Programm dient der Komprimierung von Bildern. Wir haben dieses Programm geschrieben, weil wir den Komprimierungsprozess vereinfachen wollen. Vor allem ältere Personen, die sich nicht mit komplizierten Computerprogrammen auskennen, haben öfters Probleme mit dem Komprimieren von Bildern.
 Um das Komprimieren von Bildern für diese Zielgruppe zu vereinfachen, haben wir ein intuitives Programm erstellt. Die Komprimierung von Bildern bringt einen erheblichen Gewinn an Speicherplatz mit sich, da die Dateigröße der Bilder massiv reduziert wird. Im Hinblick auf Versendungen per E-Mail bringt die Komprimierung von Bildern auch erhebliche Vorteile.
 Die Programmiersprache Java wurde ausgewählt, weil sie sowohl mit Windows, Mac als auch Linux kompatibel ist.
 
 
-## 2. Zielsetzung
+## Zielsetzung
 
 Das Ziel unseres Projekts ist es, die Komprimierung von Bildern zu vereinfachen. Die Applikation soll speziell für Leute sein, die gerne Fotografieren, sich aber nicht mit der Bildkomprimierung auskennen und ihre Bilder trotzdem möglichst platzsparend ablegen möchten.
 
 
-## 3. Randbedingung
+## Randbedingung
 
 Das Programm soll in Java innerhalb der Eclipse Programmierumgebung geschrieben werden. Durch eine Strukturierung in verschiedene Klassen und Methoden soll ein klarer Aufbau erzielt werden. Das Programm soll mittels der Projektverwaltung Maven erstellt werden. Für die Versionsverwaltung und die nahtlose Zusammenarbeit der Gruppe wird die Software Git verwendet. Durch eine entsprechende Konfiguration sind Eclipse, Maven und Git direkt miteinander verbunden. 
 
 
-## 4. Build-Anleitung
+## Build-Anleitung
 
 1. Laden Sie die Datei .jar auf ihren Computer runter.
 2. Vergewissern Sie sich, dass Sie eine Java Runtime Environment auf Ihrem Computer installiert haben.
 3. Klicken Sie (Doppelklick) auf ebenjene, um die Datei auszuführen.
 
 
-## 5. User Stories
+## User Stories
 
 Nr. | UserStory | Aufwand-schätzung (Story Points) | Priorität | Akzptanzkriterium
 ----|-----------|----------------------------------|-----------|------------------
@@ -60,7 +60,7 @@ Nr. | UserStory | Aufwand-schätzung (Story Points) | Priorität | Akzptanzkrite
 7 | Der Kunde soll die Komprimierungsgröße frei wählen können, um so mehrere Abstufungen der Komprimierung zu haben. | 3 | 4 | Es müssen 3 verschiedene Komprimierungsstufen zur Auswahl stehen, die der Kunde über einen Button anwählen kann.
 8 | Die Applikation soll eine Sprachauswahl beinhalten, damit sie für deutschsprachige sowie englischsprachige Benutzer einfach zu verstehen ist. | 5 | 4 | Auf dem Startfenster der Applikation soll der Kunde über einen Button die Sprache Deutsch oder Englisch auswählen können.
 
-## 6. Releaseplan
+## Releaseplan
 
 User Story | Release 1 | Release 2 | Release 3
 -----------|-----------|-----------|----------
@@ -79,9 +79,9 @@ User Story | Release 1 | Release 2 | Release 3
 Der 3. Release kam nicht zu Stande, da wir für die beiden ersten Sprints mehr Zeit als erwartet benötigten. Vor allem die Komprimierung selbst und die Progress Bar erwiesen sich als zeitintensiver als erwartet. So werden die geplanten Storys zu unseren Zielen, die wir in einem darauffolgenden Projekt weiter ausbauen wollen.
 
 
-## 7. Sprint 1
+## Sprint 1
 
-#### 7.1. Taskiliste
+#### Taskiliste
 
 Nr. | Task | User Story | Zeit Schätzung in h
 ----|------|------------|--------------------
@@ -93,9 +93,9 @@ Nr. | Task | User Story | Zeit Schätzung in h
 6 | Zählerfunktion erstellen (2.Scene) | 3 | 4
 7 | Start-Button (1.Scene)  | 1 | 0,5
 
-#### 7.2. Anreicherung der User Stories
+#### Anreicherung der User Stories
 
-#### 7.3. Dokumentation wichtiger Code Snipplets
+#### Dokumentation wichtiger Code Snipplets
 
 ###### JUnit Test - Komprimierung
 
@@ -121,16 +121,16 @@ Das obige Code-Snippet aus der Klasse «compress.java» zeigt, wie der Pfad des 
 
 Dieses Code-Snippet zeigt, wie das eingelesene Bild komprimiert und danach im neu generierten Ordner mit dem neu generierten Dateinamen abgespeichert wird. Es wird dabei zuerst die Höhe und Breite des Bildes ausgelesen. Falls die Höhe des Bildes unterhalb der doppelten Full-HD Auflösung liegt, wird das Bild nicht komprimiert, da die Bildqualität ansonsten nicht auf einem akzeptablen Niveau wäre. Wenn die Bildhöhe grösser als 2160 Pixel ist, wird das Bild im weiteren Verlauf komprimiert. Dabei wird die Bildhöhe halbiert und das Bild entsprechend skaliert. Das komprimierte Bild besitzt damit immer eine Auflösung, die mindestens der Full-HD Auflösung entspricht. Danach wird das komprimierte Bild generiert. Das neue Bild wird danach als «jpeg» Datei im neu generierten Ordner auf dem Desktop unter dem neuen Bildnamen abgelegt. Es existieren weitere Konstruktoren, die erweiterte Funktionalitäten beim nächsten Release bieten werden. So soll für professionellere Anwender die Möglichkeit geschaffen werden, das Bild nach einer genauen Eingabe der Pixel oder nach der maximal erwünschten Dateigrösse zu komprimieren. 
 
-#### 7.4. Testfälle
+#### Testfälle
 
 
-## 8. Sprint 2
+## Sprint 2
 
-#### 8.1. Taskliste
+#### Taskliste
 
-#### 8.2. Anreicherung der User Stories
+#### Anreicherung der User Stories
 
-#### 8.3. Klassen- und Sequenzdiagramm
+#### Klassen- und Sequenzdiagramm
 
 ###### Klassendiagramm
 
@@ -140,9 +140,9 @@ Dieses Code-Snippet zeigt, wie das eingelesene Bild komprimiert und danach im ne
 
 ![](https://github.com/atorha/CompressionProject/blob/master/Images/Sequence_diagram.jpg)
 
-#### 8.4. Dokumentation wichtiger Code Snipplets
+#### Dokumentation wichtiger Code Snipplets
 
-#### 8.5. Testfälle
+#### Testfälle
 
 
 ## Bedienungsanleitung
